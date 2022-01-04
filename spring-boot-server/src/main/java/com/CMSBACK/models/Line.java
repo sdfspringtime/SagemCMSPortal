@@ -38,6 +38,12 @@ public class Line {
 	public void setName(String name) {
 		this.name = name;
 	}
+	public Line(String description, String name) {
+		super();
+		this.description = description;
+		this.name = name;
+	}
+	
 	
 
 }
