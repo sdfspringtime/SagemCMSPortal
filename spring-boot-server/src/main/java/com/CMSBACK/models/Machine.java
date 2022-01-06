@@ -28,8 +28,8 @@ public class Machine {
 	private EMType typemach;
 
 	private String description;
-	private boolean allocated;
-	private boolean status;
+	private boolean allocated=false;
+	private boolean status=false;
 	private boolean FESE;
 	@ManyToOne
     @JoinColumn(name="line_id", nullable=false)
@@ -80,6 +80,12 @@ public class Machine {
 		this.allocated = allocated;
 		this.status = status;
 		this.FESE = fESE;
+	}
+	public Line getLine() {
+		return line;
+	}
+	public void setLine(Line line) {
+		this.line = line;
 	}
 	
 	
