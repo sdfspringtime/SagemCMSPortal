@@ -2,8 +2,11 @@ package com.CMSBACK.models;
 
 import javax.persistence.*;
 
+import org.hibernate.envers.Audited;
+
 @Entity
 @Table(name = "roles")
+@Audited
 public class Role {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)

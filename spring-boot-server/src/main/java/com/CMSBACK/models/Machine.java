@@ -2,6 +2,7 @@ package com.CMSBACK.models;
 
 import java.util.Set;
 
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
@@ -13,8 +14,12 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+
+import org.hibernate.envers.Audited;
+
 @Entity
 @Table(	name = "machines")
+@Audited
 public class Machine {
 
 	

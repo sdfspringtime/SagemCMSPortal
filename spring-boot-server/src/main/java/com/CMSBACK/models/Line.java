@@ -3,27 +3,33 @@ package com.CMSBACK.models;
 import java.util.Set;
 
 import javax.persistence.Entity;
+import javax.persistence.EntityListeners;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+import org.hibernate.envers.Audited;
+import org.springframework.data.jpa.domain.support.AuditingEntityListener;
+
 @Entity
 @Table(name = "lines_p")
+@Audited
 public class Line {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Integer id;
+	private Long id;
 	@OneToMany(mappedBy = "line")
     Set<LineAlloc> lineallocs;
 	private String description;
+	
 	private String name;
-	public Integer getId() {
+	public Long getId() {
 		return id;
 	}
-	public void setId(Integer id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 	public String getDescription() {
@@ -38,12 +44,7 @@ public class Line {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public Line(String description, String name) {
-		super();
-		this.description = description;
-		this.name = name;
-	}
-	
+
 	
 
 }
