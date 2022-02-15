@@ -16,9 +16,21 @@ public class MyRevisionListener implements RevisionListener {
     @Override
     public void newRevision(Object revisionEntity) {
 
-        String currentUser = SecurityContextHolder.getContext().getAuthentication().getName();
+    	   final SecurityContext context = SecurityContextHolder.getContext();
+           MyRevision audit = (MyRevision) revisionEntity;
 
-        MyRevision audit = (MyRevision) revisionEntity;
-        audit.setUser(currentUser);
 
-	 }}
+           if (context != null) {
+
+               if (context.getAuthentication() != null) {
+
+                   audit.setUser( context.getAuthentication().getName());
+
+               } else {
+
+            	   audit.setUser( "anonymous");
+
+               }
+
+
+	 }}}

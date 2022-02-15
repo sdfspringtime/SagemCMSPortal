@@ -15,7 +15,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 
 @Entity
 @Table(name = "my_revision")
-@RevisionEntity
+@RevisionEntity(MyRevisionListener.class)
 public class MyRevision extends DefaultRevisionEntity {
  
     @Column(name = "user")
