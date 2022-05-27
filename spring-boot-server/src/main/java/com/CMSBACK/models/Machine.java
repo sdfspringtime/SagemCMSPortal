@@ -1,5 +1,6 @@
 package com.CMSBACK.models;
 
+import java.util.Date;
 import java.util.Set;
 
 
@@ -7,10 +8,12 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
@@ -41,6 +44,20 @@ public class Machine {
     private Line line;
 	@OneToMany(mappedBy = "machine")
     Set<MachineAlloc> machineallocs;
+    private String revisionauthor;
+	private Date revisiondate;
+	public String getRevisionauthor() {
+		return revisionauthor;
+	}
+	public void setRevisionauthor(String revisionauthor) {
+		this.revisionauthor = revisionauthor;
+	}
+	public Date getRevisiondate() {
+		return revisiondate;
+	}
+	public void setRevisiondate(Date revisiondate) {
+		this.revisiondate = revisiondate;
+	}
 	public Integer getId() {
 		return id;
 

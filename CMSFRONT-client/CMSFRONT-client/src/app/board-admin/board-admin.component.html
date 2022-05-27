@@ -1,5 +1,26 @@
-<div class="container">
-    <header class="jumbotron">
-      <p>{{ content }}</p>
-    </header>
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h2>Production Lines List</h2>
+
   </div>
+  <div class="panel-body">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>name</th>
+          <th>description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let line of linep | async">
+          <td>{{line.name}}</td>
+          <td>{{line.description}}</td>
+          
+          <td><button (click)="deletelprod(line.id)" class="btn btn-danger">Delete</button>
+              <button (click)="LprodDetails(line.id)" class="btn btn-info" style="margin-left: 10px">Details</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

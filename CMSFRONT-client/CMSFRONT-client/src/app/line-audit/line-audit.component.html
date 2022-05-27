@@ -1,0 +1,28 @@
+<h2>Line Production Audit Logs</h2> 
+
+<div class="panel-body">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Line Name</th>
+          <th>Description</th>
+          <th>Audit Author</th>
+          <th>Audit Date</th>
+          <th>Audit type</th>
+        
+
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let line of lineaud ">
+          <td>{{line.name}}</td>
+          <td>{{line.description}}</td>
+          <td>{{line.revisionauthor}}</td>
+          <td>{{line.revisiondate}}</td>
+          <td>{{line.revtype | revType}}</td>
+
+          
+        </tr>
+      </tbody>
+    </table>
+  </div>

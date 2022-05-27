@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
@@ -13,6 +13,13 @@ import { BoardMachinistComponent } from './board-machinist/board-machinist.compo
 import { authInterceptorProviders } from './_helpers/auth.interceptor';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { LineprodComponent } from './lineprod/lineprod.component';
+import { MachinesComponent } from './machines/machines.component';
+import { LineprodaddComponent } from './lineprodadd/lineprodadd.component';
+import { LinepupdateComponent } from './linepupdate/linepupdate.component';
+import { LinepdetailsComponent } from './linepdetails/linepdetails.component';
+import { LineAuditComponent } from './line-audit/line-audit.component';
+import { RevTypePipe } from './pipes/revtype/rev-type.pipe';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,13 +29,22 @@ import { HttpClientModule } from '@angular/common/http';
     ProfileComponent,
     BoardAdminComponent,
     BoardLinemanagerComponent,
-    BoardMachinistComponent
+    BoardMachinistComponent,
+    LineprodComponent,
+    MachinesComponent,
+    LineprodaddComponent,
+    LinepupdateComponent,
+    LinepdetailsComponent,
+    LineAuditComponent,
+    RevTypePipe,
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule,
   ],
   providers: [authInterceptorProviders],
   bootstrap: [AppComponent]

@@ -41,9 +41,10 @@ public class User {
 				inverseJoinColumns = @JoinColumn(name = "role_id"))
 	private Set<Role> roles = new HashSet<>();
 	@OneToMany(mappedBy = "user")
-    Set<LineAlloc> lineallocs;
+    private Set<LineAlloc> lineallocs;
 	@OneToMany(mappedBy = "user")
-    Set<MachineAlloc> machineallocs;
+    private Set<MachineAlloc> machineallocs;
+	
 	public User() {
 	}
 
