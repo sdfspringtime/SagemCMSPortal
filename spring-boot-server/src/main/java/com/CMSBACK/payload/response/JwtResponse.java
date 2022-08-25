@@ -3,27 +3,27 @@ package com.CMSBACK.payload.response;
 import java.util.List;
 
 public class JwtResponse {
-	private String token;
+	private String accessToken;
 	private String type = "Bearer";
 	private Long id;
 	private String username;
-	private String email;
+	private String mail;
 	private List<String> roles;
 
-	public JwtResponse(String accessToken, Long id, String username, String email, List<String> roles) {
-		this.token = accessToken;
+	public JwtResponse(String accessToken, Long id, String username, String mail, List<String> roles) {
+		this.accessToken = accessToken;
 		this.id = id;
 		this.username = username;
-		this.email = email;
+		this.mail = mail;
 		this.roles = roles;
 	}
 
 	public String getAccessToken() {
-		return token;
+		return accessToken;
 	}
 
 	public void setAccessToken(String accessToken) {
-		this.token = accessToken;
+		this.accessToken = accessToken;
 	}
 
 	public String getTokenType() {
@@ -42,12 +42,12 @@ public class JwtResponse {
 		this.id = id;
 	}
 
-	public String getEmail() {
-		return email;
+	public String getMail() {
+		return mail;
 	}
 
-	public void setEmail(String email) {
-		this.email = email;
+	public void setMail(String mail) {
+		this.mail = mail;
 	}
 
 	public String getUsername() {

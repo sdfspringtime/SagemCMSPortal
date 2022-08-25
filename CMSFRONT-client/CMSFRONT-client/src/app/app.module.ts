@@ -20,6 +20,7 @@ import { LinepupdateComponent } from './linepupdate/linepupdate.component';
 import { LinepdetailsComponent } from './linepdetails/linepdetails.component';
 import { LineAuditComponent } from './line-audit/line-audit.component';
 import { RevTypePipe } from './pipes/revtype/rev-type.pipe';
+import { AdminLoginComponent } from './admin-login/admin-login.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,6 +38,7 @@ import { RevTypePipe } from './pipes/revtype/rev-type.pipe';
     LinepdetailsComponent,
     LineAuditComponent,
     RevTypePipe,
+    AdminLoginComponent,
     
   ],
   imports: [

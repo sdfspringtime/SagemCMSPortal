@@ -69,10 +69,9 @@
       </form>
   
       <div class="alert alert-success" *ngIf="isLoggedIn">
-        Logged in as {{ ['roles'] }}.
+        Logged in as {{ roles.join(" & ") }}.
       </div>
 
-      <a class="" style="margin-bottom: 10px;" routerLink="/alogin">Connect As Administrator</a>
 
     </div>
   </div>

@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AdminLoginComponent } from './admin-login/admin-login.component';
 import { BoardAdminComponent } from './board-admin/board-admin.component';
 import { BoardLinemanagerComponent } from './board-linemanager/board-linemanager.component';
 import { BoardMachinistComponent } from './board-machinist/board-machinist.component';
@@ -22,6 +23,7 @@ const routes: Routes = [
   { path: 'mod', component: BoardLinemanagerComponent },
   { path: 'lineps', component: LineprodComponent },
   { path: 'linepadd', component: LineprodaddComponent },
+  { path: 'alogin', component: AdminLoginComponent },
   { path: 'linepupdate/:id', component: LinepupdateComponent },
   { path: 'linepdetails/:id', component: LinepdetailsComponent },
   { path: 'linepaudit/:id', component: LineAuditComponent },

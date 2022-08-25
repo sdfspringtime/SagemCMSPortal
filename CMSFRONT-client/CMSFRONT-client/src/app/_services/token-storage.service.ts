@@ -24,12 +24,17 @@ export class TokenStorageService {
 
   public saveUser(user: any): void {
     window.sessionStorage.removeItem(USER_KEY);
+    if(!(user.roles instanceof Array)){
+      user.roles = [user.roles]
+    }
+
     window.sessionStorage.setItem(USER_KEY, JSON.stringify(user));
   }
 
   public getUser(): any {
     const user = window.sessionStorage.getItem(USER_KEY);
     if (user) {
+      console.log(user)
       return JSON.parse(user);
     }
 
