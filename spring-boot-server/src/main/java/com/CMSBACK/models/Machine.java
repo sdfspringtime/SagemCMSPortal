@@ -20,6 +20,8 @@ import javax.persistence.Table;
 
 import org.hibernate.envers.Audited;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 @Entity
 @Table(	name = "machines")
 @Audited
@@ -29,7 +31,7 @@ public class Machine {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Integer id;
+	private Long id;
 
 	@Enumerated(EnumType.STRING)
 
@@ -39,13 +41,21 @@ public class Machine {
 	private boolean allocated=false;
 	private boolean status=false;
 	private boolean FESE;
-	@ManyToOne
-    @JoinColumn(name="line_id", nullable=false)
+	@JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
+	@ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name="line_id")
     private Line line;
 	@OneToMany(mappedBy = "machine")
     Set<MachineAlloc> machineallocs;
     private String revisionauthor;
 	private Date revisiondate;
+	private String name;
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
 	public String getRevisionauthor() {
 		return revisionauthor;
 	}
@@ -58,11 +68,11 @@ public class Machine {
 	public void setRevisiondate(Date revisiondate) {
 		this.revisiondate = revisiondate;
 	}
-	public Integer getId() {
+	public Long getId() {
 		return id;
 
 	}
-	public void setId(Integer id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 	public EMType getTypemach() {
@@ -95,14 +105,10 @@ public class Machine {
 	public void setFESE(boolean fESE) {
 		FESE = fESE;
 	}
-	public Machine(EMType typemach, String description, boolean allocated, boolean status, boolean fESE) {
+	public Machine() {
 		super();
-		this.typemach = typemach;
-		this.description = description;
-		this.allocated = allocated;
-		this.status = status;
-		this.FESE = fESE;
 	}
+
 	public Line getLine() {
 		return line;
 	}

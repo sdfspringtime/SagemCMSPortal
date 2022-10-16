@@ -1,1 +1,29 @@
-<p>machines works!</p>
+<div class="panel panel-primary">
+    <div class="panel-heading">
+      <h2>Machine List</h2>
+      <button class="btn btn-success" style="margin-bottom: 10px;" routerLink="/machadd">Add a Machine</button>
+    </div>
+    <div class="panel-body">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>name</th>
+            <th>description</th>
+        
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let line of linep | async">
+            <td>{{line.name}}</td>
+            <td>{{line.description}}</td>
+
+            
+            <td><button (click)=" deletelprod(line.id)" class="btn btn-danger">Delete</button>
+                <button (click)="LprodDetails(line.id)" class="btn btn-info" style="margin-left: 10px">Details</button>
+                <button (click)="Lprodupdate(line.id)" class="btn btn-warning" style="margin-left: 10px">Modify</button>
+                </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>

@@ -1,6 +1,9 @@
 package com.CMSBACK.models;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 import javax.persistence.CascadeType;
@@ -18,6 +21,9 @@ import javax.persistence.Table;
 import org.hibernate.envers.Audited;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 @Entity
 @Table(name = "lines_p")
 @Audited
@@ -26,8 +32,9 @@ public class Line {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
+	
 	@OneToMany(mappedBy = "line",cascade = CascadeType.ALL, orphanRemoval = true)
-    Set<LineAlloc> lineallocs;
+    private Set<Machine> lines=new HashSet<>();
 	private String description;
     private String revisionauthor;
 	
@@ -35,12 +42,15 @@ public class Line {
 	
 	
 	
-	public Set<LineAlloc> getLineallocs() {
-		return lineallocs;
+
+	public Set<Machine> getLines() {
+		return lines;
 	}
-	public void setLineallocs(Set<LineAlloc> lineallocs) {
-		this.lineallocs = lineallocs;
+	public void setLines(Set<Machine> lines) {
+		this.lines = lines;
 	}
+	
+
 	public String getrevisionauthor() {
 		return revisionauthor;
 	}

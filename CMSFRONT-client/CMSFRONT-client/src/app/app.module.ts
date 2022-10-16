@@ -21,6 +21,10 @@ import { LinepdetailsComponent } from './linepdetails/linepdetails.component';
 import { LineAuditComponent } from './line-audit/line-audit.component';
 import { RevTypePipe } from './pipes/revtype/rev-type.pipe';
 import { AdminLoginComponent } from './admin-login/admin-login.component';
+import { MachineAddComponentComponent } from './machine-add-component/machine-add-component.component';
+import { MachineUpdateComponentComponent } from './machine-update-component/machine-update-component.component';
+import { MachdetailsComponent } from './machdetails/machdetails.component';
+import { MachineauditComponent } from './machineaudit/machineaudit.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -39,6 +43,10 @@ import { AdminLoginComponent } from './admin-login/admin-login.component';
     LineAuditComponent,
     RevTypePipe,
     AdminLoginComponent,
+    MachineAddComponentComponent,
+    MachineUpdateComponentComponent,
+    MachdetailsComponent,
+    MachineauditComponent,
     
   ],
   imports: [

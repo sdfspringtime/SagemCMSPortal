@@ -11,6 +11,11 @@ import { LineprodComponent } from './lineprod/lineprod.component';
 import { LineprodaddComponent } from './lineprodadd/lineprodadd.component';
 import { LinepupdateComponent } from './linepupdate/linepupdate.component';
 import { LoginComponent } from './login/login.component';
+import { MachdetailsComponent } from './machdetails/machdetails.component';
+import { MachineAddComponentComponent } from './machine-add-component/machine-add-component.component';
+import { MachineUpdateComponentComponent } from './machine-update-component/machine-update-component.component';
+import { MachineauditComponent } from './machineaudit/machineaudit.component';
+import { MachinesComponent } from './machines/machines.component';
 import { ProfileComponent } from './profile/profile.component';
 import { RegisterComponent } from './register/register.component';
 
@@ -27,8 +32,13 @@ const routes: Routes = [
   { path: 'linepupdate/:id', component: LinepupdateComponent },
   { path: 'linepdetails/:id', component: LinepdetailsComponent },
   { path: 'linepaudit/:id', component: LineAuditComponent },
-
+  { path: 'machupdate/:id', component: MachineUpdateComponentComponent },
+  { path: 'machdetails/:id', component:  MachdetailsComponent},
+  { path: 'machaudit/:id', component: MachineauditComponent },
+  { path: 'machines', component: MachinesComponent },
+  { path: 'machadd', component: MachineAddComponentComponent },
   { path: 'admin', component: BoardAdminComponent },
+
   { path: '', redirectTo: 'home', pathMatch: 'full' }
 ];
 @NgModule({
