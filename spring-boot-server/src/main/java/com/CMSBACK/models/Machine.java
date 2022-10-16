@@ -20,11 +20,15 @@ import javax.persistence.Table;
 
 import org.hibernate.envers.Audited;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 @Entity
 @Table(	name = "machines")
 @Audited
+@JsonIgnoreProperties({"hibernateLazyInitializer"})
+
 public class Machine {
 
 	
@@ -41,10 +45,12 @@ public class Machine {
 	private boolean allocated=false;
 	private boolean status=false;
 	private boolean FESE;
-	@JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
+	 @JsonManagedReference
 	@ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name="line_id")
     private Line line;
+	
+	
 	@OneToMany(mappedBy = "machine")
     Set<MachineAlloc> machineallocs;
     private String revisionauthor;
@@ -114,6 +120,19 @@ public class Machine {
 	}
 	public void setLine(Line line) {
 		this.line = line;
+	}
+	public Machine(EMType typemach, String description, boolean allocated, boolean status, boolean fESE, Line line,
+			String revisionauthor, Date revisiondate, String name) {
+		super();
+		this.typemach = typemach;
+		this.description = description;
+		this.allocated = allocated;
+		this.status = status;
+		FESE = fESE;
+		this.line = line;
+		this.revisionauthor = revisionauthor;
+		this.revisiondate = revisiondate;
+		this.name = name;
 	}
 	
 	

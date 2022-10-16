@@ -11,7 +11,7 @@ public class MachineImpl{
 	@PersistenceContext // or even @Autowired
     private EntityManager entityManager;
     public List<Object[]> getMachinesRevisions(long id){
-    return entityManager.createNativeQuery("SELECT rev,revtype,name,description,fese,typemach,status,line_id,revisiondate,revisionauthor FROM machines_aud WHERE id="+id+" ORDER BY revisiondate").getResultList();
+    return entityManager.createNativeQuery("SELECT rev,revtype,name,description,fese,typemach,status,line_id,revisiondate,revisionauthor,allocated FROM machines_aud WHERE id="+id+" ORDER BY revisiondate").getResultList();
     
     }
 }

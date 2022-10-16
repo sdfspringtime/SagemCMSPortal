@@ -11,28 +11,23 @@
           <th>Audit type</th>
           <th>Input/Output </th>
           <th>Status</th>
-          <th>Line id</th>
+          <th>Line name</th>
           <th>Machine type</th>
-
-
-
-
-        
-
+          <th>Allocated</th>
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let line of lineaud ">
-          <td>{{line.name}}</td>
-          <td>{{line.description}}</td>
-          <td>{{line.revisionauthor}}</td>
-          <td>{{line.revisiondate}}</td>
-          <td>{{line.revtype | revType}}</td>
-          <td>{{line.fese}}</td>
-          <td>{{line.status}}</td>
-          <td>{{line.line_id}}</td>
-          <td>{{line.typemach}}</td>
-          
+        <tr *ngFor="let mAud of machaud ">
+          <td>{{mAud.name}}</td>
+          <td>{{mAud.description}}</td>
+          <td>{{mAud.revisionauthor}}</td>
+          <td>{{mAud.revisiondate}}</td>
+          <td>{{mAud.revtype | revType}}</td>
+          <td>{{mAud.fese}}</td>
+          <td>{{mAud.status}}</td>
+          <td>{{machine.line.name}}</td>
+          <td>{{mAud.typemach}}</td>
+          <td>{{mAud.allocated}}</td>
         </tr>
       </tbody>
     </table>

@@ -1,1 +1,47 @@
-<p>machine-update-component works!</p>
+<h3>Update Machine</h3>
+<div style="width: 400px;">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="text" class="form-control" id="name" required [(ngModel)]="lprod.name" name="name">
+    </div>
+
+    <div class="form-group">
+      <label for="name">Description</label>
+      <input type="text" class="form-control" id="description" required [(ngModel)]="lprod.description" name="description">
+    </div>
+    <div class="form-group">
+        <label for="line">Line</label>
+        <select (ngModelChange)="setLine($event)" (ngModel)="lprod.line" required class="form-control" id="line"
+          name="line">
+          <option [ngValue]="line" *ngFor="let line of lines">{{line.name}}</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="line">Machine Type</label>
+        <select (ngModelChange)="setType($event)" (ngModel)="lprod.typemach" required class="form-control" id="type"
+          name="type">
+          <option ngValue="SPI">SPI</option>
+          <option ngValue="SPI">AOI</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="fese">Input Output State</label>
+        <div id="fese" class="d-flex flex-row p-2 justify-content-center align-items-center">
+          <div>
+            <span> ON </span>
+            <input type="radio" name="fese" id="fese1" [(ngModel)]="lprod.fese" [value]="true">
+          </div>
+          <div>
+            <span> OFF </span>
+            <input type="radio" name="fese" id="fese2" [(ngModel)]="lprod.fese" [value]="false">
+          </div>
+        </div>
+  
+      </div>
+  
+
+
+    <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+</div>

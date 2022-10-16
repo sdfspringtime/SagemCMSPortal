@@ -12,45 +12,53 @@ import { MachinesService } from '../machines.service';
 export class MachineauditComponent implements OnInit {
 
   id !: number;
-  lprod !: Machines;
-  lineaud !: any[];
-    constructor(private lprodserv: MachinesService,
+  machine !: Machines;
+  machaud !: any[];
+  constructor(private machineserv: MachinesService,
     private router: Router,
-    private route : ActivatedRoute) { }
+    private route: ActivatedRoute) { }
 
-  ngOnInit(): void {
+  getMachIdFromParams() {
     this.route.paramMap.subscribe({
-      next : (res : any) => {
-        this.getauditList(res.get('id')); 
+      next: (res: any) => {
+        this.id = res.get('id');
+      }
+    }
+    )
+  }
+  ngOnInit(): void {
+    this.getMachIdFromParams();
+    this.route.paramMap.subscribe({
+      next: (res: any) => {
+        this.getauditList(this.id);
       }
     })
-    
+    this.machineserv.getmach(this.id).subscribe({
+      next : (res : any) => {
+        this.machine = res;
+      },
+      error : (err : any) =>{
+        console.log(err)
+      }
+    })
+
+
   }
 
-getauditList(id:number){
-  this.lprodserv.getAudits(id).subscribe({
-    next : (res : any) => {
-      this.lineaud = res
-      this.lineaud = this.lineaud.map(line =>  new Machaudit(
-          line[0], 
-          line[1], 
-          line[2], 
-          line[3], 
-          line[4],
-          line[5],
-          line[6],
-          line[7],
-          line[8],
-          line[9],
+  getauditList(id: number) {
+    this.machineserv.getAudits(id).subscribe({
+      next: (res: any) => {
+        this.machaud = res
+    this.machaud = this.machaud.map(value => new Machaudit(value[0], value[1], value[5], value[3], value[10], value[6], value[7], value[9], value[8], value[2], value[4]
 
         ))
-    },
-    error : (err : any)=> {
+      },
+      error: (err: any) => {
 
-    }
+      }
 
-  })
- 
-}
+    })
+
+  }
 
 }

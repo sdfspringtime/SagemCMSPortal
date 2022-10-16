@@ -21,19 +21,23 @@ import javax.persistence.Table;
 import org.hibernate.envers.Audited;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 @Entity
 @Table(name = "lines_p")
 @Audited
+@JsonIgnoreProperties({"hibernateLazyInitializer"})
+
 public class Line {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	
-	@OneToMany(mappedBy = "line",cascade = CascadeType.ALL, orphanRemoval = true)
+	 @JsonBackReference
+     @OneToMany(mappedBy = "line",cascade = CascadeType.ALL, orphanRemoval = true)
     private Set<Machine> lines=new HashSet<>();
 	private String description;
     private String revisionauthor;

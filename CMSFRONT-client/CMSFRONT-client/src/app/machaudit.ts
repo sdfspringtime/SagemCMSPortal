@@ -1,15 +1,19 @@
+import { Lineprod } from "./lineprod";
+
 export class Machaudit {
     constructor (
         private rev :number,
         private revtype :number,
-        private description : string,
-       private  name : string,
-       private  revisiondate :Date,
-       private  revisionauthor :string,
-       private fese:boolean,
-       private status:boolean,
-       private line_id:number,
-       private typemach:string
+        
+        private typemach:string,
+        private description:string,
+        private allocated:boolean,
+        private status:boolean,
+        private line:Lineprod,
+        private revisionauthor:string,
+        private revisiondate:Date,
+        private  name:string,
+        private fese:boolean,
        ){}
  
 }

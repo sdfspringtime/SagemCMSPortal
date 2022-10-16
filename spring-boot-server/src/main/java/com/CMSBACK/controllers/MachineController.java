@@ -80,6 +80,9 @@ public class MachineController {
 	        mach.setAllocated(machinedetails.isAllocated());
 	        mach.setFESE(machinedetails.isFESE());
 	        mach.setLine(machinedetails.getLine());
+	        mach.setRevisionauthor(rl.getUserName());
+			Date date = new Date(); 
+			mach.setRevisiondate(date);
 	        machrep.save(machinedetails);
 
 		

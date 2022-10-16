@@ -2,10 +2,13 @@
 
 <hr/>
   <div>
-    <label routerLink="/"><b>Line Name: </b></label> {{lprod.name}}
+    <label routerLink="/"><b>Line Name: </b></label> {{lprod.line.name}}
   </div>
   <div>
     <label ><b>Machine Description: </b></label> {{lprod.description}}
+  </div>
+  <div>
+    <label ><b>Production Line: </b></label> {{lprod.line.name}}
   </div>
   <div>
     <label ><b>Machine Type: </b></label> {{lprod.typemach}}
@@ -16,6 +19,7 @@
   <div>
     <label ><b>FeSe: </b></label> {{lprod.fese}}
   </div>
+
   <button (click)="linepaudits(lprod.id)" class="btn btn-info" style="margin-left: 10px">Logs History</button>
 
 <br>

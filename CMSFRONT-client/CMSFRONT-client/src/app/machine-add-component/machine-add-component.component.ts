@@ -67,7 +67,7 @@ setType(pp:string)
 }
 
   gotoList() {
-    this.router.navigate(['/machines']);
+    this.router.navigate(['machines']);
   }
 
 }
