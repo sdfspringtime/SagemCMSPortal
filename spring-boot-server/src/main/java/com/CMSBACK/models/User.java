@@ -1,5 +1,6 @@
 package com.CMSBACK.models;
 
+import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -44,7 +45,9 @@ public class User {
     private Set<LineAlloc> lineallocs;
 	@OneToMany(mappedBy = "user")
     private Set<MachineAlloc> machineallocs;
+    private String revisionauthor;
 	
+	private Date revisiondate;
 	public User() {
 	}
 
@@ -52,6 +55,22 @@ public class User {
 		this.username = username;
 		this.email = email;
 		this.password = password;
+	}
+
+	public String getRevisionauthor() {
+		return revisionauthor;
+	}
+
+	public void setRevisionauthor(String revisionauthor) {
+		this.revisionauthor = revisionauthor;
+	}
+
+	public Date getRevisiondate() {
+		return revisiondate;
+	}
+
+	public void setRevisiondate(Date revisiondate) {
+		this.revisiondate = revisiondate;
 	}
 
 	public Long getId() {

@@ -39,7 +39,7 @@ export class AdminLoginComponent implements OnInit {
       next: (res: any) => {
         console.log(res)
         this.tservice.saveToken(res.accessToken);
-        this.user.mail = res.mail;
+        this.user.email = res.email;
         this.user.username = res.username;
         this.user.roles = [res.roles];
 

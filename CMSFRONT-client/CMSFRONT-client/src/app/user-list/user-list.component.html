@@ -1,0 +1,32 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">
+      <h2>User List</h2>
+      <button class="btn btn-success" style="margin-bottom: 10px;" routerLink="/useradd">Add a User</button>
+    </div>
+    <div class="panel-body">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>username</th>
+            <th>mail</th>
+            <th>role</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let line of linep | async">
+            <td>{{line.username}}</td>
+            <td>{{line.email}}</td>
+            
+            
+              <td><ul ><li *ngFor="let role1 of line.roles">{{role1.name}}</li></ul></td>
+            
+            
+            <td><button (click)=" deletelprod(line.id)" class="btn btn-danger">Delete</button>
+                <button (click)="LprodDetails(line.id)" class="btn btn-info" style="margin-left: 10px">Details</button>
+                <button (click)="Lprodupdate(line.id)" class="btn btn-warning" style="margin-left: 10px">Modify</button>
+                </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>

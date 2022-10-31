@@ -1,0 +1,19 @@
+<h2>Machine Details</h2> 
+
+<hr/>
+  <div>
+    <label routerLink="/"><b>User Name: </b></label> {{lprod.username}}
+  </div>
+  <div>
+    <label ><b>User email: </b></label> {{lprod.email}}
+  </div>
+  <div>
+    <td><label ><b>User Role: </b></label><li *ngFor="let role1 of lprod.roles">{{role1.name}}</li></td>
+    </div>
+  
+
+  <button (click)="linepaudits(lprod.id)" class="btn btn-info" style="margin-left: 10px">Logs History</button>
+
+<br>
+<br>
+<button (click)="list()" class="btn btn-primary">Back to User List</button><br>

@@ -14,4 +14,5 @@ public class MachineImpl{
     return entityManager.createNativeQuery("SELECT rev,revtype,name,description,fese,typemach,status,line_id,revisiondate,revisionauthor,allocated FROM machines_aud WHERE id="+id+" ORDER BY revisiondate").getResultList();
     
     }
+
 }

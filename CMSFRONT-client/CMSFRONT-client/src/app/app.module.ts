@@ -25,6 +25,11 @@ import { MachineAddComponentComponent } from './machine-add-component/machine-ad
 import { MachineUpdateComponentComponent } from './machine-update-component/machine-update-component.component';
 import { MachdetailsComponent } from './machdetails/machdetails.component';
 import { MachineauditComponent } from './machineaudit/machineaudit.component';
+import { UserAddComponent } from './user-add/user-add.component';
+import { UserUpdateComponent } from './user-update/user-update.component';
+import { UserListComponent } from './user-list/user-list.component';
+import { UserAuditComponent } from './user-audit/user-audit.component';
+import { UserDetailsComponent } from './user-details/user-details.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -47,6 +52,11 @@ import { MachineauditComponent } from './machineaudit/machineaudit.component';
     MachineUpdateComponentComponent,
     MachdetailsComponent,
     MachineauditComponent,
+    UserAddComponent,
+    UserUpdateComponent,
+    UserListComponent,
+    UserAuditComponent,
+    UserDetailsComponent,
     
   ],
   imports: [

@@ -1,0 +1,30 @@
+<h2>Machine Audit Logs</h2> 
+
+<div class="panel-body">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>User Role</th>
+          <th>User Mail</th>
+          <th>User Username</th>
+          <th>Audit Type</th>
+          <th>Audit Author</th>
+          <th>Audit Date </th>
+        
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let mAud of machaud ">
+          <td>{{mAud.roles}}</td>
+          <td>{{mAud.email}}</td>
+          <td>{{mAud.username}}</td>
+          <td>{{mAud.revtype | revType}}</td>
+          <td>{{mAud.revisionauthor}}</td>
+          <td>{{mAud.revisiondate}}</td>
+          
+          
+        
+        </tr>
+      </tbody>
+    </table>
+  </div>

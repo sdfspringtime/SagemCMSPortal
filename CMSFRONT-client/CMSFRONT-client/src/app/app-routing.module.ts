@@ -18,6 +18,11 @@ import { MachineauditComponent } from './machineaudit/machineaudit.component';
 import { MachinesComponent } from './machines/machines.component';
 import { ProfileComponent } from './profile/profile.component';
 import { RegisterComponent } from './register/register.component';
+import { UserAddComponent } from './user-add/user-add.component';
+import { UserAuditComponent } from './user-audit/user-audit.component';
+import { UserDetailsComponent } from './user-details/user-details.component';
+import { UserListComponent } from './user-list/user-list.component';
+import { UserUpdateComponent } from './user-update/user-update.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -38,7 +43,11 @@ const routes: Routes = [
   { path: 'machines', component: MachinesComponent },
   { path: 'machadd', component: MachineAddComponentComponent },
   { path: 'admin', component: BoardAdminComponent },
-
+  { path: 'userdetails/:id', component: UserDetailsComponent },
+  { path: 'userupdate/:id', component: UserUpdateComponent },
+  { path: 'useraudit/:id', component: UserAuditComponent },
+  { path: 'users', component: UserListComponent },
+  { path: 'useradd', component: UserAddComponent },
   { path: '', redirectTo: 'home', pathMatch: 'full' }
 ];
 @NgModule({
