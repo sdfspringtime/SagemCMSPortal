@@ -1,0 +1,1429 @@
+[2022-11-01 22:22:47,784] INFO Kafka Connect standalone worker initializing ... (org.apache.kafka.connect.cli.ConnectStandalone:68)
+[2022-11-01 22:22:47,792] INFO WorkerInfo values: 
+	jvm.args = -Xmx256M, -XX:+UseG1GC, -XX:MaxGCPauseMillis=20, -XX:InitiatingHeapOccupancyPercent=35, -XX:+ExplicitGCInvokesConcurrent, -Djava.awt.headless=true, -Dcom.sun.management.jmxremote, -Dcom.sun.management.jmxremote.authenticate=false, -Dcom.sun.management.jmxremote.ssl=false, -Dkafka.logs.dir=C:\Users\1s0\Desktop\kafka_2.12-3.2.1/logs, -Dlog4j.configuration=file:C:\Users\1s0\Desktop\kafka_2.12-3.2.1/config/connect-log4j.properties
+	jvm.spec = Oracle Corporation, Java HotSpot(TM) 64-Bit Server VM, 1.8.0_333, 25.333-b02
+	jvm.classpath = C:\Users\1s0\Desktop\kafka_2.12-3.2.1\libs\activation-1.1.1.jar;C:\Users\1s0\Desktop\kafka_2.12-3.2.1\libs\aopalliance-repackaged-2.6.1.jar;C:\Users\1s0\Desktop\kafka_2.12-3.2.1\libs\argparse4j-0.7.0.jar;C:\Users\1s0\Desktop\kafka_2.12-3.2.1\libs\audience-annotations-0.5.0.jar;C:\Users\1s0\Desktop\kafka_2.12-3.2.1\libs\commons-cli-1.4.jar;C:\Users\1s0\Desktop\kafka_2.12-3.2.1\libs\commons-lang3-3.8.1.jar;C:\Users\1s0\Desktop\kafka_2.12-3.2.1\libs\connect-api-3.2.1.jar;C:\Users\1s0\Desktop\kafka_2.12-3.2.1\libs\connect-basic-auth-extension-3.2.1.jar;C:\Users\1s0\Desktop\kafka_2.12-3.2.1\libs\connect-file-3.2.1.jar;C:\Users\1s0\Desktop\kafka_2.12-3.2.1\libs\connect-json-3.2.1.jar;C:\Users\1s0\Desktop\kafka_2.12-3.2.1\libs\connect-mirror-3.2.1.jar;C:\Users\1s0\Desktop\kafka_2.12-3.2.1\libs\connect-mirror-client-3.2.1.jar;C:\Users\1s0\Desktop\kafka_2.12-3.2.1\libs\connect-runtime-3.2.1.jar;C:\Users\1s0\Desktop\kafka_2.12-3.2.1\libs\connect-transforms-3.2.1.jar;C:\Users\1s0\Desktop\kafka_2.12-3.2.1\libs\hk2-api-2.6.1.jar;C:\Users\1s0\Desktop\kafka_2.12-3.2.1\libs\hk2-locator-2.6.1.jar;C:\Users\1s0\Desktop\kafka_2.12-3.2.1\libs\hk2-utils-2.6.1.jar;C:\Users\1s0\Desktop\kafka_2.12-3.2.1\libs\jackson-annotations-2.12.6.jar;C:\Users\1s0\Desktop\kafka_2.12-3.2.1\libs\jackson-core-2.12.6.jar;C:\Users\1s0\Desktop\kafka_2.12-3.2.1\libs\jackson-databind-2.12.6.1.jar;C:\Users\1s0\Desktop\kafka_2.12-3.2.1\libs\jackson-dataformat-csv-2.12.6.jar;C:\Users\1s0\Desktop\kafka_2.12-3.2.1\libs\jackson-datatype-jdk8-2.12.6.jar;C:\Users\1s0\Desktop\kafka_2.12-3.2.1\libs\jackson-jaxrs-base-2.12.6.jar;C:\Users\1s0\Desktop\kafka_2.12-3.2.1\libs\jackson-jaxrs-json-provider-2.12.6.jar;C:\Users\1s0\Desktop\kafka_2.12-3.2.1\libs\jackson-module-jaxb-annotations-2.12.6.jar;C:\Users\1s0\Desktop\kafka_2.12-3.2.1\libs\jackson-module-scala_2.12-2.12.6.jar;C:\Users\1s0\Desktop\kafka_2.12-3.2.1\libs\jakarta.activation-api-1.2.1.jar;C:\Users\1s0\Desktop\kafka_2.12-3.2.1\libs\jakarta.annotation-api-1.3.5.jar;C:\Users\1s0\Desktop\kafka_2.12-3.2.1\libs\jakarta.inject-2.6.1.jar;C:\Users\1s0\Desktop\kafka_2.12-3.2.1\libs\jakarta.validation-api-2.0.2.jar;C:\Users\1s0\Desktop\kafka_2.12-3.2.1\libs\jakarta.ws.rs-api-2.1.6.jar;C:\Users\1s0\Desktop\kafka_2.12-3.2.1\libs\jakarta.xml.bind-api-2.3.2.jar;C:\Users\1s0\Desktop\kafka_2.12-3.2.1\libs\javassist-3.27.0-GA.jar;C:\Users\1s0\Desktop\kafka_2.12-3.2.1\libs\javax.servlet-api-3.1.0.jar;C:\Users\1s0\Desktop\kafka_2.12-3.2.1\libs\javax.ws.rs-api-2.1.1.jar;C:\Users\1s0\Desktop\kafka_2.12-3.2.1\libs\jaxb-api-2.3.0.jar;C:\Users\1s0\Desktop\kafka_2.12-3.2.1\libs\jersey-client-2.34.jar;C:\Users\1s0\Desktop\kafka_2.12-3.2.1\libs\jersey-common-2.34.jar;C:\Users\1s0\Desktop\kafka_2.12-3.2.1\libs\jersey-container-servlet-2.34.jar;C:\Users\1s0\Desktop\kafka_2.12-3.2.1\libs\jersey-container-servlet-core-2.34.jar;C:\Users\1s0\Desktop\kafka_2.12-3.2.1\libs\jersey-hk2-2.34.jar;C:\Users\1s0\Desktop\kafka_2.12-3.2.1\libs\jersey-server-2.34.jar;C:\Users\1s0\Desktop\kafka_2.12-3.2.1\libs\jetty-client-9.4.44.v20210927.jar;C:\Users\1s0\Desktop\kafka_2.12-3.2.1\libs\jetty-continuation-9.4.44.v20210927.jar;C:\Users\1s0\Desktop\kafka_2.12-3.2.1\libs\jetty-http-9.4.44.v20210927.jar;C:\Users\1s0\Desktop\kafka_2.12-3.2.1\libs\jetty-io-9.4.44.v20210927.jar;C:\Users\1s0\Desktop\kafka_2.12-3.2.1\libs\jetty-security-9.4.44.v20210927.jar;C:\Users\1s0\Desktop\kafka_2.12-3.2.1\libs\jetty-server-9.4.44.v20210927.jar;C:\Users\1s0\Desktop\kafka_2.12-3.2.1\libs\jetty-servlet-9.4.44.v20210927.jar;C:\Users\1s0\Desktop\kafka_2.12-3.2.1\libs\jetty-servlets-9.4.44.v20210927.jar;C:\Users\1s0\Desktop\kafka_2.12-3.2.1\libs\jetty-util-9.4.44.v20210927.jar;C:\Users\1s0\Desktop\kafka_2.12-3.2.1\libs\jetty-util-ajax-9.4.44.v20210927.jar;C:\Users\1s0\Desktop\kafka_2.12-3.2.1\libs\jline-3.21.0.jar;C:\Users\1s0\Desktop\kafka_2.12-3.2.1\libs\jopt-simple-5.0.4.jar;C:\Users\1s0\Desktop\kafka_2.12-3.2.1\libs\jose4j-0.7.9.jar;C:\Users\1s0\Desktop\kafka_2.12-3.2.1\libs\kafka-clients-3.2.1.jar;C:\Users\1s0\Desktop\kafka_2.12-3.2.1\libs\kafka-log4j-appender-3.2.1.jar;C:\Users\1s0\Desktop\kafka_2.12-3.2.1\libs\kafka-metadata-3.2.1.jar;C:\Users\1s0\Desktop\kafka_2.12-3.2.1\libs\kafka-raft-3.2.1.jar;C:\Users\1s0\Desktop\kafka_2.12-3.2.1\libs\kafka-server-common-3.2.1.jar;C:\Users\1s0\Desktop\kafka_2.12-3.2.1\libs\kafka-shell-3.2.1.jar;C:\Users\1s0\Desktop\kafka_2.12-3.2.1\libs\kafka-storage-3.2.1.jar;C:\Users\1s0\Desktop\kafka_2.12-3.2.1\libs\kafka-storage-api-3.2.1.jar;C:\Users\1s0\Desktop\kafka_2.12-3.2.1\libs\kafka-streams-3.2.1.jar;C:\Users\1s0\Desktop\kafka_2.12-3.2.1\libs\kafka-streams-examples-3.2.1.jar;C:\Users\1s0\Desktop\kafka_2.12-3.2.1\libs\kafka-streams-scala_2.12-3.2.1.jar;C:\Users\1s0\Desktop\kafka_2.12-3.2.1\libs\kafka-streams-test-utils-3.2.1.jar;C:\Users\1s0\Desktop\kafka_2.12-3.2.1\libs\kafka-tools-3.2.1.jar;C:\Users\1s0\Desktop\kafka_2.12-3.2.1\libs\kafka_2.12-3.2.1.jar;C:\Users\1s0\Desktop\kafka_2.12-3.2.1\libs\lz4-java-1.8.0.jar;C:\Users\1s0\Desktop\kafka_2.12-3.2.1\libs\maven-artifact-3.8.4.jar;C:\Users\1s0\Desktop\kafka_2.12-3.2.1\libs\metrics-core-2.2.0.jar;C:\Users\1s0\Desktop\kafka_2.12-3.2.1\libs\metrics-core-4.1.12.1.jar;C:\Users\1s0\Desktop\kafka_2.12-3.2.1\libs\MySqlConnector.class;C:\Users\1s0\Desktop\kafka_2.12-3.2.1\libs\netty-buffer-4.1.73.Final.jar;C:\Users\1s0\Desktop\kafka_2.12-3.2.1\libs\netty-codec-4.1.73.Final.jar;C:\Users\1s0\Desktop\kafka_2.12-3.2.1\libs\netty-common-4.1.73.Final.jar;C:\Users\1s0\Desktop\kafka_2.12-3.2.1\libs\netty-handler-4.1.73.Final.jar;C:\Users\1s0\Desktop\kafka_2.12-3.2.1\libs\netty-resolver-4.1.73.Final.jar;C:\Users\1s0\Desktop\kafka_2.12-3.2.1\libs\netty-tcnative-classes-2.0.46.Final.jar;C:\Users\1s0\Desktop\kafka_2.12-3.2.1\libs\netty-transport-4.1.73.Final.jar;C:\Users\1s0\Desktop\kafka_2.12-3.2.1\libs\netty-transport-classes-epoll-4.1.73.Final.jar;C:\Users\1s0\Desktop\kafka_2.12-3.2.1\libs\netty-transport-native-epoll-4.1.73.Final.jar;C:\Users\1s0\Desktop\kafka_2.12-3.2.1\libs\netty-transport-native-unix-common-4.1.73.Final.jar;C:\Users\1s0\Desktop\kafka_2.12-3.2.1\libs\osgi-resource-locator-1.0.3.jar;C:\Users\1s0\Desktop\kafka_2.12-3.2.1\libs\paranamer-2.8.jar;C:\Users\1s0\Desktop\kafka_2.12-3.2.1\libs\plexus-utils-3.3.0.jar;C:\Users\1s0\Desktop\kafka_2.12-3.2.1\libs\reflections-0.9.12.jar;C:\Users\1s0\Desktop\kafka_2.12-3.2.1\libs\reload4j-1.2.19.jar;C:\Users\1s0\Desktop\kafka_2.12-3.2.1\libs\rocksdbjni-6.29.4.1.jar;C:\Users\1s0\Desktop\kafka_2.12-3.2.1\libs\scala-collection-compat_2.12-2.6.0.jar;C:\Users\1s0\Desktop\kafka_2.12-3.2.1\libs\scala-java8-compat_2.12-1.0.2.jar;C:\Users\1s0\Desktop\kafka_2.12-3.2.1\libs\scala-library-2.12.15.jar;C:\Users\1s0\Desktop\kafka_2.12-3.2.1\libs\scala-logging_2.12-3.9.4.jar;C:\Users\1s0\Desktop\kafka_2.12-3.2.1\libs\scala-reflect-2.12.15.jar;C:\Users\1s0\Desktop\kafka_2.12-3.2.1\libs\slf4j-api-1.7.36.jar;C:\Users\1s0\Desktop\kafka_2.12-3.2.1\libs\slf4j-reload4j-1.7.36.jar;C:\Users\1s0\Desktop\kafka_2.12-3.2.1\libs\snappy-java-1.1.8.4.jar;C:\Users\1s0\Desktop\kafka_2.12-3.2.1\libs\trogdor-3.2.1.jar;C:\Users\1s0\Desktop\kafka_2.12-3.2.1\libs\zookeeper-3.6.3.jar;C:\Users\1s0\Desktop\kafka_2.12-3.2.1\libs\zookeeper-jute-3.6.3.jar;C:\Users\1s0\Desktop\kafka_2.12-3.2.1\libs\zstd-jni-1.5.2-1.jar
+	os.spec = Windows 10, amd64, 10.0
+	os.vcpus = 4
+ (org.apache.kafka.connect.runtime.WorkerInfo:71)
+[2022-11-01 22:22:47,799] INFO Scanning for plugin classes. This might take a moment ... (org.apache.kafka.connect.cli.ConnectStandalone:77)
+[2022-11-01 22:22:47,853] INFO Loading plugin from: C:\Users\1s0\Desktop\kafka_2.12-3.2.1\bin (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:277)
+[2022-11-01 22:22:47,900] INFO Registered loader: PluginClassLoader{pluginLocation=file:/C:/Users/1s0/Desktop/kafka_2.12-3.2.1/bin/} (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:299)
+[2022-11-01 22:22:47,901] INFO Added plugin 'org.apache.kafka.connect.connector.policy.AllConnectorClientConfigOverridePolicy' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:230)
+[2022-11-01 22:22:47,902] INFO Added plugin 'org.apache.kafka.connect.connector.policy.PrincipalConnectorClientConfigOverridePolicy' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:230)
+[2022-11-01 22:22:47,904] INFO Added plugin 'org.apache.kafka.connect.connector.policy.NoneConnectorClientConfigOverridePolicy' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:230)
+[2022-11-01 22:22:47,915] INFO Loading plugin from: C:\Users\1s0\Desktop\kafka_2.12-3.2.1\config (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:277)
+[2022-11-01 22:22:47,920] INFO Registered loader: PluginClassLoader{pluginLocation=file:/C:/Users/1s0/Desktop/kafka_2.12-3.2.1/config/} (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:299)
+[2022-11-01 22:22:47,921] INFO Loading plugin from: C:\Users\1s0\Desktop\kafka_2.12-3.2.1\debezium (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:277)
+[2022-11-01 22:22:49,364] INFO Registered loader: PluginClassLoader{pluginLocation=file:/C:/Users/1s0/Desktop/kafka_2.12-3.2.1/debezium/} (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:299)
+[2022-11-01 22:22:49,365] INFO Added plugin 'io.debezium.connector.mysql.MySqlConnector' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:230)
+[2022-11-01 22:22:49,366] INFO Added plugin 'io.debezium.converters.ByteBufferConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:230)
+[2022-11-01 22:22:49,368] INFO Added plugin 'io.debezium.converters.CloudEventsConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:230)
+[2022-11-01 22:22:49,369] INFO Added plugin 'io.debezium.transforms.ExtractNewRecordState' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:230)
+[2022-11-01 22:22:49,369] INFO Added plugin 'io.debezium.transforms.outbox.EventRouter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:230)
+[2022-11-01 22:22:49,370] INFO Added plugin 'io.debezium.connector.mysql.transforms.ReadToInsertEvent' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:230)
+[2022-11-01 22:22:49,370] INFO Added plugin 'io.debezium.transforms.ByLogicalTableRouter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:230)
+[2022-11-01 22:22:49,371] INFO Added plugin 'io.debezium.transforms.tracing.ActivateTracingSpan' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:230)
+[2022-11-01 22:22:49,385] INFO Loading plugin from: C:\Users\1s0\Desktop\kafka_2.12-3.2.1\libs (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:277)
+[2022-11-01 22:22:49,398] WARN Plugin path contains both java archives and class files. Returning only the archives (org.apache.kafka.connect.runtime.isolation.PluginUtils:294)
+[2022-11-01 22:22:52,121] INFO Registered loader: PluginClassLoader{pluginLocation=file:/C:/Users/1s0/Desktop/kafka_2.12-3.2.1/libs/} (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:299)
+[2022-11-01 22:22:52,122] INFO Added plugin 'org.apache.kafka.connect.tools.VerifiableSinkConnector' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:230)
+[2022-11-01 22:22:52,123] INFO Added plugin 'org.apache.kafka.connect.tools.MockSinkConnector' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:230)
+[2022-11-01 22:22:52,123] INFO Added plugin 'org.apache.kafka.connect.file.FileStreamSinkConnector' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:230)
+[2022-11-01 22:22:52,127] INFO Added plugin 'org.apache.kafka.connect.tools.VerifiableSourceConnector' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:230)
+[2022-11-01 22:22:52,127] INFO Added plugin 'org.apache.kafka.connect.mirror.MirrorSourceConnector' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:230)
+[2022-11-01 22:22:52,128] INFO Added plugin 'org.apache.kafka.connect.mirror.MirrorHeartbeatConnector' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:230)
+[2022-11-01 22:22:52,128] INFO Added plugin 'org.apache.kafka.connect.tools.SchemaSourceConnector' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:230)
+[2022-11-01 22:22:52,129] INFO Added plugin 'org.apache.kafka.connect.tools.MockSourceConnector' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:230)
+[2022-11-01 22:22:52,129] INFO Added plugin 'org.apache.kafka.connect.file.FileStreamSourceConnector' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:230)
+[2022-11-01 22:22:52,129] INFO Added plugin 'org.apache.kafka.connect.mirror.MirrorCheckpointConnector' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:230)
+[2022-11-01 22:22:52,130] INFO Added plugin 'org.apache.kafka.connect.converters.FloatConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:230)
+[2022-11-01 22:22:52,131] INFO Added plugin 'org.apache.kafka.connect.converters.DoubleConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:230)
+[2022-11-01 22:22:52,131] INFO Added plugin 'org.apache.kafka.connect.converters.ByteArrayConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:230)
+[2022-11-01 22:22:52,131] INFO Added plugin 'org.apache.kafka.connect.converters.LongConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:230)
+[2022-11-01 22:22:52,132] INFO Added plugin 'org.apache.kafka.connect.converters.IntegerConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:230)
+[2022-11-01 22:22:52,133] INFO Added plugin 'org.apache.kafka.connect.json.JsonConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:230)
+[2022-11-01 22:22:52,134] INFO Added plugin 'org.apache.kafka.connect.storage.StringConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:230)
+[2022-11-01 22:22:52,134] INFO Added plugin 'org.apache.kafka.connect.converters.ShortConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:230)
+[2022-11-01 22:22:52,135] INFO Added plugin 'org.apache.kafka.connect.storage.SimpleHeaderConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:230)
+[2022-11-01 22:22:52,135] INFO Added plugin 'org.apache.kafka.connect.transforms.ReplaceField$Value' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:230)
+[2022-11-01 22:22:52,137] INFO Added plugin 'org.apache.kafka.connect.transforms.SetSchemaMetadata$Value' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:230)
+[2022-11-01 22:22:52,140] INFO Added plugin 'org.apache.kafka.connect.transforms.ReplaceField$Key' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:230)
+[2022-11-01 22:22:52,140] INFO Added plugin 'org.apache.kafka.connect.transforms.Filter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:230)
+[2022-11-01 22:22:52,140] INFO Added plugin 'org.apache.kafka.connect.transforms.InsertField$Value' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:230)
+[2022-11-01 22:22:52,141] INFO Added plugin 'org.apache.kafka.connect.transforms.HeaderFrom$Key' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:230)
+[2022-11-01 22:22:52,142] INFO Added plugin 'org.apache.kafka.connect.transforms.TimestampConverter$Key' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:230)
+[2022-11-01 22:22:52,142] INFO Added plugin 'org.apache.kafka.connect.transforms.MaskField$Value' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:230)
+[2022-11-01 22:22:52,143] INFO Added plugin 'org.apache.kafka.connect.transforms.TimestampRouter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:230)
+[2022-11-01 22:22:52,143] INFO Added plugin 'org.apache.kafka.connect.transforms.RegexRouter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:230)
+[2022-11-01 22:22:52,144] INFO Added plugin 'org.apache.kafka.connect.transforms.HoistField$Value' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:230)
+[2022-11-01 22:22:52,144] INFO Added plugin 'org.apache.kafka.connect.transforms.ValueToKey' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:230)
+[2022-11-01 22:22:52,145] INFO Added plugin 'org.apache.kafka.connect.transforms.MaskField$Key' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:230)
+[2022-11-01 22:22:52,146] INFO Added plugin 'org.apache.kafka.connect.transforms.DropHeaders' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:230)
+[2022-11-01 22:22:52,146] INFO Added plugin 'org.apache.kafka.connect.transforms.Cast$Key' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:230)
+[2022-11-01 22:22:52,147] INFO Added plugin 'org.apache.kafka.connect.transforms.Cast$Value' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:230)
+[2022-11-01 22:22:52,147] INFO Added plugin 'org.apache.kafka.connect.runtime.PredicatedTransformation' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:230)
+[2022-11-01 22:22:52,148] INFO Added plugin 'org.apache.kafka.connect.transforms.ExtractField$Key' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:230)
+[2022-11-01 22:22:52,148] INFO Added plugin 'org.apache.kafka.connect.transforms.Flatten$Value' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:230)
+[2022-11-01 22:22:52,149] INFO Added plugin 'org.apache.kafka.connect.transforms.InsertHeader' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:230)
+[2022-11-01 22:22:52,149] INFO Added plugin 'org.apache.kafka.connect.transforms.InsertField$Key' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:230)
+[2022-11-01 22:22:52,150] INFO Added plugin 'org.apache.kafka.connect.transforms.Flatten$Key' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:230)
+[2022-11-01 22:22:52,151] INFO Added plugin 'org.apache.kafka.connect.transforms.HeaderFrom$Value' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:230)
+[2022-11-01 22:22:52,153] INFO Added plugin 'org.apache.kafka.connect.transforms.SetSchemaMetadata$Key' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:230)
+[2022-11-01 22:22:52,154] INFO Added plugin 'org.apache.kafka.connect.transforms.ExtractField$Value' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:230)
+[2022-11-01 22:22:52,155] INFO Added plugin 'org.apache.kafka.connect.transforms.TimestampConverter$Value' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:230)
+[2022-11-01 22:22:52,155] INFO Added plugin 'org.apache.kafka.connect.transforms.HoistField$Key' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:230)
+[2022-11-01 22:22:52,156] INFO Added plugin 'org.apache.kafka.connect.transforms.predicates.HasHeaderKey' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:230)
+[2022-11-01 22:22:52,156] INFO Added plugin 'org.apache.kafka.connect.transforms.predicates.RecordIsTombstone' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:230)
+[2022-11-01 22:22:52,157] INFO Added plugin 'org.apache.kafka.connect.transforms.predicates.TopicNameMatches' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:230)
+[2022-11-01 22:22:52,158] INFO Added plugin 'org.apache.kafka.common.config.provider.FileConfigProvider' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:230)
+[2022-11-01 22:22:52,158] INFO Added plugin 'org.apache.kafka.common.config.provider.DirectoryConfigProvider' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:230)
+[2022-11-01 22:22:52,159] INFO Added plugin 'org.apache.kafka.connect.rest.basic.auth.extension.BasicAuthSecurityRestExtension' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:230)
+[2022-11-01 22:22:52,159] INFO Loading plugin from: C:\Users\1s0\Desktop\kafka_2.12-3.2.1\licenses (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:277)
+[2022-11-01 22:22:52,161] INFO Registered loader: PluginClassLoader{pluginLocation=file:/C:/Users/1s0/Desktop/kafka_2.12-3.2.1/licenses/} (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:299)
+[2022-11-01 22:22:52,162] INFO Loading plugin from: C:\Users\1s0\Desktop\kafka_2.12-3.2.1\logs (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:277)
+[2022-11-01 22:22:52,165] INFO Registered loader: PluginClassLoader{pluginLocation=file:/C:/Users/1s0/Desktop/kafka_2.12-3.2.1/logs/} (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:299)
+[2022-11-01 22:22:52,166] INFO Loading plugin from: C:\Users\1s0\Desktop\kafka_2.12-3.2.1\serverdata (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:277)
+[2022-11-01 22:22:52,170] INFO Registered loader: PluginClassLoader{pluginLocation=file:/C:/Users/1s0/Desktop/kafka_2.12-3.2.1/serverdata/} (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:299)
+[2022-11-01 22:22:52,172] INFO Loading plugin from: C:\Users\1s0\Desktop\kafka_2.12-3.2.1\site-docs (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:277)
+[2022-11-01 22:22:52,174] INFO Registered loader: PluginClassLoader{pluginLocation=file:/C:/Users/1s0/Desktop/kafka_2.12-3.2.1/site-docs/} (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:299)
+[2022-11-01 22:22:52,175] INFO Loading plugin from: C:\Users\1s0\Desktop\kafka_2.12-3.2.1\tmp (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:277)
+[2022-11-01 22:22:52,178] INFO Registered loader: PluginClassLoader{pluginLocation=file:/C:/Users/1s0/Desktop/kafka_2.12-3.2.1/tmp/} (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:299)
+[2022-11-01 22:22:52,179] INFO Loading plugin from: C:\Users\1s0\Desktop\kafka_2.12-3.2.1\zookeeper-data (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:277)
+[2022-11-01 22:22:52,182] INFO Registered loader: PluginClassLoader{pluginLocation=file:/C:/Users/1s0/Desktop/kafka_2.12-3.2.1/zookeeper-data/} (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:299)
+[2022-11-01 22:22:53,271] INFO Registered loader: sun.misc.Launcher$AppClassLoader@764c12b6 (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:299)
+[2022-11-01 22:22:53,275] INFO Added aliases 'MySqlConnector' and 'MySql' to plugin 'io.debezium.connector.mysql.MySqlConnector' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:476)
+[2022-11-01 22:22:53,276] INFO Added aliases 'FileStreamSinkConnector' and 'FileStreamSink' to plugin 'org.apache.kafka.connect.file.FileStreamSinkConnector' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:476)
+[2022-11-01 22:22:53,277] INFO Added aliases 'FileStreamSourceConnector' and 'FileStreamSource' to plugin 'org.apache.kafka.connect.file.FileStreamSourceConnector' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:476)
+[2022-11-01 22:22:53,278] INFO Added aliases 'MirrorCheckpointConnector' and 'MirrorCheckpoint' to plugin 'org.apache.kafka.connect.mirror.MirrorCheckpointConnector' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:476)
+[2022-11-01 22:22:53,279] INFO Added aliases 'MirrorHeartbeatConnector' and 'MirrorHeartbeat' to plugin 'org.apache.kafka.connect.mirror.MirrorHeartbeatConnector' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:476)
+[2022-11-01 22:22:53,280] INFO Added aliases 'MirrorSourceConnector' and 'MirrorSource' to plugin 'org.apache.kafka.connect.mirror.MirrorSourceConnector' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:476)
+[2022-11-01 22:22:53,280] INFO Added aliases 'MockSinkConnector' and 'MockSink' to plugin 'org.apache.kafka.connect.tools.MockSinkConnector' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:476)
+[2022-11-01 22:22:53,281] INFO Added aliases 'MockSourceConnector' and 'MockSource' to plugin 'org.apache.kafka.connect.tools.MockSourceConnector' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:476)
+[2022-11-01 22:22:53,293] INFO Added aliases 'SchemaSourceConnector' and 'SchemaSource' to plugin 'org.apache.kafka.connect.tools.SchemaSourceConnector' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:476)
+[2022-11-01 22:22:53,294] INFO Added aliases 'VerifiableSinkConnector' and 'VerifiableSink' to plugin 'org.apache.kafka.connect.tools.VerifiableSinkConnector' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:476)
+[2022-11-01 22:22:53,295] INFO Added aliases 'VerifiableSourceConnector' and 'VerifiableSource' to plugin 'org.apache.kafka.connect.tools.VerifiableSourceConnector' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:476)
+[2022-11-01 22:22:53,295] INFO Added aliases 'ByteBufferConverter' and 'ByteBuffer' to plugin 'io.debezium.converters.ByteBufferConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:476)
+[2022-11-01 22:22:53,296] INFO Added aliases 'CloudEventsConverter' and 'CloudEvents' to plugin 'io.debezium.converters.CloudEventsConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:476)
+[2022-11-01 22:22:53,298] INFO Added aliases 'ByteArrayConverter' and 'ByteArray' to plugin 'org.apache.kafka.connect.converters.ByteArrayConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:476)
+[2022-11-01 22:22:53,299] INFO Added aliases 'DoubleConverter' and 'Double' to plugin 'org.apache.kafka.connect.converters.DoubleConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:476)
+[2022-11-01 22:22:53,299] INFO Added aliases 'FloatConverter' and 'Float' to plugin 'org.apache.kafka.connect.converters.FloatConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:476)
+[2022-11-01 22:22:53,300] INFO Added aliases 'IntegerConverter' and 'Integer' to plugin 'org.apache.kafka.connect.converters.IntegerConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:476)
+[2022-11-01 22:22:53,301] INFO Added aliases 'LongConverter' and 'Long' to plugin 'org.apache.kafka.connect.converters.LongConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:476)
+[2022-11-01 22:22:53,301] INFO Added aliases 'ShortConverter' and 'Short' to plugin 'org.apache.kafka.connect.converters.ShortConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:476)
+[2022-11-01 22:22:53,302] INFO Added aliases 'JsonConverter' and 'Json' to plugin 'org.apache.kafka.connect.json.JsonConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:476)
+[2022-11-01 22:22:53,304] INFO Added aliases 'StringConverter' and 'String' to plugin 'org.apache.kafka.connect.storage.StringConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:476)
+[2022-11-01 22:22:53,306] INFO Added aliases 'ByteBufferConverter' and 'ByteBuffer' to plugin 'io.debezium.converters.ByteBufferConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:476)
+[2022-11-01 22:22:53,306] INFO Added aliases 'ByteArrayConverter' and 'ByteArray' to plugin 'org.apache.kafka.connect.converters.ByteArrayConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:476)
+[2022-11-01 22:22:53,306] INFO Added aliases 'DoubleConverter' and 'Double' to plugin 'org.apache.kafka.connect.converters.DoubleConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:476)
+[2022-11-01 22:22:53,307] INFO Added aliases 'FloatConverter' and 'Float' to plugin 'org.apache.kafka.connect.converters.FloatConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:476)
+[2022-11-01 22:22:53,307] INFO Added aliases 'IntegerConverter' and 'Integer' to plugin 'org.apache.kafka.connect.converters.IntegerConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:476)
+[2022-11-01 22:22:53,308] INFO Added aliases 'LongConverter' and 'Long' to plugin 'org.apache.kafka.connect.converters.LongConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:476)
+[2022-11-01 22:22:53,309] INFO Added aliases 'ShortConverter' and 'Short' to plugin 'org.apache.kafka.connect.converters.ShortConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:476)
+[2022-11-01 22:22:53,309] INFO Added aliases 'JsonConverter' and 'Json' to plugin 'org.apache.kafka.connect.json.JsonConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:476)
+[2022-11-01 22:22:53,310] INFO Added aliases 'SimpleHeaderConverter' and 'Simple' to plugin 'org.apache.kafka.connect.storage.SimpleHeaderConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:476)
+[2022-11-01 22:22:53,311] INFO Added aliases 'StringConverter' and 'String' to plugin 'org.apache.kafka.connect.storage.StringConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:476)
+[2022-11-01 22:22:53,311] INFO Added alias 'ReadToInsertEvent' to plugin 'io.debezium.connector.mysql.transforms.ReadToInsertEvent' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:473)
+[2022-11-01 22:22:53,312] INFO Added alias 'ByLogicalTableRouter' to plugin 'io.debezium.transforms.ByLogicalTableRouter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:473)
+[2022-11-01 22:22:53,312] INFO Added alias 'ExtractNewRecordState' to plugin 'io.debezium.transforms.ExtractNewRecordState' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:473)
+[2022-11-01 22:22:53,313] INFO Added alias 'EventRouter' to plugin 'io.debezium.transforms.outbox.EventRouter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:473)
+[2022-11-01 22:22:53,313] INFO Added alias 'ActivateTracingSpan' to plugin 'io.debezium.transforms.tracing.ActivateTracingSpan' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:473)
+[2022-11-01 22:22:53,314] INFO Added aliases 'PredicatedTransformation' and 'Predicated' to plugin 'org.apache.kafka.connect.runtime.PredicatedTransformation' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:476)
+[2022-11-01 22:22:53,315] INFO Added alias 'DropHeaders' to plugin 'org.apache.kafka.connect.transforms.DropHeaders' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:473)
+[2022-11-01 22:22:53,315] INFO Added alias 'Filter' to plugin 'org.apache.kafka.connect.transforms.Filter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:473)
+[2022-11-01 22:22:53,316] INFO Added alias 'InsertHeader' to plugin 'org.apache.kafka.connect.transforms.InsertHeader' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:473)
+[2022-11-01 22:22:53,317] INFO Added alias 'RegexRouter' to plugin 'org.apache.kafka.connect.transforms.RegexRouter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:473)
+[2022-11-01 22:22:53,321] INFO Added alias 'TimestampRouter' to plugin 'org.apache.kafka.connect.transforms.TimestampRouter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:473)
+[2022-11-01 22:22:53,322] INFO Added alias 'ValueToKey' to plugin 'org.apache.kafka.connect.transforms.ValueToKey' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:473)
+[2022-11-01 22:22:53,323] INFO Added alias 'HasHeaderKey' to plugin 'org.apache.kafka.connect.transforms.predicates.HasHeaderKey' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:473)
+[2022-11-01 22:22:53,323] INFO Added alias 'RecordIsTombstone' to plugin 'org.apache.kafka.connect.transforms.predicates.RecordIsTombstone' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:473)
+[2022-11-01 22:22:53,324] INFO Added alias 'TopicNameMatches' to plugin 'org.apache.kafka.connect.transforms.predicates.TopicNameMatches' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:473)
+[2022-11-01 22:22:53,325] INFO Added alias 'BasicAuthSecurityRestExtension' to plugin 'org.apache.kafka.connect.rest.basic.auth.extension.BasicAuthSecurityRestExtension' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:473)
+[2022-11-01 22:22:53,326] INFO Added aliases 'AllConnectorClientConfigOverridePolicy' and 'All' to plugin 'org.apache.kafka.connect.connector.policy.AllConnectorClientConfigOverridePolicy' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:476)
+[2022-11-01 22:22:53,327] INFO Added aliases 'NoneConnectorClientConfigOverridePolicy' and 'None' to plugin 'org.apache.kafka.connect.connector.policy.NoneConnectorClientConfigOverridePolicy' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:476)
+[2022-11-01 22:22:53,328] INFO Added aliases 'PrincipalConnectorClientConfigOverridePolicy' and 'Principal' to plugin 'org.apache.kafka.connect.connector.policy.PrincipalConnectorClientConfigOverridePolicy' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:476)
+[2022-11-01 22:22:53,350] INFO StandaloneConfig values: 
+	access.control.allow.methods = 
+	access.control.allow.origin = 
+	admin.listeners = null
+	bootstrap.servers = [localhost:9094]
+	client.dns.lookup = use_all_dns_ips
+	config.providers = []
+	connector.client.config.override.policy = All
+	header.converter = class org.apache.kafka.connect.storage.SimpleHeaderConverter
+	key.converter = class org.apache.kafka.connect.json.JsonConverter
+	listeners = [http://:8083]
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	offset.flush.interval.ms = 10000
+	offset.flush.timeout.ms = 5000
+	offset.storage.file.filename = mpconnect.offsets
+	plugin.path = []
+	response.http.headers.config = 
+	rest.advertised.host.name = null
+	rest.advertised.listener = null
+	rest.advertised.port = null
+	rest.extension.classes = []
+	ssl.cipher.suites = null
+	ssl.client.auth = none
+	ssl.enabled.protocols = [TLSv1.2]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.2
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	task.shutdown.graceful.timeout.ms = 5000
+	topic.creation.enable = true
+	topic.tracking.allow.reset = true
+	topic.tracking.enable = true
+	value.converter = class org.apache.kafka.connect.json.JsonConverter
+ (org.apache.kafka.connect.runtime.standalone.StandaloneConfig:376)
+[2022-11-01 22:22:53,351] WARN The worker has been configured with one or more internal converter properties ([internal.key.converter, schemas.enable, internal.value.converter, schemas.enable]). Support for these properties was deprecated in version 2.0 and removed in version 3.0, and specifying them will have no effect. Instead, an instance of the JsonConverter with schemas.enable set to false will be used. For more information, please visit http://kafka.apache.org/documentation/#upgrade and consult the upgrade notesfor the 3.0 release. (org.apache.kafka.connect.runtime.WorkerConfig:316)
+[2022-11-01 22:22:53,355] INFO Creating Kafka admin client (org.apache.kafka.connect.util.ConnectUtils:51)
+[2022-11-01 22:22:53,359] INFO AdminClientConfig values: 
+	bootstrap.servers = [localhost:9094]
+	client.dns.lookup = use_all_dns_ips
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.2
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+ (org.apache.kafka.clients.admin.AdminClientConfig:376)
+[2022-11-01 22:22:53,453] WARN The configuration 'plugin.path' was supplied but isn't a known config. (org.apache.kafka.clients.admin.AdminClientConfig:384)
+[2022-11-01 22:22:53,453] WARN The configuration 'internal.key.converter.schemas.enable' was supplied but isn't a known config. (org.apache.kafka.clients.admin.AdminClientConfig:384)
+[2022-11-01 22:22:53,454] WARN The configuration 'offset.flush.interval.ms' was supplied but isn't a known config. (org.apache.kafka.clients.admin.AdminClientConfig:384)
+[2022-11-01 22:22:53,457] WARN The configuration 'key.converter.schemas.enable' was supplied but isn't a known config. (org.apache.kafka.clients.admin.AdminClientConfig:384)
+[2022-11-01 22:22:53,458] WARN The configuration 'internal.key.converter' was supplied but isn't a known config. (org.apache.kafka.clients.admin.AdminClientConfig:384)
+[2022-11-01 22:22:53,458] WARN The configuration 'file' was supplied but isn't a known config. (org.apache.kafka.clients.admin.AdminClientConfig:384)
+[2022-11-01 22:22:53,459] WARN The configuration 'offset.storage.file.filename' was supplied but isn't a known config. (org.apache.kafka.clients.admin.AdminClientConfig:384)
+[2022-11-01 22:22:53,459] WARN The configuration 'internal.value.converter.schemas.enable' was supplied but isn't a known config. (org.apache.kafka.clients.admin.AdminClientConfig:384)
+[2022-11-01 22:22:53,460] WARN The configuration 'value.converter.schemas.enable' was supplied but isn't a known config. (org.apache.kafka.clients.admin.AdminClientConfig:384)
+[2022-11-01 22:22:53,460] WARN The configuration 'internal.value.converter' was supplied but isn't a known config. (org.apache.kafka.clients.admin.AdminClientConfig:384)
+[2022-11-01 22:22:53,461] WARN The configuration 'value.converter' was supplied but isn't a known config. (org.apache.kafka.clients.admin.AdminClientConfig:384)
+[2022-11-01 22:22:53,462] WARN The configuration 'key.converter' was supplied but isn't a known config. (org.apache.kafka.clients.admin.AdminClientConfig:384)
+[2022-11-01 22:22:53,463] INFO Kafka version: 3.2.1 (org.apache.kafka.common.utils.AppInfoParser:119)
+[2022-11-01 22:22:53,463] INFO Kafka commitId: b172a0a94f4ebb9f (org.apache.kafka.common.utils.AppInfoParser:120)
+[2022-11-01 22:22:53,464] INFO Kafka startTimeMs: 1667337773462 (org.apache.kafka.common.utils.AppInfoParser:121)
+[2022-11-01 22:22:53,987] INFO Kafka cluster ID: psUDAMC6SMCJ-rdwTmR1ug (org.apache.kafka.connect.util.ConnectUtils:67)
+[2022-11-01 22:22:53,990] INFO App info kafka.admin.client for adminclient-1 unregistered (org.apache.kafka.common.utils.AppInfoParser:83)
+[2022-11-01 22:22:54,143] INFO Metrics scheduler closed (org.apache.kafka.common.metrics.Metrics:659)
+[2022-11-01 22:22:54,144] INFO Closing reporter org.apache.kafka.common.metrics.JmxReporter (org.apache.kafka.common.metrics.Metrics:663)
+[2022-11-01 22:22:54,148] INFO Metrics reporters closed (org.apache.kafka.common.metrics.Metrics:669)
+[2022-11-01 22:22:54,169] INFO Logging initialized @7032ms to org.eclipse.jetty.util.log.Slf4jLog (org.eclipse.jetty.util.log:170)
+[2022-11-01 22:22:54,293] INFO Added connector for http://:8083 (org.apache.kafka.connect.runtime.rest.RestServer:117)
+[2022-11-01 22:22:54,294] INFO Initializing REST server (org.apache.kafka.connect.runtime.rest.RestServer:188)
+[2022-11-01 22:22:54,308] INFO jetty-9.4.44.v20210927; built: 2021-09-27T23:02:44.612Z; git: 8da83308eeca865e495e53ef315a249d63ba9332; jvm 1.8.0_333-b02 (org.eclipse.jetty.server.Server:375)
+[2022-11-01 22:22:54,341] INFO Started http_8083@4defd42{HTTP/1.1, (http/1.1)}{0.0.0.0:8083} (org.eclipse.jetty.server.AbstractConnector:331)
+[2022-11-01 22:22:54,343] INFO Started @7206ms (org.eclipse.jetty.server.Server:415)
+[2022-11-01 22:22:54,363] INFO Advertised URI: http://192.168.1.26:8083/ (org.apache.kafka.connect.runtime.rest.RestServer:355)
+[2022-11-01 22:22:54,364] INFO REST server listening at http://192.168.1.26:8083/, advertising URL http://192.168.1.26:8083/ (org.apache.kafka.connect.runtime.rest.RestServer:203)
+[2022-11-01 22:22:54,365] INFO Advertised URI: http://192.168.1.26:8083/ (org.apache.kafka.connect.runtime.rest.RestServer:355)
+[2022-11-01 22:22:54,366] INFO REST admin endpoints at http://192.168.1.26:8083/ (org.apache.kafka.connect.runtime.rest.RestServer:204)
+[2022-11-01 22:22:54,367] INFO Advertised URI: http://192.168.1.26:8083/ (org.apache.kafka.connect.runtime.rest.RestServer:355)
+[2022-11-01 22:22:54,368] INFO Setting up All Policy for ConnectorClientConfigOverride. This will allow all client configurations to be overridden (org.apache.kafka.connect.connector.policy.AllConnectorClientConfigOverridePolicy:44)
+[2022-11-01 22:22:54,376] INFO Creating Kafka admin client (org.apache.kafka.connect.util.ConnectUtils:51)
+[2022-11-01 22:22:54,377] INFO AdminClientConfig values: 
+	bootstrap.servers = [localhost:9094]
+	client.dns.lookup = use_all_dns_ips
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.2
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+ (org.apache.kafka.clients.admin.AdminClientConfig:376)
+[2022-11-01 22:22:54,385] WARN The configuration 'plugin.path' was supplied but isn't a known config. (org.apache.kafka.clients.admin.AdminClientConfig:384)
+[2022-11-01 22:22:54,385] WARN The configuration 'internal.key.converter.schemas.enable' was supplied but isn't a known config. (org.apache.kafka.clients.admin.AdminClientConfig:384)
+[2022-11-01 22:22:54,386] WARN The configuration 'offset.flush.interval.ms' was supplied but isn't a known config. (org.apache.kafka.clients.admin.AdminClientConfig:384)
+[2022-11-01 22:22:54,386] WARN The configuration 'key.converter.schemas.enable' was supplied but isn't a known config. (org.apache.kafka.clients.admin.AdminClientConfig:384)
+[2022-11-01 22:22:54,387] WARN The configuration 'internal.key.converter' was supplied but isn't a known config. (org.apache.kafka.clients.admin.AdminClientConfig:384)
+[2022-11-01 22:22:54,388] WARN The configuration 'file' was supplied but isn't a known config. (org.apache.kafka.clients.admin.AdminClientConfig:384)
+[2022-11-01 22:22:54,389] WARN The configuration 'offset.storage.file.filename' was supplied but isn't a known config. (org.apache.kafka.clients.admin.AdminClientConfig:384)
+[2022-11-01 22:22:54,390] WARN The configuration 'internal.value.converter.schemas.enable' was supplied but isn't a known config. (org.apache.kafka.clients.admin.AdminClientConfig:384)
+[2022-11-01 22:22:54,393] WARN The configuration 'value.converter.schemas.enable' was supplied but isn't a known config. (org.apache.kafka.clients.admin.AdminClientConfig:384)
+[2022-11-01 22:22:54,394] WARN The configuration 'internal.value.converter' was supplied but isn't a known config. (org.apache.kafka.clients.admin.AdminClientConfig:384)
+[2022-11-01 22:22:54,395] WARN The configuration 'value.converter' was supplied but isn't a known config. (org.apache.kafka.clients.admin.AdminClientConfig:384)
+[2022-11-01 22:22:54,396] WARN The configuration 'key.converter' was supplied but isn't a known config. (org.apache.kafka.clients.admin.AdminClientConfig:384)
+[2022-11-01 22:22:54,397] INFO Kafka version: 3.2.1 (org.apache.kafka.common.utils.AppInfoParser:119)
+[2022-11-01 22:22:54,397] INFO Kafka commitId: b172a0a94f4ebb9f (org.apache.kafka.common.utils.AppInfoParser:120)
+[2022-11-01 22:22:54,398] INFO Kafka startTimeMs: 1667337774397 (org.apache.kafka.common.utils.AppInfoParser:121)
+[2022-11-01 22:22:54,414] INFO Kafka cluster ID: psUDAMC6SMCJ-rdwTmR1ug (org.apache.kafka.connect.util.ConnectUtils:67)
+[2022-11-01 22:22:54,416] INFO App info kafka.admin.client for adminclient-2 unregistered (org.apache.kafka.common.utils.AppInfoParser:83)
+[2022-11-01 22:22:54,424] INFO Metrics scheduler closed (org.apache.kafka.common.metrics.Metrics:659)
+[2022-11-01 22:22:54,425] INFO Closing reporter org.apache.kafka.common.metrics.JmxReporter (org.apache.kafka.common.metrics.Metrics:663)
+[2022-11-01 22:22:54,426] INFO Metrics reporters closed (org.apache.kafka.common.metrics.Metrics:669)
+[2022-11-01 22:22:54,432] INFO Kafka version: 3.2.1 (org.apache.kafka.common.utils.AppInfoParser:119)
+[2022-11-01 22:22:54,432] INFO Kafka commitId: b172a0a94f4ebb9f (org.apache.kafka.common.utils.AppInfoParser:120)
+[2022-11-01 22:22:54,433] INFO Kafka startTimeMs: 1667337774432 (org.apache.kafka.common.utils.AppInfoParser:121)
+[2022-11-01 22:22:54,554] INFO JsonConverterConfig values: 
+	converter.type = key
+	decimal.format = BASE64
+	schemas.cache.size = 1000
+	schemas.enable = false
+ (org.apache.kafka.connect.json.JsonConverterConfig:376)
+[2022-11-01 22:22:54,555] INFO JsonConverterConfig values: 
+	converter.type = value
+	decimal.format = BASE64
+	schemas.cache.size = 1000
+	schemas.enable = false
+ (org.apache.kafka.connect.json.JsonConverterConfig:376)
+[2022-11-01 22:22:54,563] INFO Kafka Connect standalone worker initialization took 6776ms (org.apache.kafka.connect.cli.ConnectStandalone:99)
+[2022-11-01 22:22:54,564] INFO Kafka Connect starting (org.apache.kafka.connect.runtime.Connect:51)
+[2022-11-01 22:22:54,565] INFO Herder starting (org.apache.kafka.connect.runtime.standalone.StandaloneHerder:98)
+[2022-11-01 22:22:54,565] INFO Worker starting (org.apache.kafka.connect.runtime.Worker:184)
+[2022-11-01 22:22:54,566] INFO Starting FileOffsetBackingStore with file mpconnect.offsets (org.apache.kafka.connect.storage.FileOffsetBackingStore:58)
+[2022-11-01 22:22:54,684] INFO Worker started (org.apache.kafka.connect.runtime.Worker:191)
+[2022-11-01 22:22:54,685] INFO Herder started (org.apache.kafka.connect.runtime.standalone.StandaloneHerder:101)
+[2022-11-01 22:22:54,686] INFO Initializing REST resources (org.apache.kafka.connect.runtime.rest.RestServer:208)
+[2022-11-01 22:22:54,750] INFO Adding admin resources to main listener (org.apache.kafka.connect.runtime.rest.RestServer:225)
+[2022-11-01 22:22:54,831] INFO DefaultSessionIdManager workerName=node0 (org.eclipse.jetty.server.session:334)
+[2022-11-01 22:22:54,832] INFO No SessionScavenger set, using defaults (org.eclipse.jetty.server.session:339)
+[2022-11-01 22:22:54,834] INFO node0 Scavenging every 600000ms (org.eclipse.jetty.server.session:132)
+[2022-11-01 22:22:55,323] INFO Started o.e.j.s.ServletContextHandler@4437ac07{/,null,AVAILABLE} (org.eclipse.jetty.server.handler.ContextHandler:915)
+[2022-11-01 22:22:55,323] INFO REST resources initialized; server is started and ready to handle requests (org.apache.kafka.connect.runtime.rest.RestServer:303)
+[2022-11-01 22:22:55,323] INFO Kafka Connect started (org.apache.kafka.connect.runtime.Connect:57)
+[2022-11-01 22:22:56,326] INFO Successfully tested connection for jdbc:mysql://localhost:3306/?useInformationSchema=true&nullCatalogMeansCurrent=false&useSSL=false&useUnicode=true&characterEncoding=UTF-8&characterSetResults=UTF-8&zeroDateTimeBehavior=CONVERT_TO_NULL&connectTimeout=30000 with user 'dbz' (io.debezium.connector.mysql.MySqlConnector:100)
+[2022-11-01 22:22:56,353] INFO Connection gracefully closed (io.debezium.jdbc.JdbcConnection:965)
+[2022-11-01 22:22:56,362] INFO AbstractConfig values: 
+ (org.apache.kafka.common.config.AbstractConfig:376)
+[2022-11-01 22:22:56,384] INFO [CMS-c2|worker] Creating connector CMS-c2 of type io.debezium.connector.mysql.MySqlConnector (org.apache.kafka.connect.runtime.Worker:264)
+[2022-11-01 22:22:56,385] INFO [CMS-c2|worker] SourceConnectorConfig values: 
+	config.action.reload = restart
+	connector.class = io.debezium.connector.mysql.MySqlConnector
+	errors.log.enable = false
+	errors.log.include.messages = false
+	errors.retry.delay.max.ms = 60000
+	errors.retry.timeout = 0
+	errors.tolerance = none
+	header.converter = null
+	key.converter = null
+	name = CMS-c2
+	predicates = []
+	tasks.max = 1
+	topic.creation.groups = []
+	transforms = []
+	value.converter = null
+ (org.apache.kafka.connect.runtime.SourceConnectorConfig:376)
+[2022-11-01 22:22:56,387] INFO [CMS-c2|worker] EnrichedConnectorConfig values: 
+	config.action.reload = restart
+	connector.class = io.debezium.connector.mysql.MySqlConnector
+	errors.log.enable = false
+	errors.log.include.messages = false
+	errors.retry.delay.max.ms = 60000
+	errors.retry.timeout = 0
+	errors.tolerance = none
+	header.converter = null
+	key.converter = null
+	name = CMS-c2
+	predicates = []
+	tasks.max = 1
+	topic.creation.groups = []
+	transforms = []
+	value.converter = null
+ (org.apache.kafka.connect.runtime.ConnectorConfig$EnrichedConnectorConfig:376)
+[2022-11-01 22:22:56,410] INFO [CMS-c2|worker] Instantiated connector CMS-c2 with version 1.8.0.Final of type class io.debezium.connector.mysql.MySqlConnector (org.apache.kafka.connect.runtime.Worker:274)
+[2022-11-01 22:22:56,410] INFO [CMS-c2|worker] Finished creating connector CMS-c2 (org.apache.kafka.connect.runtime.Worker:299)
+[2022-11-01 22:22:56,413] INFO SourceConnectorConfig values: 
+	config.action.reload = restart
+	connector.class = io.debezium.connector.mysql.MySqlConnector
+	errors.log.enable = false
+	errors.log.include.messages = false
+	errors.retry.delay.max.ms = 60000
+	errors.retry.timeout = 0
+	errors.tolerance = none
+	header.converter = null
+	key.converter = null
+	name = CMS-c2
+	predicates = []
+	tasks.max = 1
+	topic.creation.groups = []
+	transforms = []
+	value.converter = null
+ (org.apache.kafka.connect.runtime.SourceConnectorConfig:376)
+[2022-11-01 22:22:56,413] INFO EnrichedConnectorConfig values: 
+	config.action.reload = restart
+	connector.class = io.debezium.connector.mysql.MySqlConnector
+	errors.log.enable = false
+	errors.log.include.messages = false
+	errors.retry.delay.max.ms = 60000
+	errors.retry.timeout = 0
+	errors.tolerance = none
+	header.converter = null
+	key.converter = null
+	name = CMS-c2
+	predicates = []
+	tasks.max = 1
+	topic.creation.groups = []
+	transforms = []
+	value.converter = null
+ (org.apache.kafka.connect.runtime.ConnectorConfig$EnrichedConnectorConfig:376)
+[2022-11-01 22:22:56,416] INFO [CMS-c2|task-0] Creating task CMS-c2-0 (org.apache.kafka.connect.runtime.Worker:498)
+[2022-11-01 22:22:56,419] INFO [CMS-c2|task-0] ConnectorConfig values: 
+	config.action.reload = restart
+	connector.class = io.debezium.connector.mysql.MySqlConnector
+	errors.log.enable = false
+	errors.log.include.messages = false
+	errors.retry.delay.max.ms = 60000
+	errors.retry.timeout = 0
+	errors.tolerance = none
+	header.converter = null
+	key.converter = null
+	name = CMS-c2
+	predicates = []
+	tasks.max = 1
+	transforms = []
+	value.converter = null
+ (org.apache.kafka.connect.runtime.ConnectorConfig:376)
+[2022-11-01 22:22:56,420] INFO [CMS-c2|task-0] EnrichedConnectorConfig values: 
+	config.action.reload = restart
+	connector.class = io.debezium.connector.mysql.MySqlConnector
+	errors.log.enable = false
+	errors.log.include.messages = false
+	errors.retry.delay.max.ms = 60000
+	errors.retry.timeout = 0
+	errors.tolerance = none
+	header.converter = null
+	key.converter = null
+	name = CMS-c2
+	predicates = []
+	tasks.max = 1
+	transforms = []
+	value.converter = null
+ (org.apache.kafka.connect.runtime.ConnectorConfig$EnrichedConnectorConfig:376)
+[2022-11-01 22:22:56,423] INFO [CMS-c2|task-0] TaskConfig values: 
+	task.class = class io.debezium.connector.mysql.MySqlConnectorTask
+ (org.apache.kafka.connect.runtime.TaskConfig:376)
+[2022-11-01 22:22:56,430] INFO [CMS-c2|task-0] Instantiated task CMS-c2-0 with version 1.8.0.Final of type io.debezium.connector.mysql.MySqlConnectorTask (org.apache.kafka.connect.runtime.Worker:513)
+[2022-11-01 22:22:56,431] INFO [CMS-c2|task-0] JsonConverterConfig values: 
+	converter.type = key
+	decimal.format = BASE64
+	schemas.cache.size = 1000
+	schemas.enable = true
+ (org.apache.kafka.connect.json.JsonConverterConfig:376)
+[2022-11-01 22:22:56,431] INFO [CMS-c2|task-0] Set up the key converter class org.apache.kafka.connect.json.JsonConverter for task CMS-c2-0 using the worker config (org.apache.kafka.connect.runtime.Worker:526)
+[2022-11-01 22:22:56,432] INFO [CMS-c2|task-0] JsonConverterConfig values: 
+	converter.type = value
+	decimal.format = BASE64
+	schemas.cache.size = 1000
+	schemas.enable = false
+ (org.apache.kafka.connect.json.JsonConverterConfig:376)
+[2022-11-01 22:22:56,434] INFO [CMS-c2|task-0] Set up the value converter class org.apache.kafka.connect.json.JsonConverter for task CMS-c2-0 using the worker config (org.apache.kafka.connect.runtime.Worker:532)
+[2022-11-01 22:22:56,435] INFO [CMS-c2|task-0] Set up the header converter class org.apache.kafka.connect.storage.SimpleHeaderConverter for task CMS-c2-0 using the worker config (org.apache.kafka.connect.runtime.Worker:539)
+[2022-11-01 22:22:56,440] INFO [CMS-c2|task-0] SourceConnectorConfig values: 
+	config.action.reload = restart
+	connector.class = io.debezium.connector.mysql.MySqlConnector
+	errors.log.enable = false
+	errors.log.include.messages = false
+	errors.retry.delay.max.ms = 60000
+	errors.retry.timeout = 0
+	errors.tolerance = none
+	header.converter = null
+	key.converter = null
+	name = CMS-c2
+	predicates = []
+	tasks.max = 1
+	topic.creation.groups = []
+	transforms = []
+	value.converter = null
+ (org.apache.kafka.connect.runtime.SourceConnectorConfig:376)
+[2022-11-01 22:22:56,440] INFO [CMS-c2|task-0] EnrichedConnectorConfig values: 
+	config.action.reload = restart
+	connector.class = io.debezium.connector.mysql.MySqlConnector
+	errors.log.enable = false
+	errors.log.include.messages = false
+	errors.retry.delay.max.ms = 60000
+	errors.retry.timeout = 0
+	errors.tolerance = none
+	header.converter = null
+	key.converter = null
+	name = CMS-c2
+	predicates = []
+	tasks.max = 1
+	topic.creation.groups = []
+	transforms = []
+	value.converter = null
+ (org.apache.kafka.connect.runtime.ConnectorConfig$EnrichedConnectorConfig:376)
+[2022-11-01 22:22:56,442] INFO [CMS-c2|task-0] Initializing: org.apache.kafka.connect.runtime.TransformationChain{} (org.apache.kafka.connect.runtime.Worker:593)
+[2022-11-01 22:22:56,446] INFO [CMS-c2|task-0] ProducerConfig values: 
+	acks = -1
+	batch.size = 16384
+	bootstrap.servers = [localhost:9094]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = connector-producer-CMS-c2-0
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 2147483647
+	enable.idempotence = false
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.ByteArraySerializer
+	linger.ms = 0
+	max.block.ms = 9223372036854775807
+	max.in.flight.requests.per.connection = 1
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.class = class org.apache.kafka.clients.producer.internals.DefaultPartitioner
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.2
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.ByteArraySerializer
+ (org.apache.kafka.clients.producer.ProducerConfig:376)
+[2022-11-01 22:22:56,477] WARN [CMS-c2|task-0] The configuration 'metrics.context.connect.kafka.cluster.id' was supplied but isn't a known config. (org.apache.kafka.clients.producer.ProducerConfig:384)
+[2022-11-01 22:22:56,478] INFO [CMS-c2|task-0] Kafka version: 3.2.1 (org.apache.kafka.common.utils.AppInfoParser:119)
+[2022-11-01 22:22:56,479] INFO [CMS-c2|task-0] Kafka commitId: b172a0a94f4ebb9f (org.apache.kafka.common.utils.AppInfoParser:120)
+[2022-11-01 22:22:56,480] INFO [CMS-c2|task-0] Kafka startTimeMs: 1667337776478 (org.apache.kafka.common.utils.AppInfoParser:121)
+[2022-11-01 22:22:56,499] INFO [CMS-c2|task-0] [Producer clientId=connector-producer-CMS-c2-0] Cluster ID: psUDAMC6SMCJ-rdwTmR1ug (org.apache.kafka.clients.Metadata:287)
+[2022-11-01 22:22:56,505] INFO Created connector CMS-c2 (org.apache.kafka.connect.cli.ConnectStandalone:109)
+[2022-11-01 22:22:56,507] INFO [CMS-c2|task-0] Starting MySqlConnectorTask with configuration: (io.debezium.connector.common.BaseSourceTask:124)
+[2022-11-01 22:22:56,509] INFO [CMS-c2|task-0]    connector.class = io.debezium.connector.mysql.MySqlConnector (io.debezium.connector.common.BaseSourceTask:126)
+[2022-11-01 22:22:56,510] INFO [CMS-c2|task-0]    database.user = dbz (io.debezium.connector.common.BaseSourceTask:126)
+[2022-11-01 22:22:56,511] INFO [CMS-c2|task-0]    task.class = io.debezium.connector.mysql.MySqlConnectorTask (io.debezium.connector.common.BaseSourceTask:126)
+[2022-11-01 22:22:56,513] INFO [CMS-c2|task-0]    database.server.id = 111113 (io.debezium.connector.common.BaseSourceTask:126)
+[2022-11-01 22:22:56,513] INFO [CMS-c2|task-0]    tasks.max = 1 (io.debezium.connector.common.BaseSourceTask:126)
+[2022-11-01 22:22:56,514] INFO [CMS-c2|task-0]    database.hostname = localhost (io.debezium.connector.common.BaseSourceTask:126)
+[2022-11-01 22:22:56,515] INFO [CMS-c2|task-0]    database.history.kafka.bootstrap.servers = localhost:9094 (io.debezium.connector.common.BaseSourceTask:126)
+[2022-11-01 22:22:56,515] INFO [CMS-c2|task-0]    database.history.kafka.topic = schema-changes.inventory (io.debezium.connector.common.BaseSourceTask:126)
+[2022-11-01 22:22:56,516] INFO [CMS-c2|task-0]    database.password = ******** (io.debezium.connector.common.BaseSourceTask:126)
+[2022-11-01 22:22:56,517] INFO [CMS-c2|task-0]    name = CMS-c2 (io.debezium.connector.common.BaseSourceTask:126)
+[2022-11-01 22:22:56,518] INFO [CMS-c2|task-0]    database.server.name = testdb (io.debezium.connector.common.BaseSourceTask:126)
+[2022-11-01 22:22:56,518] INFO [CMS-c2|task-0]    database.port = 3306 (io.debezium.connector.common.BaseSourceTask:126)
+[2022-11-01 22:22:56,955] INFO [CMS-c2|task-0] Found previous partition offset io.debezium.connector.mysql.MySqlPartition@cbb77490: MySqlOffsetContext [sourceInfoSchema=Schema{io.debezium.connector.mysql.Source:STRUCT}, sourceInfo=SourceInfo [currentGtid=null, currentBinlogFilename=mysql-bin.000023, currentBinlogPosition=235, currentRowNumber=0, serverId=0, sourceTime=null, threadId=-1, currentQuery=null, tableIds=[], databaseName=null], snapshotCompleted=false, transactionContext=TransactionContext [currentTransactionId=null, perTableEventCount={}, totalEventCount=0], restartGtidSet=null, currentGtidSet=null, restartBinlogFilename=mysql-bin.000023, restartBinlogPosition=235, restartRowsToSkip=1, restartEventsToSkip=2, currentEventLengthInBytes=0, inTransaction=false, transactionId=null, incrementalSnapshotContext =IncrementalSnapshotContext [windowOpened=false, chunkEndPosition=null, dataCollectionsToSnapshot=[], lastEventKeySent=null, maximumKey=null]] (io.debezium.connector.common.BaseSourceTask:313)
+[2022-11-01 22:22:56,999] INFO [CMS-c2|task-0] KafkaDatabaseHistory Consumer config: {enable.auto.commit=false, value.deserializer=org.apache.kafka.common.serialization.StringDeserializer, group.id=testdb-dbhistory, auto.offset.reset=earliest, session.timeout.ms=10000, bootstrap.servers=localhost:9094, client.id=testdb-dbhistory, key.deserializer=org.apache.kafka.common.serialization.StringDeserializer, fetch.min.bytes=1} (io.debezium.relational.history.KafkaDatabaseHistory:219)
+[2022-11-01 22:22:57,000] INFO [CMS-c2|task-0] KafkaDatabaseHistory Producer config: {bootstrap.servers=localhost:9094, value.serializer=org.apache.kafka.common.serialization.StringSerializer, buffer.memory=1048576, retries=1, key.serializer=org.apache.kafka.common.serialization.StringSerializer, client.id=testdb-dbhistory, linger.ms=0, batch.size=32768, max.block.ms=10000, acks=1} (io.debezium.relational.history.KafkaDatabaseHistory:220)
+[2022-11-01 22:22:57,002] INFO [CMS-c2|task-0] Requested thread factory for connector MySqlConnector, id = testdb named = db-history-config-check (io.debezium.util.Threads:270)
+[2022-11-01 22:22:57,004] INFO [CMS-c2|task-0] Idempotence will be disabled because acks is set to 1, not set to 'all'. (org.apache.kafka.clients.producer.ProducerConfig:501)
+[2022-11-01 22:22:57,005] INFO [CMS-c2|task-0] ProducerConfig values: 
+	acks = 1
+	batch.size = 32768
+	bootstrap.servers = [localhost:9094]
+	buffer.memory = 1048576
+	client.dns.lookup = use_all_dns_ips
+	client.id = testdb-dbhistory
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = false
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 10000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.class = class org.apache.kafka.clients.producer.internals.DefaultPartitioner
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 1
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.2
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
+ (org.apache.kafka.clients.producer.ProducerConfig:376)
+[2022-11-01 22:22:57,012] INFO [CMS-c2|task-0] Kafka version: 3.2.1 (org.apache.kafka.common.utils.AppInfoParser:119)
+[2022-11-01 22:22:57,014] INFO [CMS-c2|task-0] Kafka commitId: b172a0a94f4ebb9f (org.apache.kafka.common.utils.AppInfoParser:120)
+[2022-11-01 22:22:57,015] INFO [CMS-c2|task-0] Kafka startTimeMs: 1667337777012 (org.apache.kafka.common.utils.AppInfoParser:121)
+[2022-11-01 22:22:57,024] INFO [CMS-c2|task-0] [Producer clientId=testdb-dbhistory] Cluster ID: psUDAMC6SMCJ-rdwTmR1ug (org.apache.kafka.clients.Metadata:287)
+[2022-11-01 22:22:57,043] INFO [CMS-c2|task-0] Closing connection before starting schema recovery (io.debezium.connector.mysql.MySqlConnectorTask:96)
+[2022-11-01 22:22:57,045] INFO [CMS-c2|task-0] Connection gracefully closed (io.debezium.jdbc.JdbcConnection:965)
+[2022-11-01 22:22:57,063] INFO [CMS-c2|task-0] ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = earliest
+	bootstrap.servers = [localhost:9094]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = testdb-dbhistory
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = testdb-dbhistory
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 10000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.2
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+ (org.apache.kafka.clients.consumer.ConsumerConfig:376)
+[2022-11-01 22:22:57,136] INFO [CMS-c2|task-0] Kafka version: 3.2.1 (org.apache.kafka.common.utils.AppInfoParser:119)
+[2022-11-01 22:22:57,136] INFO [CMS-c2|task-0] Kafka commitId: b172a0a94f4ebb9f (org.apache.kafka.common.utils.AppInfoParser:120)
+[2022-11-01 22:22:57,140] INFO [CMS-c2|task-0] Kafka startTimeMs: 1667337777136 (org.apache.kafka.common.utils.AppInfoParser:121)
+[2022-11-01 22:22:57,147] INFO [CMS-c2|task-0] [Consumer clientId=testdb-dbhistory, groupId=testdb-dbhistory] Cluster ID: psUDAMC6SMCJ-rdwTmR1ug (org.apache.kafka.clients.Metadata:287)
+[2022-11-01 22:22:57,160] INFO [CMS-c2|task-0] [Consumer clientId=testdb-dbhistory, groupId=testdb-dbhistory] Resetting generation and member id due to: consumer pro-actively leaving the group (org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:1003)
+[2022-11-01 22:22:57,161] INFO [CMS-c2|task-0] [Consumer clientId=testdb-dbhistory, groupId=testdb-dbhistory] Request joining group due to: consumer pro-actively leaving the group (org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:1050)
+[2022-11-01 22:22:57,161] INFO [CMS-c2|task-0] Metrics scheduler closed (org.apache.kafka.common.metrics.Metrics:659)
+[2022-11-01 22:22:57,163] INFO [CMS-c2|task-0] Closing reporter org.apache.kafka.common.metrics.JmxReporter (org.apache.kafka.common.metrics.Metrics:663)
+[2022-11-01 22:22:57,163] INFO [CMS-c2|task-0] Metrics reporters closed (org.apache.kafka.common.metrics.Metrics:669)
+[2022-11-01 22:22:57,165] INFO [CMS-c2|task-0] App info kafka.consumer for testdb-dbhistory unregistered (org.apache.kafka.common.utils.AppInfoParser:83)
+[2022-11-01 22:22:57,166] INFO [CMS-c2|task-0] ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = earliest
+	bootstrap.servers = [localhost:9094]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = testdb-dbhistory
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = testdb-dbhistory
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 10000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.2
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+ (org.apache.kafka.clients.consumer.ConsumerConfig:376)
+[2022-11-01 22:22:57,171] INFO [CMS-c2|task-0] Kafka version: 3.2.1 (org.apache.kafka.common.utils.AppInfoParser:119)
+[2022-11-01 22:22:57,173] INFO [CMS-c2|task-0] Kafka commitId: b172a0a94f4ebb9f (org.apache.kafka.common.utils.AppInfoParser:120)
+[2022-11-01 22:22:57,174] INFO [CMS-c2|task-0] Kafka startTimeMs: 1667337777171 (org.apache.kafka.common.utils.AppInfoParser:121)
+[2022-11-01 22:22:57,175] INFO [CMS-c2|task-0] Creating thread debezium-mysqlconnector-testdb-db-history-config-check (io.debezium.util.Threads:287)
+[2022-11-01 22:22:57,176] INFO [CMS-c2|task-0] AdminClientConfig values: 
+	bootstrap.servers = [localhost:9094]
+	client.dns.lookup = use_all_dns_ips
+	client.id = testdb-dbhistory-topic-check
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 1
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.2
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+ (org.apache.kafka.clients.admin.AdminClientConfig:376)
+[2022-11-01 22:22:57,180] WARN [CMS-c2|task-0] The configuration 'value.serializer' was supplied but isn't a known config. (org.apache.kafka.clients.admin.AdminClientConfig:384)
+[2022-11-01 22:22:57,181] WARN [CMS-c2|task-0] The configuration 'batch.size' was supplied but isn't a known config. (org.apache.kafka.clients.admin.AdminClientConfig:384)
+[2022-11-01 22:22:57,181] WARN [CMS-c2|task-0] The configuration 'max.block.ms' was supplied but isn't a known config. (org.apache.kafka.clients.admin.AdminClientConfig:384)
+[2022-11-01 22:22:57,182] WARN [CMS-c2|task-0] The configuration 'acks' was supplied but isn't a known config. (org.apache.kafka.clients.admin.AdminClientConfig:384)
+[2022-11-01 22:22:57,183] WARN [CMS-c2|task-0] The configuration 'buffer.memory' was supplied but isn't a known config. (org.apache.kafka.clients.admin.AdminClientConfig:384)
+[2022-11-01 22:22:57,183] WARN [CMS-c2|task-0] The configuration 'key.serializer' was supplied but isn't a known config. (org.apache.kafka.clients.admin.AdminClientConfig:384)
+[2022-11-01 22:22:57,183] WARN [CMS-c2|task-0] The configuration 'linger.ms' was supplied but isn't a known config. (org.apache.kafka.clients.admin.AdminClientConfig:384)
+[2022-11-01 22:22:57,184] INFO [CMS-c2|task-0] Kafka version: 3.2.1 (org.apache.kafka.common.utils.AppInfoParser:119)
+[2022-11-01 22:22:57,184] INFO [CMS-c2|task-0] Kafka commitId: b172a0a94f4ebb9f (org.apache.kafka.common.utils.AppInfoParser:120)
+[2022-11-01 22:22:57,185] INFO [CMS-c2|task-0] Kafka startTimeMs: 1667337777184 (org.apache.kafka.common.utils.AppInfoParser:121)
+[2022-11-01 22:22:57,196] INFO [CMS-c2|task-0] [Consumer clientId=testdb-dbhistory, groupId=testdb-dbhistory] Resetting the last seen epoch of partition schema-changes.inventory-0 to 0 since the associated topicId changed from null to YKpt_bSrSEG84197I7wI_A (org.apache.kafka.clients.Metadata:402)
+[2022-11-01 22:22:57,198] INFO [CMS-c2|task-0] [Consumer clientId=testdb-dbhistory, groupId=testdb-dbhistory] Cluster ID: psUDAMC6SMCJ-rdwTmR1ug (org.apache.kafka.clients.Metadata:287)
+[2022-11-01 22:22:57,261] INFO [CMS-c2|task-0] [Consumer clientId=testdb-dbhistory, groupId=testdb-dbhistory] Resetting generation and member id due to: consumer pro-actively leaving the group (org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:1003)
+[2022-11-01 22:22:57,262] INFO [CMS-c2|task-0] [Consumer clientId=testdb-dbhistory, groupId=testdb-dbhistory] Request joining group due to: consumer pro-actively leaving the group (org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:1050)
+[2022-11-01 22:22:57,264] INFO [CMS-c2|task-0] Metrics scheduler closed (org.apache.kafka.common.metrics.Metrics:659)
+[2022-11-01 22:22:57,265] INFO [CMS-c2|task-0] Closing reporter org.apache.kafka.common.metrics.JmxReporter (org.apache.kafka.common.metrics.Metrics:663)
+[2022-11-01 22:22:57,266] INFO [CMS-c2|task-0] Metrics reporters closed (org.apache.kafka.common.metrics.Metrics:669)
+[2022-11-01 22:22:57,268] INFO [CMS-c2|task-0] Database history topic 'schema-changes.inventory' has correct settings (io.debezium.relational.history.KafkaDatabaseHistory:444)
+[2022-11-01 22:22:57,269] INFO [CMS-c2|task-0] App info kafka.consumer for testdb-dbhistory unregistered (org.apache.kafka.common.utils.AppInfoParser:83)
+[2022-11-01 22:22:57,270] INFO [CMS-c2|task-0] App info kafka.admin.client for testdb-dbhistory-topic-check unregistered (org.apache.kafka.common.utils.AppInfoParser:83)
+[2022-11-01 22:22:57,272] INFO [CMS-c2|task-0] ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = earliest
+	bootstrap.servers = [localhost:9094]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = testdb-dbhistory
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = testdb-dbhistory
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 10000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.2
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+ (org.apache.kafka.clients.consumer.ConsumerConfig:376)
+[2022-11-01 22:22:57,273] INFO [CMS-c2|task-0] Metrics scheduler closed (org.apache.kafka.common.metrics.Metrics:659)
+[2022-11-01 22:22:57,274] INFO [CMS-c2|task-0] Closing reporter org.apache.kafka.common.metrics.JmxReporter (org.apache.kafka.common.metrics.Metrics:663)
+[2022-11-01 22:22:57,275] INFO [CMS-c2|task-0] Metrics reporters closed (org.apache.kafka.common.metrics.Metrics:669)
+[2022-11-01 22:22:57,279] INFO [CMS-c2|task-0] Kafka version: 3.2.1 (org.apache.kafka.common.utils.AppInfoParser:119)
+[2022-11-01 22:22:57,279] INFO [CMS-c2|task-0] Kafka commitId: b172a0a94f4ebb9f (org.apache.kafka.common.utils.AppInfoParser:120)
+[2022-11-01 22:22:57,280] INFO [CMS-c2|task-0] Kafka startTimeMs: 1667337777279 (org.apache.kafka.common.utils.AppInfoParser:121)
+[2022-11-01 22:22:57,285] INFO [CMS-c2|task-0] [Consumer clientId=testdb-dbhistory, groupId=testdb-dbhistory] Cluster ID: psUDAMC6SMCJ-rdwTmR1ug (org.apache.kafka.clients.Metadata:287)
+[2022-11-01 22:22:57,292] INFO [CMS-c2|task-0] [Consumer clientId=testdb-dbhistory, groupId=testdb-dbhistory] Resetting generation and member id due to: consumer pro-actively leaving the group (org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:1003)
+[2022-11-01 22:22:57,293] INFO [CMS-c2|task-0] [Consumer clientId=testdb-dbhistory, groupId=testdb-dbhistory] Request joining group due to: consumer pro-actively leaving the group (org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:1050)
+[2022-11-01 22:22:57,294] INFO [CMS-c2|task-0] Metrics scheduler closed (org.apache.kafka.common.metrics.Metrics:659)
+[2022-11-01 22:22:57,294] INFO [CMS-c2|task-0] Closing reporter org.apache.kafka.common.metrics.JmxReporter (org.apache.kafka.common.metrics.Metrics:663)
+[2022-11-01 22:22:57,295] INFO [CMS-c2|task-0] Metrics reporters closed (org.apache.kafka.common.metrics.Metrics:669)
+[2022-11-01 22:22:57,299] INFO [CMS-c2|task-0] App info kafka.consumer for testdb-dbhistory unregistered (org.apache.kafka.common.utils.AppInfoParser:83)
+[2022-11-01 22:22:57,300] INFO [CMS-c2|task-0] ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = earliest
+	bootstrap.servers = [localhost:9094]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = testdb-dbhistory
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = testdb-dbhistory
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 10000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.2
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+ (org.apache.kafka.clients.consumer.ConsumerConfig:376)
+[2022-11-01 22:22:57,308] INFO [CMS-c2|task-0] Kafka version: 3.2.1 (org.apache.kafka.common.utils.AppInfoParser:119)
+[2022-11-01 22:22:57,308] INFO [CMS-c2|task-0] Kafka commitId: b172a0a94f4ebb9f (org.apache.kafka.common.utils.AppInfoParser:120)
+[2022-11-01 22:22:57,309] INFO [CMS-c2|task-0] Kafka startTimeMs: 1667337777308 (org.apache.kafka.common.utils.AppInfoParser:121)
+[2022-11-01 22:22:57,318] INFO [CMS-c2|task-0] [Consumer clientId=testdb-dbhistory, groupId=testdb-dbhistory] Resetting the last seen epoch of partition schema-changes.inventory-0 to 0 since the associated topicId changed from null to YKpt_bSrSEG84197I7wI_A (org.apache.kafka.clients.Metadata:402)
+[2022-11-01 22:22:57,319] INFO [CMS-c2|task-0] [Consumer clientId=testdb-dbhistory, groupId=testdb-dbhistory] Cluster ID: psUDAMC6SMCJ-rdwTmR1ug (org.apache.kafka.clients.Metadata:287)
+[2022-11-01 22:22:57,326] INFO [CMS-c2|task-0] [Consumer clientId=testdb-dbhistory, groupId=testdb-dbhistory] Resetting generation and member id due to: consumer pro-actively leaving the group (org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:1003)
+[2022-11-01 22:22:57,327] INFO [CMS-c2|task-0] [Consumer clientId=testdb-dbhistory, groupId=testdb-dbhistory] Request joining group due to: consumer pro-actively leaving the group (org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:1050)
+[2022-11-01 22:22:57,329] INFO [CMS-c2|task-0] Metrics scheduler closed (org.apache.kafka.common.metrics.Metrics:659)
+[2022-11-01 22:22:57,329] INFO [CMS-c2|task-0] Closing reporter org.apache.kafka.common.metrics.JmxReporter (org.apache.kafka.common.metrics.Metrics:663)
+[2022-11-01 22:22:57,331] INFO [CMS-c2|task-0] Metrics reporters closed (org.apache.kafka.common.metrics.Metrics:669)
+[2022-11-01 22:22:57,333] INFO [CMS-c2|task-0] App info kafka.consumer for testdb-dbhistory unregistered (org.apache.kafka.common.utils.AppInfoParser:83)
+[2022-11-01 22:22:57,334] INFO [CMS-c2|task-0] Started database history recovery (io.debezium.relational.history.DatabaseHistoryMetrics:113)
+[2022-11-01 22:22:57,343] INFO [CMS-c2|task-0] ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = earliest
+	bootstrap.servers = [localhost:9094]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = testdb-dbhistory
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = testdb-dbhistory
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 10000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.2
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+ (org.apache.kafka.clients.consumer.ConsumerConfig:376)
+[2022-11-01 22:22:57,350] INFO [CMS-c2|task-0] Kafka version: 3.2.1 (org.apache.kafka.common.utils.AppInfoParser:119)
+[2022-11-01 22:22:57,351] INFO [CMS-c2|task-0] Kafka commitId: b172a0a94f4ebb9f (org.apache.kafka.common.utils.AppInfoParser:120)
+[2022-11-01 22:22:57,351] INFO [CMS-c2|task-0] Kafka startTimeMs: 1667337777350 (org.apache.kafka.common.utils.AppInfoParser:121)
+[2022-11-01 22:22:57,352] INFO [CMS-c2|task-0] [Consumer clientId=testdb-dbhistory, groupId=testdb-dbhistory] Subscribed to topic(s): schema-changes.inventory (org.apache.kafka.clients.consumer.KafkaConsumer:968)
+[2022-11-01 22:22:57,358] INFO [CMS-c2|task-0] [Consumer clientId=testdb-dbhistory, groupId=testdb-dbhistory] Resetting the last seen epoch of partition schema-changes.inventory-0 to 0 since the associated topicId changed from null to YKpt_bSrSEG84197I7wI_A (org.apache.kafka.clients.Metadata:402)
+[2022-11-01 22:22:57,360] INFO [CMS-c2|task-0] [Consumer clientId=testdb-dbhistory, groupId=testdb-dbhistory] Cluster ID: psUDAMC6SMCJ-rdwTmR1ug (org.apache.kafka.clients.Metadata:287)
+[2022-11-01 22:22:57,370] INFO [CMS-c2|task-0] [Consumer clientId=testdb-dbhistory, groupId=testdb-dbhistory] Discovered group coordinator localhost:9094 (id: 2147483647 rack: null) (org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:884)
+[2022-11-01 22:22:57,373] INFO [CMS-c2|task-0] [Consumer clientId=testdb-dbhistory, groupId=testdb-dbhistory] (Re-)joining group (org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:553)
+[2022-11-01 22:22:57,400] INFO [CMS-c2|task-0] [Consumer clientId=testdb-dbhistory, groupId=testdb-dbhistory] Request joining group due to: need to re-join with the given member-id: testdb-dbhistory-07599d47-1f26-4cc6-ba17-26586e63572a (org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:1050)
+[2022-11-01 22:22:57,401] INFO [CMS-c2|task-0] [Consumer clientId=testdb-dbhistory, groupId=testdb-dbhistory] Request joining group due to: rebalance failed due to 'The group member needs to have a valid member id before actually entering a consumer group.' (MemberIdRequiredException) (org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:1050)
+[2022-11-01 22:22:57,402] INFO [CMS-c2|task-0] [Consumer clientId=testdb-dbhistory, groupId=testdb-dbhistory] (Re-)joining group (org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:553)
+[2022-11-01 22:22:57,425] INFO [CMS-c2|task-0] [Consumer clientId=testdb-dbhistory, groupId=testdb-dbhistory] Successfully joined group with generation Generation{generationId=7, memberId='testdb-dbhistory-07599d47-1f26-4cc6-ba17-26586e63572a', protocol='range'} (org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:614)
+[2022-11-01 22:22:57,429] INFO [CMS-c2|task-0] [Consumer clientId=testdb-dbhistory, groupId=testdb-dbhistory] Finished assignment for group at generation 7: {testdb-dbhistory-07599d47-1f26-4cc6-ba17-26586e63572a=Assignment(partitions=[schema-changes.inventory-0])} (org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:702)
+[2022-11-01 22:22:57,503] INFO [CMS-c2|task-0] [Consumer clientId=testdb-dbhistory, groupId=testdb-dbhistory] Successfully synced group in generation Generation{generationId=7, memberId='testdb-dbhistory-07599d47-1f26-4cc6-ba17-26586e63572a', protocol='range'} (org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:789)
+[2022-11-01 22:22:57,504] INFO [CMS-c2|task-0] [Consumer clientId=testdb-dbhistory, groupId=testdb-dbhistory] Notifying assignor about the new Assignment(partitions=[schema-changes.inventory-0]) (org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:301)
+[2022-11-01 22:22:57,510] INFO [CMS-c2|task-0] [Consumer clientId=testdb-dbhistory, groupId=testdb-dbhistory] Adding newly assigned partitions: schema-changes.inventory-0 (org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:313)
+[2022-11-01 22:22:57,541] INFO [CMS-c2|task-0] [Consumer clientId=testdb-dbhistory, groupId=testdb-dbhistory] Found no committed offset for partition schema-changes.inventory-0 (org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:1515)
+[2022-11-01 22:22:57,565] INFO [CMS-c2|task-0] [Consumer clientId=testdb-dbhistory, groupId=testdb-dbhistory] Resetting offset for partition schema-changes.inventory-0 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:9094 (id: 0 rack: null)], epoch=0}}. (org.apache.kafka.clients.consumer.internals.SubscriptionState:399)
+[2022-11-01 22:22:59,243] INFO [CMS-c2|task-0] [Consumer clientId=testdb-dbhistory, groupId=testdb-dbhistory] Revoke previously assigned partitions schema-changes.inventory-0 (org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:332)
+[2022-11-01 22:22:59,244] INFO [CMS-c2|task-0] [Consumer clientId=testdb-dbhistory, groupId=testdb-dbhistory] Member testdb-dbhistory-07599d47-1f26-4cc6-ba17-26586e63572a sending LeaveGroup request to coordinator localhost:9094 (id: 2147483647 rack: null) due to the consumer is being closed (org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:1111)
+[2022-11-01 22:22:59,246] INFO [CMS-c2|task-0] [Consumer clientId=testdb-dbhistory, groupId=testdb-dbhistory] Resetting generation and member id due to: consumer pro-actively leaving the group (org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:1003)
+[2022-11-01 22:22:59,247] INFO [CMS-c2|task-0] [Consumer clientId=testdb-dbhistory, groupId=testdb-dbhistory] Request joining group due to: consumer pro-actively leaving the group (org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:1050)
+[2022-11-01 22:22:59,264] INFO [CMS-c2|task-0] Metrics scheduler closed (org.apache.kafka.common.metrics.Metrics:659)
+[2022-11-01 22:22:59,264] INFO [CMS-c2|task-0] Closing reporter org.apache.kafka.common.metrics.JmxReporter (org.apache.kafka.common.metrics.Metrics:663)
+[2022-11-01 22:22:59,265] INFO [CMS-c2|task-0] Metrics reporters closed (org.apache.kafka.common.metrics.Metrics:669)
+[2022-11-01 22:22:59,268] INFO [CMS-c2|task-0] App info kafka.consumer for testdb-dbhistory unregistered (org.apache.kafka.common.utils.AppInfoParser:83)
+[2022-11-01 22:22:59,268] INFO [CMS-c2|task-0] Finished database history recovery of 252 change(s) in 1934 ms (io.debezium.relational.history.DatabaseHistoryMetrics:119)
+[2022-11-01 22:22:59,309] INFO [CMS-c2|task-0] Reconnecting after finishing schema recovery (io.debezium.connector.mysql.MySqlConnectorTask:110)
+[2022-11-01 22:22:59,314] INFO [CMS-c2|task-0] Get all known binlogs from MySQL (io.debezium.connector.mysql.MySqlConnection:408)
+[2022-11-01 22:22:59,693] INFO [CMS-c2|task-0] MySQL has the binlog file 'mysql-bin.000023' required by the connector (io.debezium.connector.mysql.MySqlConnectorTask:333)
+[2022-11-01 22:22:59,715] INFO [CMS-c2|task-0] Requested thread factory for connector MySqlConnector, id = testdb named = change-event-source-coordinator (io.debezium.util.Threads:270)
+[2022-11-01 22:22:59,716] INFO [CMS-c2|task-0] Creating thread debezium-mysqlconnector-testdb-change-event-source-coordinator (io.debezium.util.Threads:287)
+[2022-11-01 22:22:59,717] INFO [CMS-c2|task-0] WorkerSourceTask{id=CMS-c2-0} Source task finished initialization and start (org.apache.kafka.connect.runtime.WorkerSourceTask:227)
+[2022-11-01 22:22:59,718] INFO [CMS-c2|task-0] WorkerSourceTask{id=CMS-c2-0} Executing source task (org.apache.kafka.connect.runtime.WorkerSourceTask:233)
+[2022-11-01 22:22:59,721] INFO [CMS-c2|task-0] Metrics registered (io.debezium.pipeline.ChangeEventSourceCoordinator:102)
+[2022-11-01 22:22:59,722] INFO [CMS-c2|task-0] Context created (io.debezium.pipeline.ChangeEventSourceCoordinator:105)
+[2022-11-01 22:22:59,726] INFO [CMS-c2|task-0] A previous offset indicating a completed snapshot has been found. Neither schema nor data will be snapshotted. (io.debezium.connector.mysql.MySqlSnapshotChangeEventSource:82)
+[2022-11-01 22:22:59,728] INFO [CMS-c2|task-0] Snapshot ended with SnapshotResult [status=SKIPPED, offset=MySqlOffsetContext [sourceInfoSchema=Schema{io.debezium.connector.mysql.Source:STRUCT}, sourceInfo=SourceInfo [currentGtid=null, currentBinlogFilename=mysql-bin.000023, currentBinlogPosition=235, currentRowNumber=0, serverId=0, sourceTime=null, threadId=-1, currentQuery=null, tableIds=[], databaseName=null], snapshotCompleted=false, transactionContext=TransactionContext [currentTransactionId=null, perTableEventCount={}, totalEventCount=0], restartGtidSet=null, currentGtidSet=null, restartBinlogFilename=mysql-bin.000023, restartBinlogPosition=235, restartRowsToSkip=1, restartEventsToSkip=2, currentEventLengthInBytes=0, inTransaction=false, transactionId=null, incrementalSnapshotContext =IncrementalSnapshotContext [windowOpened=false, chunkEndPosition=null, dataCollectionsToSnapshot=[], lastEventKeySent=null, maximumKey=null]]] (io.debezium.pipeline.ChangeEventSourceCoordinator:154)
+[2022-11-01 22:22:59,732] INFO [CMS-c2|task-0] Requested thread factory for connector MySqlConnector, id = testdb named = binlog-client (io.debezium.util.Threads:270)
+[2022-11-01 22:22:59,735] INFO [CMS-c2|task-0] Starting streaming (io.debezium.pipeline.ChangeEventSourceCoordinator:171)
+[2022-11-01 22:22:59,743] INFO [CMS-c2|task-0] Skip 2 events on streaming start (io.debezium.connector.mysql.MySqlStreamingChangeEventSource:914)
+[2022-11-01 22:22:59,744] INFO [CMS-c2|task-0] Skip 1 rows on streaming start (io.debezium.connector.mysql.MySqlStreamingChangeEventSource:918)
+[2022-11-01 22:22:59,746] INFO [CMS-c2|task-0] Creating thread debezium-mysqlconnector-testdb-binlog-client (io.debezium.util.Threads:287)
+[2022-11-01 22:22:59,750] INFO [CMS-c2|task-0] Creating thread debezium-mysqlconnector-testdb-binlog-client (io.debezium.util.Threads:287)
+[2022-11-01 22:22:59,789] INFO [CMS-c2|task-0] Connected to MySQL binlog at localhost:3306, starting at MySqlOffsetContext [sourceInfoSchema=Schema{io.debezium.connector.mysql.Source:STRUCT}, sourceInfo=SourceInfo [currentGtid=null, currentBinlogFilename=mysql-bin.000023, currentBinlogPosition=235, currentRowNumber=0, serverId=0, sourceTime=null, threadId=-1, currentQuery=null, tableIds=[], databaseName=null], snapshotCompleted=false, transactionContext=TransactionContext [currentTransactionId=null, perTableEventCount={}, totalEventCount=0], restartGtidSet=null, currentGtidSet=null, restartBinlogFilename=mysql-bin.000023, restartBinlogPosition=235, restartRowsToSkip=1, restartEventsToSkip=2, currentEventLengthInBytes=0, inTransaction=false, transactionId=null, incrementalSnapshotContext =IncrementalSnapshotContext [windowOpened=false, chunkEndPosition=null, dataCollectionsToSnapshot=[], lastEventKeySent=null, maximumKey=null]] (io.debezium.connector.mysql.MySqlStreamingChangeEventSource:1203)
+[2022-11-01 22:22:59,791] INFO [CMS-c2|task-0] Waiting for keepalive thread to start (io.debezium.connector.mysql.MySqlStreamingChangeEventSource:935)
+[2022-11-01 22:22:59,792] INFO [CMS-c2|task-0] Creating thread debezium-mysqlconnector-testdb-binlog-client (io.debezium.util.Threads:287)
+[2022-11-01 22:22:59,899] INFO [CMS-c2|task-0] Keepalive thread is running (io.debezium.connector.mysql.MySqlStreamingChangeEventSource:942)
+[2022-11-01 22:24:18,270] INFO [CMS-c2|task-0] 1 records sent during previous 00:01:21.84, last recorded offset: {transaction_id=null, ts_sec=1667337857, file=mysql-bin.000024, pos=235, row=1, server_id=1, event=2} (io.debezium.connector.common.BaseSourceTask:182)
+[2022-11-01 22:24:18,286] INFO [CMS-c2|task-0] [Producer clientId=connector-producer-CMS-c2-0] Resetting the last seen epoch of partition testdb.testdb.users-0 to 0 since the associated topicId changed from null to 2qkd29mMT7euXDdJl5cW5Q (org.apache.kafka.clients.Metadata:402)
+[2022-11-01 22:31:56,586] INFO [CMS-c2|task-0] [Producer clientId=connector-producer-CMS-c2-0] Node -1 disconnected. (org.apache.kafka.clients.NetworkClient:935)
+[2022-11-01 22:31:57,132] INFO [CMS-c2|task-0] [Producer clientId=testdb-dbhistory] Node -1 disconnected. (org.apache.kafka.clients.NetworkClient:935)

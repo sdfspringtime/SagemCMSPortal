@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { MessageService } from './message.service';
 import { TokenStorageService } from './_services/token-storage.service';
 
 @Component({
@@ -14,7 +16,7 @@ export class AppComponent implements OnInit {
   username?: string;
 
   constructor(private tokenStorageService: TokenStorageService) { }
-
+ 
   ngOnInit(): void {
     this.isLoggedIn = !!this.tokenStorageService.getToken();
 

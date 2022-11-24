@@ -28,6 +28,7 @@ export class AdminLoginServiceService {
         headers: new HttpHeaders({
           Authorization: 'Basic ' + window.btoa(`${username}:${password}`),
           'Content-Type': 'application/json'
+          
         })
       })
       ;

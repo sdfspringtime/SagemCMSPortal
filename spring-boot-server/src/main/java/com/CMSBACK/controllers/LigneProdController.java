@@ -59,7 +59,7 @@ public class LigneProdController {
 	@PreAuthorize("hasRole('ROLE_LMANAGER') or hasRole('ROLE_ADMIN')")
 	public Line addLProd(@RequestBody Line lignep) {
 
-		lignep.setrevisionauthor(rl.getUserName());
+		lignep.setrevisionauthor(SecurityContextHolder.getContext().getAuthentication().getName());
 		Date date = new Date(); 
 
 		lignep.setrevisiondate(date);
@@ -98,7 +98,7 @@ return line;
 @DeleteMapping("/delete/{id}")
 public void deleteline(@PathVariable(value = "id") Long lineid) {
 	Optional<Line> aaa=linerep.findById(lineid);
-	aaa.get().setrevisionauthor(rl.getUserName());
+	aaa.get().setrevisionauthor(SecurityContextHolder.getContext().getAuthentication().getName());
 
 	Date date = new Date(); 
 
@@ -120,7 +120,7 @@ public void deleteline(@PathVariable(value = "id") Long lineid) {
         
          	   
 
-    	aaa.get().setrevisionauthor(rl.getUserName());
+    	aaa.get().setrevisionauthor(SecurityContextHolder.getContext().getAuthentication().getName());
             
     	Date date = new Date();  
 

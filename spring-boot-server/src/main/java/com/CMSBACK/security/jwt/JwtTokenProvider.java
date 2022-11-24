@@ -20,12 +20,11 @@ public class JwtTokenProvider
     {
         Instant now = Instant.now();
         String jwtToken = Jwts.builder()
-                .claim("name", userName)
-                .setSubject("jwt_token")
+                .claim("name", userName).setSubject(userName)
                 .setId(UUID.randomUUID().toString())
                 .setIssuedAt(Date.from(now))
                 .setExpiration(Date.from(now.plus(5l, ChronoUnit.MINUTES)))
-                .signWith(SignatureAlgorithm.RS512, getPrivateKey())
+                .signWith(SignatureAlgorithm.HS512, "bezKoderSecretKey")
                 .compact();
 
         return jwtToken;

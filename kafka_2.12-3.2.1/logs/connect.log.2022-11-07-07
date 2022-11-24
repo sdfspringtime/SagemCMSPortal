@@ -1,0 +1,2 @@
+[2022-11-07 07:47:44,714] INFO [CMS-connecto5|task-0] 1 records sent during previous 02:37:12.36, last recorded offset: {transaction_id=null, ts_sec=1667803664, file=mysql-bin.000026, pos=2119, row=1, server_id=1, event=2} (io.debezium.connector.common.BaseSourceTask:182)
+[2022-11-07 07:47:44,795] INFO [CMS-connecto5|task-0] [Producer clientId=connector-producer-CMS-connecto5-0] Resetting the last seen epoch of partition testdb.testdb.lines_p-0 to 0 since the associated topicId changed from null to lUgq9WsaTbSrNAUKEOf47g (org.apache.kafka.clients.Metadata:402)

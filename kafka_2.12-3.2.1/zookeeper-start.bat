@@ -1,0 +1,1 @@
+bin\windows\zookeeper-server-start config\zookeeper.properties

@@ -1,0 +1,13 @@
+[2022-11-02 11:50:53,699] INFO Expiring session 0x100122f187b0001, timeout of 18000ms exceeded (org.apache.zookeeper.server.ZooKeeperServer)
+[2022-11-02 11:50:54,669] WARN Unexpected exception (org.apache.zookeeper.server.NIOServerCnxn)
+EndOfStreamException: Unable to read additional data from client, it probably closed the socket: address = /127.0.0.1:58457, session = 0x100122f187b0001
+	at org.apache.zookeeper.server.NIOServerCnxn.handleFailedRead(NIOServerCnxn.java:163)
+	at org.apache.zookeeper.server.NIOServerCnxn.doIO(NIOServerCnxn.java:326)
+	at org.apache.zookeeper.server.NIOServerCnxnFactory$IOWorkRequest.doWork(NIOServerCnxnFactory.java:522)
+	at org.apache.zookeeper.server.WorkerService$ScheduledWorkRequest.run(WorkerService.java:154)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+[2022-11-02 11:50:55,863] WARN fsync-ing the write ahead log in SyncThread:0 took 1656ms which will adversely effect operation latency.File size is 67108880 bytes. See the ZooKeeper troubleshooting guide (org.apache.zookeeper.server.persistence.FileTxnLog)
+[2022-11-02 11:50:57,254] INFO Invalid session 0x100122f187b0001 for client /0:0:0:0:0:0:0:1:51128, probably expired (org.apache.zookeeper.server.ZooKeeperServer)
+[2022-11-02 11:51:00,036] WARN fsync-ing the write ahead log in SyncThread:0 took 1116ms which will adversely effect operation latency.File size is 67108880 bytes. See the ZooKeeper troubleshooting guide (org.apache.zookeeper.server.persistence.FileTxnLog)

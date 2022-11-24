@@ -2,19 +2,24 @@ package com.CMSBACK.controllers;
 
 import java.util.Map;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.authentication.DisabledException;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.CMSBACK.models.LdapAuthenticationProvider;
+import com.CMSBACK.payload.request.LoginRequest;
 import com.CMSBACK.payload.response.AuthenticationResponse;
 import com.CMSBACK.security.jwt.JwtTokenProvider;
 
@@ -38,16 +43,17 @@ public class AdminController
     	headers.forEach((key, value) -> {
             System.out.println(String.format("Header '%s' = %s", key, value));
         });
-        authenticate(SecurityContextHolder.getContext().getAuthentication());
-
-        final String token = JwtTokenProvider.generateToken(SecurityContextHolder.getContext().getAuthentication().getPrincipal().toString());
+		SecurityContextHolder.getContext().setAuthentication(authenticate(SecurityContextHolder.getContext().getAuthentication()));
+    
+    	System.out.println(authenticate(SecurityContextHolder.getContext().getAuthentication()));
+        final String token = JwtTokenProvider.generateToken(SecurityContextHolder.getContext().getAuthentication().getName());
         
         return ResponseEntity.ok(new AuthenticationResponse(token,SecurityContextHolder.getContext().getAuthentication().getName(),authenticationProvider.getLdapmail(SecurityContextHolder.getContext().getAuthentication().getName()).get(0),"ROLE_ADMIN"));
     }
 
-    private void authenticate(Authentication auth) throws Exception {
+    private Authentication authenticate(Authentication auth) throws Exception {
         try {
-            authenticationProvider.authenticate(auth);
+            return authenticationProvider.authenticate(auth);
         } catch (DisabledException e) {
             throw new Exception(USER_DISABLED, e);
         } catch (BadCredentialsException e) {

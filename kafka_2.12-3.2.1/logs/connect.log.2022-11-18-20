@@ -1,0 +1,2 @@
+[2022-11-18 20:08:02,165] INFO [CMS-connecto r5|task-0] [Producer clientId=connector-producer-CMS-connecto r5-0] Node 0 disconnected. (org.apache.kafka.clients.NetworkClient:935)
+[2022-11-18 20:08:02,165] INFO [CMS-connecto r5|task-0] [Producer clientId=testdb-dbhistory] Node 0 disconnected. (org.apache.kafka.clients.NetworkClient:935)

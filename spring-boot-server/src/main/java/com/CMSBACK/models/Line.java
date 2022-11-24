@@ -29,7 +29,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 @Entity
 @Table(name = "lines_p")
 @Audited
-@JsonIgnoreProperties({"hibernateLazyInitializer"})
 
 public class Line {
 	
@@ -37,6 +36,7 @@ public class Line {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	 @JsonBackReference
+	 
      @OneToMany(mappedBy = "line",cascade = CascadeType.ALL, orphanRemoval = true)
     private Set<Machine> lines=new HashSet<>();
 	private String description;

@@ -20,6 +20,8 @@ import javax.persistence.Table;
 
 import org.hibernate.envers.Audited;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -27,7 +29,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 @Entity
 @Table(	name = "machines")
 @Audited
-@JsonIgnoreProperties({"hibernateLazyInitializer"})
 
 public class Machine {
 
@@ -45,14 +46,16 @@ public class Machine {
 	private boolean allocated=false;
 	private boolean status=false;
 	private boolean FESE;
-	 @JsonManagedReference
+	@JsonBackReference
 	@ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name="line_id")
     private Line line;
 	
-	
+	@JsonBackReference
+	@JsonIgnore
 	@OneToMany(mappedBy = "machine")
     Set<MachineAlloc> machineallocs;
+	
     private String revisionauthor;
 	private Date revisiondate;
 	private String name;

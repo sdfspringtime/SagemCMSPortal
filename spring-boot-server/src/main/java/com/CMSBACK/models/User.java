@@ -11,6 +11,9 @@ import javax.validation.constraints.Size;
 
 import org.hibernate.envers.Audited;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
 @Entity
 @Table(	name = "users", 
 		uniqueConstraints = { 
@@ -35,14 +38,16 @@ public class User {
 	@NotBlank
 	@Size(max = 120)
 	private String password;
-
+	@JsonBackReference
 	@ManyToMany(fetch = FetchType.LAZY)
 	@JoinTable(	name = "user_roles", 
 				joinColumns = @JoinColumn(name = "user_id"), 
 				inverseJoinColumns = @JoinColumn(name = "role_id"))
 	private Set<Role> roles = new HashSet<>();
+	@JsonBackReference
 	@OneToMany(mappedBy = "user")
     private Set<LineAlloc> lineallocs;
+	@JsonBackReference
 	@OneToMany(mappedBy = "user")
     private Set<MachineAlloc> machineallocs;
     private String revisionauthor;

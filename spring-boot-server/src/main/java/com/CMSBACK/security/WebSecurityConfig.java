@@ -22,14 +22,6 @@ import com.CMSBACK.security.jwt.AuthEntryPointJwt;
 import com.CMSBACK.security.jwt.AuthTokenFilter;
 import com.CMSBACK.security.jwt.JwtTokenProvider;
 import com.CMSBACK.security.services.UserDetailsServiceImpl;
-
-@Configuration
-@EnableWebSecurity
-@EnableGlobalMethodSecurity(
-		// securedEnabled = true,
-		// jsr250Enabled = true,
-		prePostEnabled = true)
-
 public class WebSecurityConfig  {
 	 @Configuration
 	 @Order(1)
@@ -45,10 +37,11 @@ public class WebSecurityConfig  {
 
 	@Autowired
 	private AuthEntryPointJwt unauthorizedHandler;
-
+	
+	private Environment env;
 	@Bean
-	public AuthTokenFilter authenticationJwtTokenFilter() {
-		return new AuthTokenFilter();
+	public AuthTokenFilter authenticationJwtTokenFilter(Environment env) {
+		return new AuthTokenFilter(this.env);
 	}
 
 	@Override
@@ -74,12 +67,12 @@ public class WebSecurityConfig  {
 		http.cors().and().csrf().disable()
 			.exceptionHandling().authenticationEntryPoint(unauthorizedHandler).and()
 			.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS).and()
-            .requestMatchers().antMatchers("/api/auth/**")
-            .requestMatchers().antMatchers("/api/test/**")
+           .requestMatchers().antMatchers("/api/auth/**")
+           .requestMatchers().antMatchers("/api/test/**")
 			
 			.and()
 	         ;
-		http.addFilterBefore(authenticationJwtTokenFilter(), UsernamePasswordAuthenticationFilter.class);
+		http.addFilterBefore(authenticationJwtTokenFilter(env), UsernamePasswordAuthenticationFilter.class);
 	}
 	
 	
@@ -87,7 +80,7 @@ public class WebSecurityConfig  {
 @Configuration
 
 public static class LDAPTokenSecurityConfig extends WebSecurityConfigurerAdapter{
-	 private Environment env;
+	private Environment env;
 	 @Bean
 	    public JwtTokenProvider provider(){
 	        return new JwtTokenProvider();
@@ -104,7 +97,7 @@ public static class LDAPTokenSecurityConfig extends WebSecurityConfigurerAdapter
 	    protected void configure(HttpSecurity httpSecurity) throws Exception 
 	    {
 	        httpSecurity
-            .requestMatchers().antMatchers("/auth-server")
+           .requestMatchers().antMatchers("/auth-server")
 
 	                .and().
 	                cors().and()
@@ -114,25 +107,22 @@ public static class LDAPTokenSecurityConfig extends WebSecurityConfigurerAdapter
 	    }}}
 	/*public LDAPTokenSecurityConfig() {
 		
-        super();
-    }
+       super();
+   }
 	
 	@Override
 	  protected void configure(HttpSecurity http) throws Exception {
 		 http
 		 
 		 .authorizeRequests()
-         .antMatchers("/admin/**").permitAll()
-         .anyRequest()
-         .authenticated()
-         .and()
-         .csrf()
-         .disable()
-         .httpBasic();
-
-    ;}
-
-
+        .antMatchers("/admin/**").permitAll()
+        .anyRequest()
+        .authenticated()
+        .and()
+        .csrf()
+        .disable()
+        .httpBasic();
+   ;}
 	  @Override
 	  public void configure(AuthenticationManagerBuilder auth) throws Exception {
 	    auth
@@ -151,15 +141,15 @@ public static class LDAPTokenSecurityConfig extends WebSecurityConfigurerAdapter
 		return new AuthTokenFilter();
 	}*/
 
-   /* @Override
-    protected void configure(HttpSecurity http) throws Exception {
-        http
-            .antMatcher("/**") //this is default
-            .authorizeRequests()
-            .antMatchers("/admin/login").permitAll()
-            .and()
-            .authorizeRequests()
-            .anyRequest()
-            .authenticated()
-            ;
-    }*/
+  /* @Override
+   protected void configure(HttpSecurity http) throws Exception {
+       http
+           .antMatcher("/**") //this is default
+           .authorizeRequests()
+           .antMatchers("/admin/login").permitAll()
+           .and()
+           .authorizeRequests()
+           .anyRequest()
+           .authenticated()
+           ;
+   }*/

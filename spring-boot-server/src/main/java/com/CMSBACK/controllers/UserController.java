@@ -9,6 +9,7 @@ import java.util.Set;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -54,7 +55,7 @@ public class UserController {
 		@PreAuthorize("hasRole('ROLE_ADMIN') or hasRole('ROLE_LMANAGER')")
 		public User addLProd(@RequestBody User lignep) {
 
-			lignep.setRevisionauthor(rl.getUserName());
+			lignep.setRevisionauthor(SecurityContextHolder.getContext().getAuthentication().getName());
 			Date date = new Date();
 			/*Set<String> ruser=new HashSet<>();
 			ruser=(Set<String>)lignep.getRoles();
@@ -122,7 +123,7 @@ public class UserController {
 	@DeleteMapping("/delete/{id}")
 	public void deleteline(@PathVariable(value = "id") Long lineid) {
 		Optional<User> aaa=linerep.findById(lineid);
-		aaa.get().setRevisionauthor(rl.getUserName());
+		aaa.get().setRevisionauthor(SecurityContextHolder.getContext().getAuthentication().getName());
 
 		Date date = new Date(); 
 
@@ -145,7 +146,7 @@ public class UserController {
 	        
 	         	   
 
-	    	aaa.get().setRevisionauthor(rl.getUserName());
+	    	aaa.get().setRevisionauthor(SecurityContextHolder.getContext().getAuthentication().getName());
 	            
 	    	Date date = new Date();  
 

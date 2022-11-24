@@ -1,0 +1,1 @@
+bin\windows\connect-standalone config\connect-standalone.properties config\debezium.properties

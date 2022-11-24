@@ -6,6 +6,7 @@ import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -38,7 +39,7 @@ public class MachineController {
 		@PostMapping("/add")
 		
 		public Machine addmachine(@RequestBody Machine machine) {
-			machine.setRevisionauthor(rl.getUserName());
+			machine.setRevisionauthor(SecurityContextHolder.getContext().getAuthentication().getName());
 			Date date = new Date(); 
            machine.setRevisiondate(date);
 			 return machrep.save(machine);
@@ -80,7 +81,7 @@ public class MachineController {
 	        mach.setAllocated(machinedetails.isAllocated());
 	        mach.setFESE(machinedetails.isFESE());
 	        mach.setLine(machinedetails.getLine());
-	        mach.setRevisionauthor(rl.getUserName());
+	        mach.setRevisionauthor(SecurityContextHolder.getContext().getAuthentication().getName());
 			Date date = new Date(); 
 			mach.setRevisiondate(date);
 	        machrep.save(machinedetails);

@@ -1,0 +1,779 @@
+[2022-11-07 03:00:37,081] INFO Successfully tested connection for jdbc:mysql://localhost:3306/?useInformationSchema=true&nullCatalogMeansCurrent=false&useSSL=false&useUnicode=true&characterEncoding=UTF-8&characterSetResults=UTF-8&zeroDateTimeBehavior=CONVERT_TO_NULL&connectTimeout=30000 with user 'dbz' (io.debezium.connector.mysql.MySqlConnector:100)
+[2022-11-07 03:00:37,084] INFO Connection gracefully closed (io.debezium.jdbc.JdbcConnection:965)
+[2022-11-07 03:00:37,085] INFO AbstractConfig values: 
+ (org.apache.kafka.common.config.AbstractConfig:376)
+[2022-11-07 03:00:37,086] INFO [CMS-connecto5|worker] Creating connector CMS-connecto5 of type io.debezium.connector.mysql.MySqlConnector (org.apache.kafka.connect.runtime.Worker:264)
+[2022-11-07 03:00:37,086] INFO [CMS-connecto5|worker] SourceConnectorConfig values: 
+	config.action.reload = restart
+	connector.class = io.debezium.connector.mysql.MySqlConnector
+	errors.log.enable = false
+	errors.log.include.messages = false
+	errors.retry.delay.max.ms = 60000
+	errors.retry.timeout = 0
+	errors.tolerance = none
+	header.converter = null
+	key.converter = null
+	name = CMS-connecto5
+	predicates = []
+	tasks.max = 1
+	topic.creation.groups = []
+	transforms = []
+	value.converter = null
+ (org.apache.kafka.connect.runtime.SourceConnectorConfig:376)
+[2022-11-07 03:00:37,087] INFO [CMS-connecto5|worker] EnrichedConnectorConfig values: 
+	config.action.reload = restart
+	connector.class = io.debezium.connector.mysql.MySqlConnector
+	errors.log.enable = false
+	errors.log.include.messages = false
+	errors.retry.delay.max.ms = 60000
+	errors.retry.timeout = 0
+	errors.tolerance = none
+	header.converter = null
+	key.converter = null
+	name = CMS-connecto5
+	predicates = []
+	tasks.max = 1
+	topic.creation.groups = []
+	transforms = []
+	value.converter = null
+ (org.apache.kafka.connect.runtime.ConnectorConfig$EnrichedConnectorConfig:376)
+[2022-11-07 03:00:37,087] INFO [CMS-connecto5|worker] Instantiated connector CMS-connecto5 with version 1.8.0.Final of type class io.debezium.connector.mysql.MySqlConnector (org.apache.kafka.connect.runtime.Worker:274)
+[2022-11-07 03:00:37,088] INFO [CMS-connecto5|worker] Finished creating connector CMS-connecto5 (org.apache.kafka.connect.runtime.Worker:299)
+[2022-11-07 03:00:37,088] INFO SourceConnectorConfig values: 
+	config.action.reload = restart
+	connector.class = io.debezium.connector.mysql.MySqlConnector
+	errors.log.enable = false
+	errors.log.include.messages = false
+	errors.retry.delay.max.ms = 60000
+	errors.retry.timeout = 0
+	errors.tolerance = none
+	header.converter = null
+	key.converter = null
+	name = CMS-connecto5
+	predicates = []
+	tasks.max = 1
+	topic.creation.groups = []
+	transforms = []
+	value.converter = null
+ (org.apache.kafka.connect.runtime.SourceConnectorConfig:376)
+[2022-11-07 03:00:37,089] INFO EnrichedConnectorConfig values: 
+	config.action.reload = restart
+	connector.class = io.debezium.connector.mysql.MySqlConnector
+	errors.log.enable = false
+	errors.log.include.messages = false
+	errors.retry.delay.max.ms = 60000
+	errors.retry.timeout = 0
+	errors.tolerance = none
+	header.converter = null
+	key.converter = null
+	name = CMS-connecto5
+	predicates = []
+	tasks.max = 1
+	topic.creation.groups = []
+	transforms = []
+	value.converter = null
+ (org.apache.kafka.connect.runtime.ConnectorConfig$EnrichedConnectorConfig:376)
+[2022-11-07 03:00:37,089] INFO [CMS-connecto5|task-0] Creating task CMS-connecto5-0 (org.apache.kafka.connect.runtime.Worker:498)
+[2022-11-07 03:00:37,090] INFO [CMS-connecto5|task-0] ConnectorConfig values: 
+	config.action.reload = restart
+	connector.class = io.debezium.connector.mysql.MySqlConnector
+	errors.log.enable = false
+	errors.log.include.messages = false
+	errors.retry.delay.max.ms = 60000
+	errors.retry.timeout = 0
+	errors.tolerance = none
+	header.converter = null
+	key.converter = null
+	name = CMS-connecto5
+	predicates = []
+	tasks.max = 1
+	transforms = []
+	value.converter = null
+ (org.apache.kafka.connect.runtime.ConnectorConfig:376)
+[2022-11-07 03:00:37,090] INFO [CMS-connecto5|task-0] EnrichedConnectorConfig values: 
+	config.action.reload = restart
+	connector.class = io.debezium.connector.mysql.MySqlConnector
+	errors.log.enable = false
+	errors.log.include.messages = false
+	errors.retry.delay.max.ms = 60000
+	errors.retry.timeout = 0
+	errors.tolerance = none
+	header.converter = null
+	key.converter = null
+	name = CMS-connecto5
+	predicates = []
+	tasks.max = 1
+	transforms = []
+	value.converter = null
+ (org.apache.kafka.connect.runtime.ConnectorConfig$EnrichedConnectorConfig:376)
+[2022-11-07 03:00:37,091] INFO [CMS-connecto5|task-0] TaskConfig values: 
+	task.class = class io.debezium.connector.mysql.MySqlConnectorTask
+ (org.apache.kafka.connect.runtime.TaskConfig:376)
+[2022-11-07 03:00:37,091] INFO [CMS-connecto5|task-0] Instantiated task CMS-connecto5-0 with version 1.8.0.Final of type io.debezium.connector.mysql.MySqlConnectorTask (org.apache.kafka.connect.runtime.Worker:513)
+[2022-11-07 03:00:37,091] INFO [CMS-connecto5|task-0] JsonConverterConfig values: 
+	converter.type = key
+	decimal.format = BASE64
+	schemas.cache.size = 1000
+	schemas.enable = true
+ (org.apache.kafka.connect.json.JsonConverterConfig:376)
+[2022-11-07 03:00:37,094] INFO [CMS-connecto5|task-0] Set up the key converter class org.apache.kafka.connect.json.JsonConverter for task CMS-connecto5-0 using the worker config (org.apache.kafka.connect.runtime.Worker:526)
+[2022-11-07 03:00:37,094] INFO [CMS-connecto5|task-0] JsonConverterConfig values: 
+	converter.type = value
+	decimal.format = BASE64
+	schemas.cache.size = 1000
+	schemas.enable = false
+ (org.apache.kafka.connect.json.JsonConverterConfig:376)
+[2022-11-07 03:00:37,094] INFO [CMS-connecto5|task-0] Set up the value converter class org.apache.kafka.connect.json.JsonConverter for task CMS-connecto5-0 using the worker config (org.apache.kafka.connect.runtime.Worker:532)
+[2022-11-07 03:00:37,094] INFO [CMS-connecto5|task-0] Set up the header converter class org.apache.kafka.connect.storage.SimpleHeaderConverter for task CMS-connecto5-0 using the worker config (org.apache.kafka.connect.runtime.Worker:539)
+[2022-11-07 03:00:37,096] INFO [CMS-connecto5|task-0] SourceConnectorConfig values: 
+	config.action.reload = restart
+	connector.class = io.debezium.connector.mysql.MySqlConnector
+	errors.log.enable = false
+	errors.log.include.messages = false
+	errors.retry.delay.max.ms = 60000
+	errors.retry.timeout = 0
+	errors.tolerance = none
+	header.converter = null
+	key.converter = null
+	name = CMS-connecto5
+	predicates = []
+	tasks.max = 1
+	topic.creation.groups = []
+	transforms = []
+	value.converter = null
+ (org.apache.kafka.connect.runtime.SourceConnectorConfig:376)
+[2022-11-07 03:00:37,096] INFO [CMS-connecto5|task-0] EnrichedConnectorConfig values: 
+	config.action.reload = restart
+	connector.class = io.debezium.connector.mysql.MySqlConnector
+	errors.log.enable = false
+	errors.log.include.messages = false
+	errors.retry.delay.max.ms = 60000
+	errors.retry.timeout = 0
+	errors.tolerance = none
+	header.converter = null
+	key.converter = null
+	name = CMS-connecto5
+	predicates = []
+	tasks.max = 1
+	topic.creation.groups = []
+	transforms = []
+	value.converter = null
+ (org.apache.kafka.connect.runtime.ConnectorConfig$EnrichedConnectorConfig:376)
+[2022-11-07 03:00:37,096] INFO [CMS-connecto5|task-0] Initializing: org.apache.kafka.connect.runtime.TransformationChain{} (org.apache.kafka.connect.runtime.Worker:593)
+[2022-11-07 03:00:37,097] INFO [CMS-connecto5|task-0] ProducerConfig values: 
+	acks = -1
+	batch.size = 16384
+	bootstrap.servers = [localhost:9094]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = connector-producer-CMS-connecto5-0
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 2147483647
+	enable.idempotence = false
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.ByteArraySerializer
+	linger.ms = 0
+	max.block.ms = 9223372036854775807
+	max.in.flight.requests.per.connection = 1
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.class = class org.apache.kafka.clients.producer.internals.DefaultPartitioner
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.2
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.ByteArraySerializer
+ (org.apache.kafka.clients.producer.ProducerConfig:376)
+[2022-11-07 03:00:37,102] WARN [CMS-connecto5|task-0] The configuration 'metrics.context.connect.kafka.cluster.id' was supplied but isn't a known config. (org.apache.kafka.clients.producer.ProducerConfig:384)
+[2022-11-07 03:00:37,103] INFO [CMS-connecto5|task-0] Kafka version: 3.2.1 (org.apache.kafka.common.utils.AppInfoParser:119)
+[2022-11-07 03:00:37,104] INFO [CMS-connecto5|task-0] Kafka commitId: b172a0a94f4ebb9f (org.apache.kafka.common.utils.AppInfoParser:120)
+[2022-11-07 03:00:37,105] INFO [CMS-connecto5|task-0] Kafka startTimeMs: 1667786437103 (org.apache.kafka.common.utils.AppInfoParser:121)
+[2022-11-07 03:00:37,129] INFO [CMS-connecto5|task-0] Starting MySqlConnectorTask with configuration: (io.debezium.connector.common.BaseSourceTask:124)
+[2022-11-07 03:00:37,141] INFO [CMS-connecto5|task-0] [Producer clientId=connector-producer-CMS-connecto5-0] Cluster ID: i6BrIp1ISg2w9s8XmqXJvg (org.apache.kafka.clients.Metadata:287)
+[2022-11-07 03:00:37,144] INFO [CMS-connecto5|task-0]    connector.class = io.debezium.connector.mysql.MySqlConnector (io.debezium.connector.common.BaseSourceTask:126)
+[2022-11-07 03:00:37,144] INFO [CMS-connecto5|task-0]    database.user = dbz (io.debezium.connector.common.BaseSourceTask:126)
+[2022-11-07 03:00:37,145] INFO [CMS-connecto5|task-0]    config.storage.topic = my_connect_config (io.debezium.connector.common.BaseSourceTask:126)
+[2022-11-07 03:00:37,145] INFO [CMS-connecto5|task-0]    database.server.id = 144 (io.debezium.connector.common.BaseSourceTask:126)
+[2022-11-07 03:00:37,146] INFO [CMS-connecto5|task-0]    tasks.max = 1 (io.debezium.connector.common.BaseSourceTask:126)
+[2022-11-07 03:00:37,146] INFO [CMS-connecto5|task-0]    database.history.kafka.bootstrap.servers = localhost:9094 (io.debezium.connector.common.BaseSourceTask:126)
+[2022-11-07 03:00:37,147] INFO [CMS-connecto5|task-0]    database.history.kafka.topic = schema-changes.inventory (io.debezium.connector.common.BaseSourceTask:126)
+[2022-11-07 03:00:37,150] INFO [CMS-connecto5|task-0]    status.storage.topic = my_connect_statuses (io.debezium.connector.common.BaseSourceTask:126)
+[2022-11-07 03:00:37,150] INFO [CMS-connecto5|task-0]    database.server.name = testdb (io.debezium.connector.common.BaseSourceTask:126)
+[2022-11-07 03:00:37,150] INFO [CMS-connecto5|task-0]    database.port = 3306 (io.debezium.connector.common.BaseSourceTask:126)
+[2022-11-07 03:00:37,150] INFO [CMS-connecto5|task-0]    heartbeat.interval?.ms = 5000 (io.debezium.connector.common.BaseSourceTask:126)
+[2022-11-07 03:00:37,151] INFO [CMS-connecto5|task-0]    task.class = io.debezium.connector.mysql.MySqlConnectorTask (io.debezium.connector.common.BaseSourceTask:126)
+[2022-11-07 03:00:37,151] INFO [CMS-connecto5|task-0]    database.hostname = localhost (io.debezium.connector.common.BaseSourceTask:126)
+[2022-11-07 03:00:37,151] INFO [CMS-connecto5|task-0]    database.password = ******** (io.debezium.connector.common.BaseSourceTask:126)
+[2022-11-07 03:00:37,152] INFO [CMS-connecto5|task-0]    name = CMS-connecto5 (io.debezium.connector.common.BaseSourceTask:126)
+[2022-11-07 03:00:37,152] INFO [CMS-connecto5|task-0]    offset.storage.topic = my_connect_offsets (io.debezium.connector.common.BaseSourceTask:126)
+[2022-11-07 03:00:37,166] INFO [CMS-connecto5|task-0] No previous offsets found (io.debezium.connector.common.BaseSourceTask:318)
+[2022-11-07 03:00:37,177] INFO [CMS-connecto5|task-0] KafkaDatabaseHistory Consumer config: {enable.auto.commit=false, value.deserializer=org.apache.kafka.common.serialization.StringDeserializer, group.id=testdb-dbhistory, auto.offset.reset=earliest, session.timeout.ms=10000, bootstrap.servers=localhost:9094, client.id=testdb-dbhistory, key.deserializer=org.apache.kafka.common.serialization.StringDeserializer, fetch.min.bytes=1} (io.debezium.relational.history.KafkaDatabaseHistory:219)
+[2022-11-07 03:00:37,180] INFO [CMS-connecto5|task-0] KafkaDatabaseHistory Producer config: {bootstrap.servers=localhost:9094, value.serializer=org.apache.kafka.common.serialization.StringSerializer, buffer.memory=1048576, retries=1, key.serializer=org.apache.kafka.common.serialization.StringSerializer, client.id=testdb-dbhistory, linger.ms=0, batch.size=32768, max.block.ms=10000, acks=1} (io.debezium.relational.history.KafkaDatabaseHistory:220)
+[2022-11-07 03:00:37,180] INFO [CMS-connecto5|task-0] Requested thread factory for connector MySqlConnector, id = testdb named = db-history-config-check (io.debezium.util.Threads:270)
+[2022-11-07 03:00:37,182] INFO [CMS-connecto5|task-0] Idempotence will be disabled because acks is set to 1, not set to 'all'. (org.apache.kafka.clients.producer.ProducerConfig:501)
+[2022-11-07 03:00:37,183] INFO [CMS-connecto5|task-0] ProducerConfig values: 
+	acks = 1
+	batch.size = 32768
+	bootstrap.servers = [localhost:9094]
+	buffer.memory = 1048576
+	client.dns.lookup = use_all_dns_ips
+	client.id = testdb-dbhistory
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = false
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 10000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.class = class org.apache.kafka.clients.producer.internals.DefaultPartitioner
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 1
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.2
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
+ (org.apache.kafka.clients.producer.ProducerConfig:376)
+[2022-11-07 03:00:37,187] INFO [CMS-connecto5|task-0] Kafka version: 3.2.1 (org.apache.kafka.common.utils.AppInfoParser:119)
+[2022-11-07 03:00:37,187] INFO [CMS-connecto5|task-0] Kafka commitId: b172a0a94f4ebb9f (org.apache.kafka.common.utils.AppInfoParser:120)
+[2022-11-07 03:00:37,188] INFO [CMS-connecto5|task-0] Kafka startTimeMs: 1667786437187 (org.apache.kafka.common.utils.AppInfoParser:121)
+[2022-11-07 03:00:37,188] INFO [CMS-connecto5|task-0] Closing connection before starting schema recovery (io.debezium.connector.mysql.MySqlConnectorTask:96)
+[2022-11-07 03:00:37,192] INFO [CMS-connecto5|task-0] Connection gracefully closed (io.debezium.jdbc.JdbcConnection:965)
+[2022-11-07 03:00:37,193] INFO [CMS-connecto5|task-0] Connector started for the first time, database history recovery will not be executed (io.debezium.connector.mysql.MySqlConnectorTask:346)
+[2022-11-07 03:00:37,194] INFO [CMS-connecto5|task-0] ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = earliest
+	bootstrap.servers = [localhost:9094]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = testdb-dbhistory
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = testdb-dbhistory
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 10000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.2
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+ (org.apache.kafka.clients.consumer.ConsumerConfig:376)
+[2022-11-07 03:00:37,198] INFO [CMS-connecto5|task-0] [Producer clientId=testdb-dbhistory] Cluster ID: i6BrIp1ISg2w9s8XmqXJvg (org.apache.kafka.clients.Metadata:287)
+[2022-11-07 03:00:37,200] INFO [CMS-connecto5|task-0] Kafka version: 3.2.1 (org.apache.kafka.common.utils.AppInfoParser:119)
+[2022-11-07 03:00:37,201] INFO [CMS-connecto5|task-0] Kafka commitId: b172a0a94f4ebb9f (org.apache.kafka.common.utils.AppInfoParser:120)
+[2022-11-07 03:00:37,201] INFO [CMS-connecto5|task-0] Kafka startTimeMs: 1667786437200 (org.apache.kafka.common.utils.AppInfoParser:121)
+[2022-11-07 03:00:37,209] INFO [CMS-connecto5|task-0] [Consumer clientId=testdb-dbhistory, groupId=testdb-dbhistory] Cluster ID: i6BrIp1ISg2w9s8XmqXJvg (org.apache.kafka.clients.Metadata:287)
+[2022-11-07 03:00:37,211] INFO [CMS-connecto5|task-0] [Consumer clientId=testdb-dbhistory, groupId=testdb-dbhistory] Resetting generation and member id due to: consumer pro-actively leaving the group (org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:1003)
+[2022-11-07 03:00:37,212] INFO [CMS-connecto5|task-0] [Consumer clientId=testdb-dbhistory, groupId=testdb-dbhistory] Request joining group due to: consumer pro-actively leaving the group (org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:1050)
+[2022-11-07 03:00:37,212] INFO [CMS-connecto5|task-0] Metrics scheduler closed (org.apache.kafka.common.metrics.Metrics:659)
+[2022-11-07 03:00:37,212] INFO [CMS-connecto5|task-0] Closing reporter org.apache.kafka.common.metrics.JmxReporter (org.apache.kafka.common.metrics.Metrics:663)
+[2022-11-07 03:00:37,213] INFO [CMS-connecto5|task-0] Metrics reporters closed (org.apache.kafka.common.metrics.Metrics:669)
+[2022-11-07 03:00:37,214] INFO [CMS-connecto5|task-0] App info kafka.consumer for testdb-dbhistory unregistered (org.apache.kafka.common.utils.AppInfoParser:83)
+[2022-11-07 03:00:37,215] INFO [CMS-connecto5|task-0] AdminClientConfig values: 
+	bootstrap.servers = [localhost:9094]
+	client.dns.lookup = use_all_dns_ips
+	client.id = testdb-dbhistory
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 1
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.2
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+ (org.apache.kafka.clients.admin.AdminClientConfig:376)
+[2022-11-07 03:00:37,217] WARN [CMS-connecto5|task-0] The configuration 'value.serializer' was supplied but isn't a known config. (org.apache.kafka.clients.admin.AdminClientConfig:384)
+[2022-11-07 03:00:37,218] WARN [CMS-connecto5|task-0] The configuration 'batch.size' was supplied but isn't a known config. (org.apache.kafka.clients.admin.AdminClientConfig:384)
+[2022-11-07 03:00:37,218] WARN [CMS-connecto5|task-0] The configuration 'max.block.ms' was supplied but isn't a known config. (org.apache.kafka.clients.admin.AdminClientConfig:384)
+[2022-11-07 03:00:37,218] WARN [CMS-connecto5|task-0] The configuration 'acks' was supplied but isn't a known config. (org.apache.kafka.clients.admin.AdminClientConfig:384)
+[2022-11-07 03:00:37,218] WARN [CMS-connecto5|task-0] The configuration 'buffer.memory' was supplied but isn't a known config. (org.apache.kafka.clients.admin.AdminClientConfig:384)
+[2022-11-07 03:00:37,219] WARN [CMS-connecto5|task-0] The configuration 'key.serializer' was supplied but isn't a known config. (org.apache.kafka.clients.admin.AdminClientConfig:384)
+[2022-11-07 03:00:37,219] WARN [CMS-connecto5|task-0] The configuration 'linger.ms' was supplied but isn't a known config. (org.apache.kafka.clients.admin.AdminClientConfig:384)
+[2022-11-07 03:00:37,219] INFO [CMS-connecto5|task-0] Kafka version: 3.2.1 (org.apache.kafka.common.utils.AppInfoParser:119)
+[2022-11-07 03:00:37,219] INFO [CMS-connecto5|task-0] Kafka commitId: b172a0a94f4ebb9f (org.apache.kafka.common.utils.AppInfoParser:120)
+[2022-11-07 03:00:37,219] INFO [CMS-connecto5|task-0] Kafka startTimeMs: 1667786437219 (org.apache.kafka.common.utils.AppInfoParser:121)
+[2022-11-07 03:00:37,337] INFO [CMS-connecto5|task-0] Database history topic '(name=schema-changes.inventory, numPartitions=1, replicationFactor=1, replicasAssignments=null, configs={cleanup.policy=delete, retention.ms=9223372036854775807, retention.bytes=-1})' created (io.debezium.relational.history.KafkaDatabaseHistory:506)
+[2022-11-07 03:00:38,026] INFO [CMS-connecto5|task-0] App info kafka.admin.client for testdb-dbhistory unregistered (org.apache.kafka.common.utils.AppInfoParser:83)
+[2022-11-07 03:00:38,030] INFO [CMS-connecto5|task-0] Metrics scheduler closed (org.apache.kafka.common.metrics.Metrics:659)
+[2022-11-07 03:00:38,030] INFO [CMS-connecto5|task-0] Closing reporter org.apache.kafka.common.metrics.JmxReporter (org.apache.kafka.common.metrics.Metrics:663)
+[2022-11-07 03:00:38,030] INFO [CMS-connecto5|task-0] Metrics reporters closed (org.apache.kafka.common.metrics.Metrics:669)
+[2022-11-07 03:00:38,030] INFO [CMS-connecto5|task-0] Reconnecting after finishing schema recovery (io.debezium.connector.mysql.MySqlConnectorTask:110)
+[2022-11-07 03:00:38,057] INFO [CMS-connecto5|task-0] Requested thread factory for connector MySqlConnector, id = testdb named = change-event-source-coordinator (io.debezium.util.Threads:270)
+[2022-11-07 03:00:38,058] INFO [CMS-connecto5|task-0] Creating thread debezium-mysqlconnector-testdb-change-event-source-coordinator (io.debezium.util.Threads:287)
+[2022-11-07 03:00:38,059] INFO [CMS-connecto5|task-0] WorkerSourceTask{id=CMS-connecto5-0} Source task finished initialization and start (org.apache.kafka.connect.runtime.WorkerSourceTask:227)
+[2022-11-07 03:00:38,059] INFO [CMS-connecto5|task-0] WorkerSourceTask{id=CMS-connecto5-0} Executing source task (org.apache.kafka.connect.runtime.WorkerSourceTask:233)
+[2022-11-07 03:00:38,062] INFO [CMS-connecto5|task-0] Metrics registered (io.debezium.pipeline.ChangeEventSourceCoordinator:102)
+[2022-11-07 03:00:38,062] INFO [CMS-connecto5|task-0] Context created (io.debezium.pipeline.ChangeEventSourceCoordinator:105)
+[2022-11-07 03:00:38,066] INFO [CMS-connecto5|task-0] No previous offset has been found (io.debezium.connector.mysql.MySqlSnapshotChangeEventSource:87)
+[2022-11-07 03:00:38,066] INFO [CMS-connecto5|task-0] According to the connector configuration both schema and data will be snapshotted (io.debezium.connector.mysql.MySqlSnapshotChangeEventSource:89)
+[2022-11-07 03:00:38,067] INFO [CMS-connecto5|task-0] Snapshot step 1 - Preparing (io.debezium.relational.RelationalSnapshotChangeEventSource:87)
+[2022-11-07 03:00:38,068] INFO [CMS-connecto5|task-0] Snapshot step 2 - Determining captured tables (io.debezium.relational.RelationalSnapshotChangeEventSource:96)
+[2022-11-07 03:00:38,068] INFO [CMS-connecto5|task-0] Read list of available databases (io.debezium.connector.mysql.MySqlSnapshotChangeEventSource:118)
+[2022-11-07 03:00:38,126] INFO [CMS-connecto5|task-0] 	 list of available databases is: [information_schema, mysql, performance_schema, sys, testdb] (io.debezium.connector.mysql.MySqlSnapshotChangeEventSource:125)
+[2022-11-07 03:00:38,126] INFO [CMS-connecto5|task-0] Read list of available tables in each database (io.debezium.connector.mysql.MySqlSnapshotChangeEventSource:133)
+[2022-11-07 03:00:38,244] INFO [CMS-connecto5|task-0] 	snapshot continuing with database(s): [information_schema, performance_schema, testdb, mysql, sys] (io.debezium.connector.mysql.MySqlSnapshotChangeEventSource:154)
+[2022-11-07 03:00:38,247] INFO [CMS-connecto5|task-0] Snapshot step 3 - Locking captured tables [testdb.hibernate_sequence, testdb.line_alloc, testdb.line_alloc_aud, testdb.lines_p, testdb.lines_p_aud, testdb.machine_alloc, testdb.machine_alloc_aud, testdb.machines, testdb.machines_aud, testdb.my_revision, testdb.roles, testdb.roles_aud, testdb.user_roles, testdb.user_roles_aud, testdb.users, testdb.users_aud] (io.debezium.relational.RelationalSnapshotChangeEventSource:103)
+[2022-11-07 03:00:38,249] INFO [CMS-connecto5|task-0] Flush and obtain global read lock to prevent writes to database (io.debezium.connector.mysql.MySqlSnapshotChangeEventSource:427)
+[2022-11-07 03:00:38,251] INFO [CMS-connecto5|task-0] Snapshot step 4 - Determining snapshot offset (io.debezium.relational.RelationalSnapshotChangeEventSource:109)
+[2022-11-07 03:00:38,251] INFO [CMS-connecto5|task-0] Read binlog position of MySQL primary server (io.debezium.connector.mysql.MySqlSnapshotChangeEventSource:275)
+[2022-11-07 03:00:38,254] INFO [CMS-connecto5|task-0] 	 using binlog 'mysql-bin.000026' at position '156' and gtid '' (io.debezium.connector.mysql.MySqlSnapshotChangeEventSource:286)
+[2022-11-07 03:00:38,254] INFO [CMS-connecto5|task-0] Snapshot step 5 - Reading structure of captured tables (io.debezium.relational.RelationalSnapshotChangeEventSource:112)
+[2022-11-07 03:00:38,255] INFO [CMS-connecto5|task-0] All eligible tables schema should be captured, capturing: [testdb.hibernate_sequence, testdb.line_alloc, testdb.line_alloc_aud, testdb.lines_p, testdb.lines_p_aud, testdb.machine_alloc, testdb.machine_alloc_aud, testdb.machines, testdb.machines_aud, testdb.my_revision, testdb.roles, testdb.roles_aud, testdb.user_roles, testdb.user_roles_aud, testdb.users, testdb.users_aud] (io.debezium.connector.mysql.MySqlSnapshotChangeEventSource:328)
+[2022-11-07 03:00:39,130] INFO [CMS-connecto5|task-0] Reading structure of database 'testdb' (io.debezium.connector.mysql.MySqlSnapshotChangeEventSource:350)
+[2022-11-07 03:00:39,444] INFO [CMS-connecto5|task-0] Snapshot step 6 - Persisting schema history (io.debezium.relational.RelationalSnapshotChangeEventSource:116)
+[2022-11-07 03:00:39,485] INFO [CMS-connecto5|task-0] [Producer clientId=testdb-dbhistory] Resetting the last seen epoch of partition schema-changes.inventory-0 to 0 since the associated topicId changed from null to Y5YhC3nSSyCom-dQQb7uYQ (org.apache.kafka.clients.Metadata:402)
+[2022-11-07 03:00:39,871] INFO [CMS-connecto5|task-0] Releasing global read lock to enable MySQL writes (io.debezium.connector.mysql.MySqlSnapshotChangeEventSource:433)
+[2022-11-07 03:00:39,872] INFO [CMS-connecto5|task-0] Writes to MySQL tables prevented for a total of 00:00:01.621 (io.debezium.connector.mysql.MySqlSnapshotChangeEventSource:437)
+[2022-11-07 03:00:39,872] INFO [CMS-connecto5|task-0] Snapshot step 7 - Snapshotting data (io.debezium.relational.RelationalSnapshotChangeEventSource:128)
+[2022-11-07 03:00:39,873] INFO [CMS-connecto5|task-0] Snapshotting contents of 16 tables while still in transaction (io.debezium.relational.RelationalSnapshotChangeEventSource:298)
+[2022-11-07 03:00:39,873] INFO [CMS-connecto5|task-0] Exporting data from table 'testdb.hibernate_sequence' (1 of 16 tables) (io.debezium.relational.RelationalSnapshotChangeEventSource:334)
+[2022-11-07 03:00:39,875] INFO [CMS-connecto5|task-0] 	 For table 'testdb.hibernate_sequence' using select statement: 'SELECT `next_val` FROM `testdb`.`hibernate_sequence`' (io.debezium.relational.RelationalSnapshotChangeEventSource:342)
+[2022-11-07 03:00:39,919] INFO [CMS-connecto5|task-0] 	 Finished exporting 1 records for table 'testdb.hibernate_sequence'; total duration '00:00:00.046' (io.debezium.relational.RelationalSnapshotChangeEventSource:387)
+[2022-11-07 03:00:39,920] INFO [CMS-connecto5|task-0] Exporting data from table 'testdb.line_alloc' (2 of 16 tables) (io.debezium.relational.RelationalSnapshotChangeEventSource:334)
+[2022-11-07 03:00:39,921] INFO [CMS-connecto5|task-0] 	 For table 'testdb.line_alloc' using select statement: 'SELECT `id`, `allocated_at`, `line_id`, `user_id` FROM `testdb`.`line_alloc`' (io.debezium.relational.RelationalSnapshotChangeEventSource:342)
+[2022-11-07 03:00:39,924] INFO [CMS-connecto5|task-0] 	 Finished exporting 0 records for table 'testdb.line_alloc'; total duration '00:00:00.004' (io.debezium.relational.RelationalSnapshotChangeEventSource:387)
+[2022-11-07 03:00:39,925] INFO [CMS-connecto5|task-0] Exporting data from table 'testdb.line_alloc_aud' (3 of 16 tables) (io.debezium.relational.RelationalSnapshotChangeEventSource:334)
+[2022-11-07 03:00:39,926] INFO [CMS-connecto5|task-0] 	 For table 'testdb.line_alloc_aud' using select statement: 'SELECT `id`, `rev`, `revtype`, `allocated_at`, `line_id`, `user_id` FROM `testdb`.`line_alloc_aud`' (io.debezium.relational.RelationalSnapshotChangeEventSource:342)
+[2022-11-07 03:00:39,933] INFO [CMS-connecto5|task-0] 	 Finished exporting 1 records for table 'testdb.line_alloc_aud'; total duration '00:00:00.008' (io.debezium.relational.RelationalSnapshotChangeEventSource:387)
+[2022-11-07 03:00:39,934] INFO [CMS-connecto5|task-0] Exporting data from table 'testdb.lines_p' (4 of 16 tables) (io.debezium.relational.RelationalSnapshotChangeEventSource:334)
+[2022-11-07 03:00:39,934] INFO [CMS-connecto5|task-0] 	 For table 'testdb.lines_p' using select statement: 'SELECT `id`, `description`, `name`, `revisiondate`, `revisionauthor_id`, `revisionauthor` FROM `testdb`.`lines_p`' (io.debezium.relational.RelationalSnapshotChangeEventSource:342)
+[2022-11-07 03:00:39,947] INFO [CMS-connecto5|task-0] 	 Finished exporting 3 records for table 'testdb.lines_p'; total duration '00:00:00.013' (io.debezium.relational.RelationalSnapshotChangeEventSource:387)
+[2022-11-07 03:00:39,953] INFO [CMS-connecto5|task-0] Exporting data from table 'testdb.lines_p_aud' (5 of 16 tables) (io.debezium.relational.RelationalSnapshotChangeEventSource:334)
+[2022-11-07 03:00:39,969] INFO [CMS-connecto5|task-0] 	 For table 'testdb.lines_p_aud' using select statement: 'SELECT `id`, `rev`, `revtype`, `description`, `name`, `revisiondate`, `revisionauthor_id`, `revisionauthor` FROM `testdb`.`lines_p_aud`' (io.debezium.relational.RelationalSnapshotChangeEventSource:342)
+[2022-11-07 03:00:39,996] INFO [CMS-connecto5|task-0] 	 Finished exporting 26 records for table 'testdb.lines_p_aud'; total duration '00:00:00.043' (io.debezium.relational.RelationalSnapshotChangeEventSource:387)
+[2022-11-07 03:00:39,997] INFO [CMS-connecto5|task-0] Exporting data from table 'testdb.machine_alloc' (6 of 16 tables) (io.debezium.relational.RelationalSnapshotChangeEventSource:334)
+[2022-11-07 03:00:40,003] INFO [CMS-connecto5|task-0] 	 For table 'testdb.machine_alloc' using select statement: 'SELECT `id`, `allocated_at`, `machine_id`, `user_id` FROM `testdb`.`machine_alloc`' (io.debezium.relational.RelationalSnapshotChangeEventSource:342)
+[2022-11-07 03:00:40,012] INFO [CMS-connecto5|task-0] 	 Finished exporting 0 records for table 'testdb.machine_alloc'; total duration '00:00:00.015' (io.debezium.relational.RelationalSnapshotChangeEventSource:387)
+[2022-11-07 03:00:40,014] INFO [CMS-connecto5|task-0] Exporting data from table 'testdb.machine_alloc_aud' (7 of 16 tables) (io.debezium.relational.RelationalSnapshotChangeEventSource:334)
+[2022-11-07 03:00:40,014] INFO [CMS-connecto5|task-0] 	 For table 'testdb.machine_alloc_aud' using select statement: 'SELECT `id`, `rev`, `revtype`, `allocated_at`, `machine_id`, `user_id` FROM `testdb`.`machine_alloc_aud`' (io.debezium.relational.RelationalSnapshotChangeEventSource:342)
+[2022-11-07 03:00:40,019] INFO [CMS-connecto5|task-0] 	 Finished exporting 0 records for table 'testdb.machine_alloc_aud'; total duration '00:00:00.005' (io.debezium.relational.RelationalSnapshotChangeEventSource:387)
+[2022-11-07 03:00:40,020] INFO [CMS-connecto5|task-0] Exporting data from table 'testdb.machines' (8 of 16 tables) (io.debezium.relational.RelationalSnapshotChangeEventSource:334)
+[2022-11-07 03:00:40,022] INFO [CMS-connecto5|task-0] 	 For table 'testdb.machines' using select statement: 'SELECT `id`, `fese`, `allocated`, `description`, `status`, `typemach`, `line_id`, `revisiondate`, `revisionauthor_id`, `revisionauthor`, `name` FROM `testdb`.`machines`' (io.debezium.relational.RelationalSnapshotChangeEventSource:342)
+[2022-11-07 03:00:40,035] INFO [CMS-connecto5|task-0] 	 Finished exporting 4 records for table 'testdb.machines'; total duration '00:00:00.015' (io.debezium.relational.RelationalSnapshotChangeEventSource:387)
+[2022-11-07 03:00:40,035] INFO [CMS-connecto5|task-0] Exporting data from table 'testdb.machines_aud' (9 of 16 tables) (io.debezium.relational.RelationalSnapshotChangeEventSource:334)
+[2022-11-07 03:00:40,036] INFO [CMS-connecto5|task-0] 	 For table 'testdb.machines_aud' using select statement: 'SELECT `id`, `rev`, `revtype`, `fese`, `allocated`, `description`, `status`, `typemach`, `line_id`, `revisiondate`, `revisionauthor_id`, `revisionauthor`, `name` FROM `testdb`.`machines_aud`' (io.debezium.relational.RelationalSnapshotChangeEventSource:342)
+[2022-11-07 03:00:40,047] INFO [CMS-connecto5|task-0] 	 Finished exporting 7 records for table 'testdb.machines_aud'; total duration '00:00:00.012' (io.debezium.relational.RelationalSnapshotChangeEventSource:387)
+[2022-11-07 03:00:40,048] INFO [CMS-connecto5|task-0] Exporting data from table 'testdb.my_revision' (10 of 16 tables) (io.debezium.relational.RelationalSnapshotChangeEventSource:334)
+[2022-11-07 03:00:40,048] INFO [CMS-connecto5|task-0] 	 For table 'testdb.my_revision' using select statement: 'SELECT `id`, `timestamp`, `user`, `isline`, `ismachine`, `isuser` FROM `testdb`.`my_revision`' (io.debezium.relational.RelationalSnapshotChangeEventSource:342)
+[2022-11-07 03:00:40,070] INFO [CMS-connecto5|task-0] 	 Finished exporting 51 records for table 'testdb.my_revision'; total duration '00:00:00.022' (io.debezium.relational.RelationalSnapshotChangeEventSource:387)
+[2022-11-07 03:00:40,071] INFO [CMS-connecto5|task-0] Exporting data from table 'testdb.roles' (11 of 16 tables) (io.debezium.relational.RelationalSnapshotChangeEventSource:334)
+[2022-11-07 03:00:40,071] INFO [CMS-connecto5|task-0] 	 For table 'testdb.roles' using select statement: 'SELECT `id`, `name` FROM `testdb`.`roles`' (io.debezium.relational.RelationalSnapshotChangeEventSource:342)
+[2022-11-07 03:00:40,079] INFO [CMS-connecto5|task-0] 	 Finished exporting 3 records for table 'testdb.roles'; total duration '00:00:00.008' (io.debezium.relational.RelationalSnapshotChangeEventSource:387)
+[2022-11-07 03:00:40,079] INFO [CMS-connecto5|task-0] Exporting data from table 'testdb.roles_aud' (12 of 16 tables) (io.debezium.relational.RelationalSnapshotChangeEventSource:334)
+[2022-11-07 03:00:40,080] INFO [CMS-connecto5|task-0] 	 For table 'testdb.roles_aud' using select statement: 'SELECT `id`, `rev`, `revtype`, `name` FROM `testdb`.`roles_aud`' (io.debezium.relational.RelationalSnapshotChangeEventSource:342)
+[2022-11-07 03:00:40,085] INFO [CMS-connecto5|task-0] 	 Finished exporting 0 records for table 'testdb.roles_aud'; total duration '00:00:00.006' (io.debezium.relational.RelationalSnapshotChangeEventSource:387)
+[2022-11-07 03:00:40,086] INFO [CMS-connecto5|task-0] Exporting data from table 'testdb.user_roles' (13 of 16 tables) (io.debezium.relational.RelationalSnapshotChangeEventSource:334)
+[2022-11-07 03:00:40,086] INFO [CMS-connecto5|task-0] 	 For table 'testdb.user_roles' using select statement: 'SELECT `user_id`, `role_id` FROM `testdb`.`user_roles`' (io.debezium.relational.RelationalSnapshotChangeEventSource:342)
+[2022-11-07 03:00:40,103] INFO [CMS-connecto5|task-0] 	 Finished exporting 13 records for table 'testdb.user_roles'; total duration '00:00:00.018' (io.debezium.relational.RelationalSnapshotChangeEventSource:387)
+[2022-11-07 03:00:40,120] INFO [CMS-connecto5|task-0] Exporting data from table 'testdb.user_roles_aud' (14 of 16 tables) (io.debezium.relational.RelationalSnapshotChangeEventSource:334)
+[2022-11-07 03:00:40,127] INFO [CMS-connecto5|task-0] 	 For table 'testdb.user_roles_aud' using select statement: 'SELECT `rev`, `user_id`, `role_id`, `revtype` FROM `testdb`.`user_roles_aud`' (io.debezium.relational.RelationalSnapshotChangeEventSource:342)
+[2022-11-07 03:00:40,134] INFO [CMS-connecto5|task-0] 	 Finished exporting 21 records for table 'testdb.user_roles_aud'; total duration '00:00:00.014' (io.debezium.relational.RelationalSnapshotChangeEventSource:387)
+[2022-11-07 03:00:40,135] INFO [CMS-connecto5|task-0] Exporting data from table 'testdb.users' (15 of 16 tables) (io.debezium.relational.RelationalSnapshotChangeEventSource:334)
+[2022-11-07 03:00:40,136] INFO [CMS-connecto5|task-0] 	 For table 'testdb.users' using select statement: 'SELECT `id`, `email`, `password`, `username`, `revisionauthor`, `revisiondate` FROM `testdb`.`users`' (io.debezium.relational.RelationalSnapshotChangeEventSource:342)
+[2022-11-07 03:00:40,145] INFO [CMS-connecto5|task-0] 	 Finished exporting 13 records for table 'testdb.users'; total duration '00:00:00.01' (io.debezium.relational.RelationalSnapshotChangeEventSource:387)
+[2022-11-07 03:00:40,146] INFO [CMS-connecto5|task-0] Exporting data from table 'testdb.users_aud' (16 of 16 tables) (io.debezium.relational.RelationalSnapshotChangeEventSource:334)
+[2022-11-07 03:00:40,146] INFO [CMS-connecto5|task-0] 	 For table 'testdb.users_aud' using select statement: 'SELECT `id`, `rev`, `revtype`, `email`, `password`, `username`, `revisionauthor`, `revisiondate` FROM `testdb`.`users_aud`' (io.debezium.relational.RelationalSnapshotChangeEventSource:342)
+[2022-11-07 03:00:40,161] INFO [CMS-connecto5|task-0] 	 Finished exporting 28 records for table 'testdb.users_aud'; total duration '00:00:00.015' (io.debezium.relational.RelationalSnapshotChangeEventSource:387)
+[2022-11-07 03:00:40,163] INFO [CMS-connecto5|task-0] Snapshot - Final stage (io.debezium.pipeline.source.AbstractSnapshotChangeEventSource:88)
+[2022-11-07 03:00:40,163] INFO [CMS-connecto5|task-0] Snapshot ended with SnapshotResult [status=COMPLETED, offset=MySqlOffsetContext [sourceInfoSchema=Schema{io.debezium.connector.mysql.Source:STRUCT}, sourceInfo=SourceInfo [currentGtid=null, currentBinlogFilename=mysql-bin.000026, currentBinlogPosition=156, currentRowNumber=0, serverId=0, sourceTime=2022-11-07T02:00:40.160Z, threadId=-1, currentQuery=null, tableIds=[testdb.users_aud], databaseName=testdb], snapshotCompleted=true, transactionContext=TransactionContext [currentTransactionId=null, perTableEventCount={}, totalEventCount=0], restartGtidSet=null, currentGtidSet=null, restartBinlogFilename=mysql-bin.000026, restartBinlogPosition=156, restartRowsToSkip=0, restartEventsToSkip=0, currentEventLengthInBytes=0, inTransaction=false, transactionId=null, incrementalSnapshotContext =IncrementalSnapshotContext [windowOpened=false, chunkEndPosition=null, dataCollectionsToSnapshot=[], lastEventKeySent=null, maximumKey=null]]] (io.debezium.pipeline.ChangeEventSourceCoordinator:154)
+[2022-11-07 03:00:40,169] INFO [CMS-connecto5|task-0] Requested thread factory for connector MySqlConnector, id = testdb named = binlog-client (io.debezium.util.Threads:270)
+[2022-11-07 03:00:40,171] INFO [CMS-connecto5|task-0] Starting streaming (io.debezium.pipeline.ChangeEventSourceCoordinator:171)
+[2022-11-07 03:00:40,180] INFO [CMS-connecto5|task-0] Skip 0 events on streaming start (io.debezium.connector.mysql.MySqlStreamingChangeEventSource:914)
+[2022-11-07 03:00:40,180] INFO [CMS-connecto5|task-0] Skip 0 rows on streaming start (io.debezium.connector.mysql.MySqlStreamingChangeEventSource:918)
+[2022-11-07 03:00:40,182] INFO [CMS-connecto5|task-0] Creating thread debezium-mysqlconnector-testdb-binlog-client (io.debezium.util.Threads:287)
+[2022-11-07 03:00:40,185] INFO [CMS-connecto5|task-0] Creating thread debezium-mysqlconnector-testdb-binlog-client (io.debezium.util.Threads:287)
+[2022-11-07 03:00:40,198] INFO [CMS-connecto5|task-0] Connected to MySQL binlog at localhost:3306, starting at MySqlOffsetContext [sourceInfoSchema=Schema{io.debezium.connector.mysql.Source:STRUCT}, sourceInfo=SourceInfo [currentGtid=null, currentBinlogFilename=mysql-bin.000026, currentBinlogPosition=156, currentRowNumber=0, serverId=0, sourceTime=2022-11-07T02:00:40.160Z, threadId=-1, currentQuery=null, tableIds=[testdb.users_aud], databaseName=testdb], snapshotCompleted=true, transactionContext=TransactionContext [currentTransactionId=null, perTableEventCount={}, totalEventCount=0], restartGtidSet=null, currentGtidSet=null, restartBinlogFilename=mysql-bin.000026, restartBinlogPosition=156, restartRowsToSkip=0, restartEventsToSkip=0, currentEventLengthInBytes=0, inTransaction=false, transactionId=null, incrementalSnapshotContext =IncrementalSnapshotContext [windowOpened=false, chunkEndPosition=null, dataCollectionsToSnapshot=[], lastEventKeySent=null, maximumKey=null]] (io.debezium.connector.mysql.MySqlStreamingChangeEventSource:1203)
+[2022-11-07 03:00:40,199] INFO [CMS-connecto5|task-0] Waiting for keepalive thread to start (io.debezium.connector.mysql.MySqlStreamingChangeEventSource:935)
+[2022-11-07 03:00:40,200] INFO [CMS-connecto5|task-0] Creating thread debezium-mysqlconnector-testdb-binlog-client (io.debezium.util.Threads:287)
+[2022-11-07 03:00:40,226] WARN [CMS-connecto5|task-0] [Producer clientId=connector-producer-CMS-connecto5-0] Error while fetching metadata with correlation id 3 : {testdb=LEADER_NOT_AVAILABLE} (org.apache.kafka.clients.NetworkClient:1103)
+[2022-11-07 03:00:40,310] INFO [CMS-connecto5|task-0] Keepalive thread is running (io.debezium.connector.mysql.MySqlStreamingChangeEventSource:942)
+[2022-11-07 03:00:40,348] WARN [CMS-connecto5|task-0] [Producer clientId=connector-producer-CMS-connecto5-0] Error while fetching metadata with correlation id 4 : {testdb=LEADER_NOT_AVAILABLE} (org.apache.kafka.clients.NetworkClient:1103)
+[2022-11-07 03:00:40,454] INFO [CMS-connecto5|task-0] [Producer clientId=connector-producer-CMS-connecto5-0] Resetting the last seen epoch of partition testdb-0 to 0 since the associated topicId changed from null to xZQbHWNLSru2Tz-YNy45bw (org.apache.kafka.clients.Metadata:402)
+[2022-11-07 03:00:40,687] WARN [CMS-connecto5|task-0] [Producer clientId=connector-producer-CMS-connecto5-0] Error while fetching metadata with correlation id 9 : {testdb.testdb.hibernate_sequence=LEADER_NOT_AVAILABLE} (org.apache.kafka.clients.NetworkClient:1103)
+[2022-11-07 03:00:40,802] WARN [CMS-connecto5|task-0] [Producer clientId=connector-producer-CMS-connecto5-0] Error while fetching metadata with correlation id 12 : {testdb.testdb.hibernate_sequence=LEADER_NOT_AVAILABLE} (org.apache.kafka.clients.NetworkClient:1103)
+[2022-11-07 03:00:40,803] INFO [CMS-connecto5|task-0] [Producer clientId=connector-producer-CMS-connecto5-0] Resetting the last seen epoch of partition testdb-0 to 0 since the associated topicId changed from null to xZQbHWNLSru2Tz-YNy45bw (org.apache.kafka.clients.Metadata:402)
+[2022-11-07 03:00:40,912] WARN [CMS-connecto5|task-0] [Producer clientId=connector-producer-CMS-connecto5-0] Error while fetching metadata with correlation id 13 : {testdb.testdb.hibernate_sequence=LEADER_NOT_AVAILABLE} (org.apache.kafka.clients.NetworkClient:1103)
+[2022-11-07 03:00:41,019] INFO [CMS-connecto5|task-0] [Producer clientId=connector-producer-CMS-connecto5-0] Resetting the last seen epoch of partition testdb.testdb.hibernate_sequence-0 to 0 since the associated topicId changed from null to kG1tKZyCQAuAANysIraJIQ (org.apache.kafka.clients.Metadata:402)
+[2022-11-07 03:00:41,145] WARN [CMS-connecto5|task-0] [Producer clientId=connector-producer-CMS-connecto5-0] Error while fetching metadata with correlation id 16 : {testdb.testdb.line_alloc_aud=LEADER_NOT_AVAILABLE} (org.apache.kafka.clients.NetworkClient:1103)
+[2022-11-07 03:00:41,254] WARN [CMS-connecto5|task-0] [Producer clientId=connector-producer-CMS-connecto5-0] Error while fetching metadata with correlation id 17 : {testdb.testdb.line_alloc_aud=LEADER_NOT_AVAILABLE} (org.apache.kafka.clients.NetworkClient:1103)
+[2022-11-07 03:00:41,255] INFO [CMS-connecto5|task-0] [Producer clientId=connector-producer-CMS-connecto5-0] Resetting the last seen epoch of partition testdb.testdb.hibernate_sequence-0 to 0 since the associated topicId changed from null to kG1tKZyCQAuAANysIraJIQ (org.apache.kafka.clients.Metadata:402)
+[2022-11-07 03:00:41,256] INFO [CMS-connecto5|task-0] [Producer clientId=connector-producer-CMS-connecto5-0] Resetting the last seen epoch of partition testdb-0 to 0 since the associated topicId changed from null to xZQbHWNLSru2Tz-YNy45bw (org.apache.kafka.clients.Metadata:402)
+[2022-11-07 03:00:41,361] INFO [CMS-connecto5|task-0] [Producer clientId=connector-producer-CMS-connecto5-0] Resetting the last seen epoch of partition testdb.testdb.line_alloc_aud-0 to 0 since the associated topicId changed from null to a3J4O4uPTKihTyMdDttEnQ (org.apache.kafka.clients.Metadata:402)
+[2022-11-07 03:00:41,445] WARN [CMS-connecto5|task-0] [Producer clientId=connector-producer-CMS-connecto5-0] Error while fetching metadata with correlation id 20 : {testdb.testdb.lines_p=LEADER_NOT_AVAILABLE} (org.apache.kafka.clients.NetworkClient:1103)
+[2022-11-07 03:00:41,560] WARN [CMS-connecto5|task-0] [Producer clientId=connector-producer-CMS-connecto5-0] Error while fetching metadata with correlation id 21 : {testdb.testdb.lines_p=LEADER_NOT_AVAILABLE} (org.apache.kafka.clients.NetworkClient:1103)
+[2022-11-07 03:00:41,560] INFO [CMS-connecto5|task-0] [Producer clientId=connector-producer-CMS-connecto5-0] Resetting the last seen epoch of partition testdb.testdb.hibernate_sequence-0 to 0 since the associated topicId changed from null to kG1tKZyCQAuAANysIraJIQ (org.apache.kafka.clients.Metadata:402)
+[2022-11-07 03:00:41,562] INFO [CMS-connecto5|task-0] [Producer clientId=connector-producer-CMS-connecto5-0] Resetting the last seen epoch of partition testdb.testdb.line_alloc_aud-0 to 0 since the associated topicId changed from null to a3J4O4uPTKihTyMdDttEnQ (org.apache.kafka.clients.Metadata:402)
+[2022-11-07 03:00:41,563] INFO [CMS-connecto5|task-0] [Producer clientId=connector-producer-CMS-connecto5-0] Resetting the last seen epoch of partition testdb-0 to 0 since the associated topicId changed from null to xZQbHWNLSru2Tz-YNy45bw (org.apache.kafka.clients.Metadata:402)
+[2022-11-07 03:00:41,673] INFO [CMS-connecto5|task-0] [Producer clientId=connector-producer-CMS-connecto5-0] Resetting the last seen epoch of partition testdb.testdb.lines_p-0 to 0 since the associated topicId changed from null to lUgq9WsaTbSrNAUKEOf47g (org.apache.kafka.clients.Metadata:402)
+[2022-11-07 03:00:41,781] WARN [CMS-connecto5|task-0] [Producer clientId=connector-producer-CMS-connecto5-0] Error while fetching metadata with correlation id 24 : {testdb.testdb.lines_p_aud=LEADER_NOT_AVAILABLE} (org.apache.kafka.clients.NetworkClient:1103)
+[2022-11-07 03:00:41,898] WARN [CMS-connecto5|task-0] [Producer clientId=connector-producer-CMS-connecto5-0] Error while fetching metadata with correlation id 26 : {testdb.testdb.lines_p_aud=LEADER_NOT_AVAILABLE} (org.apache.kafka.clients.NetworkClient:1103)
+[2022-11-07 03:00:41,899] INFO [CMS-connecto5|task-0] [Producer clientId=connector-producer-CMS-connecto5-0] Resetting the last seen epoch of partition testdb.testdb.line_alloc_aud-0 to 0 since the associated topicId changed from null to a3J4O4uPTKihTyMdDttEnQ (org.apache.kafka.clients.Metadata:402)
+[2022-11-07 03:00:41,900] INFO [CMS-connecto5|task-0] [Producer clientId=connector-producer-CMS-connecto5-0] Resetting the last seen epoch of partition testdb.testdb.hibernate_sequence-0 to 0 since the associated topicId changed from null to kG1tKZyCQAuAANysIraJIQ (org.apache.kafka.clients.Metadata:402)
+[2022-11-07 03:00:41,901] INFO [CMS-connecto5|task-0] [Producer clientId=connector-producer-CMS-connecto5-0] Resetting the last seen epoch of partition testdb.testdb.lines_p-0 to 0 since the associated topicId changed from null to lUgq9WsaTbSrNAUKEOf47g (org.apache.kafka.clients.Metadata:402)
+[2022-11-07 03:00:41,903] INFO [CMS-connecto5|task-0] [Producer clientId=connector-producer-CMS-connecto5-0] Resetting the last seen epoch of partition testdb-0 to 0 since the associated topicId changed from null to xZQbHWNLSru2Tz-YNy45bw (org.apache.kafka.clients.Metadata:402)
+[2022-11-07 03:00:42,016] WARN [CMS-connecto5|task-0] [Producer clientId=connector-producer-CMS-connecto5-0] Error while fetching metadata with correlation id 27 : {testdb.testdb.lines_p_aud=LEADER_NOT_AVAILABLE} (org.apache.kafka.clients.NetworkClient:1103)
+[2022-11-07 03:00:42,132] INFO [CMS-connecto5|task-0] [Producer clientId=connector-producer-CMS-connecto5-0] Resetting the last seen epoch of partition testdb.testdb.lines_p_aud-0 to 0 since the associated topicId changed from null to 1MeZ31n5QC6SD23Y0mM0yA (org.apache.kafka.clients.Metadata:402)
+[2022-11-07 03:00:42,255] WARN [CMS-connecto5|task-0] [Producer clientId=connector-producer-CMS-connecto5-0] Error while fetching metadata with correlation id 30 : {testdb.testdb.machines=LEADER_NOT_AVAILABLE} (org.apache.kafka.clients.NetworkClient:1103)
+[2022-11-07 03:00:42,366] WARN [CMS-connecto5|task-0] [Producer clientId=connector-producer-CMS-connecto5-0] Error while fetching metadata with correlation id 33 : {testdb.testdb.machines=LEADER_NOT_AVAILABLE} (org.apache.kafka.clients.NetworkClient:1103)
+[2022-11-07 03:00:42,367] INFO [CMS-connecto5|task-0] [Producer clientId=connector-producer-CMS-connecto5-0] Resetting the last seen epoch of partition testdb.testdb.line_alloc_aud-0 to 0 since the associated topicId changed from null to a3J4O4uPTKihTyMdDttEnQ (org.apache.kafka.clients.Metadata:402)
+[2022-11-07 03:00:42,368] INFO [CMS-connecto5|task-0] [Producer clientId=connector-producer-CMS-connecto5-0] Resetting the last seen epoch of partition testdb.testdb.lines_p_aud-0 to 0 since the associated topicId changed from null to 1MeZ31n5QC6SD23Y0mM0yA (org.apache.kafka.clients.Metadata:402)
+[2022-11-07 03:00:42,368] INFO [CMS-connecto5|task-0] [Producer clientId=connector-producer-CMS-connecto5-0] Resetting the last seen epoch of partition testdb.testdb.hibernate_sequence-0 to 0 since the associated topicId changed from null to kG1tKZyCQAuAANysIraJIQ (org.apache.kafka.clients.Metadata:402)
+[2022-11-07 03:00:42,370] INFO [CMS-connecto5|task-0] [Producer clientId=connector-producer-CMS-connecto5-0] Resetting the last seen epoch of partition testdb.testdb.lines_p-0 to 0 since the associated topicId changed from null to lUgq9WsaTbSrNAUKEOf47g (org.apache.kafka.clients.Metadata:402)
+[2022-11-07 03:00:42,370] INFO [CMS-connecto5|task-0] [Producer clientId=connector-producer-CMS-connecto5-0] Resetting the last seen epoch of partition testdb-0 to 0 since the associated topicId changed from null to xZQbHWNLSru2Tz-YNy45bw (org.apache.kafka.clients.Metadata:402)
+[2022-11-07 03:00:42,474] INFO [CMS-connecto5|task-0] [Producer clientId=connector-producer-CMS-connecto5-0] Resetting the last seen epoch of partition testdb.testdb.machines-0 to 0 since the associated topicId changed from null to aYOC1X94SpCiWf-vIXePCw (org.apache.kafka.clients.Metadata:402)
+[2022-11-07 03:00:42,569] WARN [CMS-connecto5|task-0] [Producer clientId=connector-producer-CMS-connecto5-0] Error while fetching metadata with correlation id 36 : {testdb.testdb.machines_aud=LEADER_NOT_AVAILABLE} (org.apache.kafka.clients.NetworkClient:1103)
+[2022-11-07 03:00:42,693] WARN [CMS-connecto5|task-0] [Producer clientId=connector-producer-CMS-connecto5-0] Error while fetching metadata with correlation id 38 : {testdb.testdb.machines_aud=LEADER_NOT_AVAILABLE} (org.apache.kafka.clients.NetworkClient:1103)
+[2022-11-07 03:00:42,695] INFO [CMS-connecto5|task-0] [Producer clientId=connector-producer-CMS-connecto5-0] Resetting the last seen epoch of partition testdb.testdb.line_alloc_aud-0 to 0 since the associated topicId changed from null to a3J4O4uPTKihTyMdDttEnQ (org.apache.kafka.clients.Metadata:402)
+[2022-11-07 03:00:42,699] INFO [CMS-connecto5|task-0] [Producer clientId=connector-producer-CMS-connecto5-0] Resetting the last seen epoch of partition testdb.testdb.machines-0 to 0 since the associated topicId changed from null to aYOC1X94SpCiWf-vIXePCw (org.apache.kafka.clients.Metadata:402)
+[2022-11-07 03:00:42,701] INFO [CMS-connecto5|task-0] [Producer clientId=connector-producer-CMS-connecto5-0] Resetting the last seen epoch of partition testdb.testdb.lines_p_aud-0 to 0 since the associated topicId changed from null to 1MeZ31n5QC6SD23Y0mM0yA (org.apache.kafka.clients.Metadata:402)
+[2022-11-07 03:00:42,702] INFO [CMS-connecto5|task-0] [Producer clientId=connector-producer-CMS-connecto5-0] Resetting the last seen epoch of partition testdb.testdb.hibernate_sequence-0 to 0 since the associated topicId changed from null to kG1tKZyCQAuAANysIraJIQ (org.apache.kafka.clients.Metadata:402)
+[2022-11-07 03:00:42,704] INFO [CMS-connecto5|task-0] [Producer clientId=connector-producer-CMS-connecto5-0] Resetting the last seen epoch of partition testdb.testdb.lines_p-0 to 0 since the associated topicId changed from null to lUgq9WsaTbSrNAUKEOf47g (org.apache.kafka.clients.Metadata:402)
+[2022-11-07 03:00:42,705] INFO [CMS-connecto5|task-0] [Producer clientId=connector-producer-CMS-connecto5-0] Resetting the last seen epoch of partition testdb-0 to 0 since the associated topicId changed from null to xZQbHWNLSru2Tz-YNy45bw (org.apache.kafka.clients.Metadata:402)
+[2022-11-07 03:00:42,808] INFO [CMS-connecto5|task-0] [Producer clientId=connector-producer-CMS-connecto5-0] Resetting the last seen epoch of partition testdb.testdb.machines_aud-0 to 0 since the associated topicId changed from null to UjxzzlNFSJeWppBgDc3AAA (org.apache.kafka.clients.Metadata:402)
+[2022-11-07 03:00:42,900] WARN [CMS-connecto5|task-0] [Producer clientId=connector-producer-CMS-connecto5-0] Error while fetching metadata with correlation id 41 : {testdb.testdb.my_revision=LEADER_NOT_AVAILABLE} (org.apache.kafka.clients.NetworkClient:1103)
+[2022-11-07 03:00:43,009] WARN [CMS-connecto5|task-0] [Producer clientId=connector-producer-CMS-connecto5-0] Error while fetching metadata with correlation id 43 : {testdb.testdb.my_revision=LEADER_NOT_AVAILABLE} (org.apache.kafka.clients.NetworkClient:1103)
+[2022-11-07 03:00:43,010] INFO [CMS-connecto5|task-0] [Producer clientId=connector-producer-CMS-connecto5-0] Resetting the last seen epoch of partition testdb.testdb.line_alloc_aud-0 to 0 since the associated topicId changed from null to a3J4O4uPTKihTyMdDttEnQ (org.apache.kafka.clients.Metadata:402)
+[2022-11-07 03:00:43,011] INFO [CMS-connecto5|task-0] [Producer clientId=connector-producer-CMS-connecto5-0] Resetting the last seen epoch of partition testdb.testdb.machines-0 to 0 since the associated topicId changed from null to aYOC1X94SpCiWf-vIXePCw (org.apache.kafka.clients.Metadata:402)
+[2022-11-07 03:00:43,012] INFO [CMS-connecto5|task-0] [Producer clientId=connector-producer-CMS-connecto5-0] Resetting the last seen epoch of partition testdb.testdb.lines_p_aud-0 to 0 since the associated topicId changed from null to 1MeZ31n5QC6SD23Y0mM0yA (org.apache.kafka.clients.Metadata:402)
+[2022-11-07 03:00:43,015] INFO [CMS-connecto5|task-0] [Producer clientId=connector-producer-CMS-connecto5-0] Resetting the last seen epoch of partition testdb.testdb.machines_aud-0 to 0 since the associated topicId changed from null to UjxzzlNFSJeWppBgDc3AAA (org.apache.kafka.clients.Metadata:402)
+[2022-11-07 03:00:43,018] INFO [CMS-connecto5|task-0] [Producer clientId=connector-producer-CMS-connecto5-0] Resetting the last seen epoch of partition testdb.testdb.hibernate_sequence-0 to 0 since the associated topicId changed from null to kG1tKZyCQAuAANysIraJIQ (org.apache.kafka.clients.Metadata:402)
+[2022-11-07 03:00:43,021] INFO [CMS-connecto5|task-0] [Producer clientId=connector-producer-CMS-connecto5-0] Resetting the last seen epoch of partition testdb.testdb.lines_p-0 to 0 since the associated topicId changed from null to lUgq9WsaTbSrNAUKEOf47g (org.apache.kafka.clients.Metadata:402)
+[2022-11-07 03:00:43,022] INFO [CMS-connecto5|task-0] [Producer clientId=connector-producer-CMS-connecto5-0] Resetting the last seen epoch of partition testdb-0 to 0 since the associated topicId changed from null to xZQbHWNLSru2Tz-YNy45bw (org.apache.kafka.clients.Metadata:402)
+[2022-11-07 03:00:43,115] INFO [CMS-connecto5|task-0] [Producer clientId=connector-producer-CMS-connecto5-0] Resetting the last seen epoch of partition testdb.testdb.my_revision-0 to 0 since the associated topicId changed from null to J4x6diXTSSOIo_C90KYGlA (org.apache.kafka.clients.Metadata:402)
+[2022-11-07 03:00:43,431] WARN [CMS-connecto5|task-0] [Producer clientId=connector-producer-CMS-connecto5-0] Error while fetching metadata with correlation id 48 : {testdb.testdb.roles=LEADER_NOT_AVAILABLE} (org.apache.kafka.clients.NetworkClient:1103)
+[2022-11-07 03:00:43,615] WARN [CMS-connecto5|task-0] [Producer clientId=connector-producer-CMS-connecto5-0] Error while fetching metadata with correlation id 50 : {testdb.testdb.roles=LEADER_NOT_AVAILABLE} (org.apache.kafka.clients.NetworkClient:1103)
+[2022-11-07 03:00:43,617] INFO [CMS-connecto5|task-0] [Producer clientId=connector-producer-CMS-connecto5-0] Resetting the last seen epoch of partition testdb.testdb.line_alloc_aud-0 to 0 since the associated topicId changed from null to a3J4O4uPTKihTyMdDttEnQ (org.apache.kafka.clients.Metadata:402)
+[2022-11-07 03:00:43,620] INFO [CMS-connecto5|task-0] [Producer clientId=connector-producer-CMS-connecto5-0] Resetting the last seen epoch of partition testdb.testdb.machines-0 to 0 since the associated topicId changed from null to aYOC1X94SpCiWf-vIXePCw (org.apache.kafka.clients.Metadata:402)
+[2022-11-07 03:00:43,622] INFO [CMS-connecto5|task-0] [Producer clientId=connector-producer-CMS-connecto5-0] Resetting the last seen epoch of partition testdb.testdb.lines_p_aud-0 to 0 since the associated topicId changed from null to 1MeZ31n5QC6SD23Y0mM0yA (org.apache.kafka.clients.Metadata:402)
+[2022-11-07 03:00:43,625] INFO [CMS-connecto5|task-0] [Producer clientId=connector-producer-CMS-connecto5-0] Resetting the last seen epoch of partition testdb.testdb.machines_aud-0 to 0 since the associated topicId changed from null to UjxzzlNFSJeWppBgDc3AAA (org.apache.kafka.clients.Metadata:402)
+[2022-11-07 03:00:43,627] INFO [CMS-connecto5|task-0] [Producer clientId=connector-producer-CMS-connecto5-0] Resetting the last seen epoch of partition testdb.testdb.hibernate_sequence-0 to 0 since the associated topicId changed from null to kG1tKZyCQAuAANysIraJIQ (org.apache.kafka.clients.Metadata:402)
+[2022-11-07 03:00:43,629] INFO [CMS-connecto5|task-0] [Producer clientId=connector-producer-CMS-connecto5-0] Resetting the last seen epoch of partition testdb.testdb.lines_p-0 to 0 since the associated topicId changed from null to lUgq9WsaTbSrNAUKEOf47g (org.apache.kafka.clients.Metadata:402)
+[2022-11-07 03:00:43,630] INFO [CMS-connecto5|task-0] [Producer clientId=connector-producer-CMS-connecto5-0] Resetting the last seen epoch of partition testdb-0 to 0 since the associated topicId changed from null to xZQbHWNLSru2Tz-YNy45bw (org.apache.kafka.clients.Metadata:402)
+[2022-11-07 03:00:43,632] INFO [CMS-connecto5|task-0] [Producer clientId=connector-producer-CMS-connecto5-0] Resetting the last seen epoch of partition testdb.testdb.my_revision-0 to 0 since the associated topicId changed from null to J4x6diXTSSOIo_C90KYGlA (org.apache.kafka.clients.Metadata:402)
+[2022-11-07 03:00:43,744] WARN [CMS-connecto5|task-0] [Producer clientId=connector-producer-CMS-connecto5-0] Error while fetching metadata with correlation id 51 : {testdb.testdb.roles=LEADER_NOT_AVAILABLE} (org.apache.kafka.clients.NetworkClient:1103)
+[2022-11-07 03:00:43,860] WARN [CMS-connecto5|task-0] [Producer clientId=connector-producer-CMS-connecto5-0] Error while fetching metadata with correlation id 52 : {testdb.testdb.roles=LEADER_NOT_AVAILABLE} (org.apache.kafka.clients.NetworkClient:1103)
+[2022-11-07 03:00:43,978] INFO [CMS-connecto5|task-0] [Producer clientId=connector-producer-CMS-connecto5-0] Resetting the last seen epoch of partition testdb.testdb.roles-0 to 0 since the associated topicId changed from null to 2pAVNQRbTKed3TRzEk9LPw (org.apache.kafka.clients.Metadata:402)
+[2022-11-07 03:00:44,544] INFO [CMS-connecto5|task-0] 77 records sent during previous 00:00:07.452, last recorded offset: {ts_sec=1667786440, file=mysql-bin.000026, pos=156} (io.debezium.connector.common.BaseSourceTask:182)
+[2022-11-07 03:00:44,961] WARN [CMS-connecto5|task-0] [Producer clientId=connector-producer-CMS-connecto5-0] Error while fetching metadata with correlation id 56 : {testdb.testdb.user_roles=LEADER_NOT_AVAILABLE} (org.apache.kafka.clients.NetworkClient:1103)
+[2022-11-07 03:00:45,133] WARN [CMS-connecto5|task-0] [Producer clientId=connector-producer-CMS-connecto5-0] Error while fetching metadata with correlation id 58 : {testdb.testdb.user_roles=LEADER_NOT_AVAILABLE} (org.apache.kafka.clients.NetworkClient:1103)
+[2022-11-07 03:00:45,134] INFO [CMS-connecto5|task-0] [Producer clientId=connector-producer-CMS-connecto5-0] Resetting the last seen epoch of partition testdb.testdb.line_alloc_aud-0 to 0 since the associated topicId changed from null to a3J4O4uPTKihTyMdDttEnQ (org.apache.kafka.clients.Metadata:402)
+[2022-11-07 03:00:45,138] INFO [CMS-connecto5|task-0] [Producer clientId=connector-producer-CMS-connecto5-0] Resetting the last seen epoch of partition testdb.testdb.roles-0 to 0 since the associated topicId changed from null to 2pAVNQRbTKed3TRzEk9LPw (org.apache.kafka.clients.Metadata:402)
+[2022-11-07 03:00:45,140] INFO [CMS-connecto5|task-0] [Producer clientId=connector-producer-CMS-connecto5-0] Resetting the last seen epoch of partition testdb.testdb.machines-0 to 0 since the associated topicId changed from null to aYOC1X94SpCiWf-vIXePCw (org.apache.kafka.clients.Metadata:402)
+[2022-11-07 03:00:45,143] INFO [CMS-connecto5|task-0] [Producer clientId=connector-producer-CMS-connecto5-0] Resetting the last seen epoch of partition testdb.testdb.lines_p_aud-0 to 0 since the associated topicId changed from null to 1MeZ31n5QC6SD23Y0mM0yA (org.apache.kafka.clients.Metadata:402)
+[2022-11-07 03:00:45,145] INFO [CMS-connecto5|task-0] [Producer clientId=connector-producer-CMS-connecto5-0] Resetting the last seen epoch of partition testdb.testdb.machines_aud-0 to 0 since the associated topicId changed from null to UjxzzlNFSJeWppBgDc3AAA (org.apache.kafka.clients.Metadata:402)
+[2022-11-07 03:00:45,146] INFO [CMS-connecto5|task-0] [Producer clientId=connector-producer-CMS-connecto5-0] Resetting the last seen epoch of partition testdb.testdb.hibernate_sequence-0 to 0 since the associated topicId changed from null to kG1tKZyCQAuAANysIraJIQ (org.apache.kafka.clients.Metadata:402)
+[2022-11-07 03:00:45,148] INFO [CMS-connecto5|task-0] [Producer clientId=connector-producer-CMS-connecto5-0] Resetting the last seen epoch of partition testdb.testdb.lines_p-0 to 0 since the associated topicId changed from null to lUgq9WsaTbSrNAUKEOf47g (org.apache.kafka.clients.Metadata:402)
+[2022-11-07 03:00:45,150] INFO [CMS-connecto5|task-0] [Producer clientId=connector-producer-CMS-connecto5-0] Resetting the last seen epoch of partition testdb-0 to 0 since the associated topicId changed from null to xZQbHWNLSru2Tz-YNy45bw (org.apache.kafka.clients.Metadata:402)
+[2022-11-07 03:00:45,151] INFO [CMS-connecto5|task-0] [Producer clientId=connector-producer-CMS-connecto5-0] Resetting the last seen epoch of partition testdb.testdb.my_revision-0 to 0 since the associated topicId changed from null to J4x6diXTSSOIo_C90KYGlA (org.apache.kafka.clients.Metadata:402)
+[2022-11-07 03:00:45,265] WARN [CMS-connecto5|task-0] [Producer clientId=connector-producer-CMS-connecto5-0] Error while fetching metadata with correlation id 59 : {testdb.testdb.user_roles=LEADER_NOT_AVAILABLE} (org.apache.kafka.clients.NetworkClient:1103)
+[2022-11-07 03:00:45,384] WARN [CMS-connecto5|task-0] [Producer clientId=connector-producer-CMS-connecto5-0] Error while fetching metadata with correlation id 60 : {testdb.testdb.user_roles=LEADER_NOT_AVAILABLE} (org.apache.kafka.clients.NetworkClient:1103)
+[2022-11-07 03:00:45,513] WARN [CMS-connecto5|task-0] [Producer clientId=connector-producer-CMS-connecto5-0] Error while fetching metadata with correlation id 61 : {testdb.testdb.user_roles=LEADER_NOT_AVAILABLE} (org.apache.kafka.clients.NetworkClient:1103)
+[2022-11-07 03:00:45,627] INFO [CMS-connecto5|task-0] [Producer clientId=connector-producer-CMS-connecto5-0] Resetting the last seen epoch of partition testdb.testdb.user_roles-0 to 0 since the associated topicId changed from null to BtydszBNQwuhmN1B2Lp8kg (org.apache.kafka.clients.Metadata:402)
+[2022-11-07 03:00:45,998] WARN [CMS-connecto5|task-0] [Producer clientId=connector-producer-CMS-connecto5-0] Error while fetching metadata with correlation id 64 : {testdb.testdb.user_roles_aud=LEADER_NOT_AVAILABLE} (org.apache.kafka.clients.NetworkClient:1103)
+[2022-11-07 03:00:46,332] WARN [CMS-connecto5|task-0] [Producer clientId=connector-producer-CMS-connecto5-0] Error while fetching metadata with correlation id 66 : {testdb.testdb.user_roles_aud=LEADER_NOT_AVAILABLE} (org.apache.kafka.clients.NetworkClient:1103)
+[2022-11-07 03:00:46,332] INFO [CMS-connecto5|task-0] [Producer clientId=connector-producer-CMS-connecto5-0] Resetting the last seen epoch of partition testdb.testdb.line_alloc_aud-0 to 0 since the associated topicId changed from null to a3J4O4uPTKihTyMdDttEnQ (org.apache.kafka.clients.Metadata:402)
+[2022-11-07 03:00:46,337] INFO [CMS-connecto5|task-0] [Producer clientId=connector-producer-CMS-connecto5-0] Resetting the last seen epoch of partition testdb.testdb.roles-0 to 0 since the associated topicId changed from null to 2pAVNQRbTKed3TRzEk9LPw (org.apache.kafka.clients.Metadata:402)
+[2022-11-07 03:00:46,338] INFO [CMS-connecto5|task-0] [Producer clientId=connector-producer-CMS-connecto5-0] Resetting the last seen epoch of partition testdb.testdb.machines-0 to 0 since the associated topicId changed from null to aYOC1X94SpCiWf-vIXePCw (org.apache.kafka.clients.Metadata:402)
+[2022-11-07 03:00:46,342] INFO [CMS-connecto5|task-0] [Producer clientId=connector-producer-CMS-connecto5-0] Resetting the last seen epoch of partition testdb.testdb.lines_p_aud-0 to 0 since the associated topicId changed from null to 1MeZ31n5QC6SD23Y0mM0yA (org.apache.kafka.clients.Metadata:402)
+[2022-11-07 03:00:46,344] INFO [CMS-connecto5|task-0] [Producer clientId=connector-producer-CMS-connecto5-0] Resetting the last seen epoch of partition testdb.testdb.machines_aud-0 to 0 since the associated topicId changed from null to UjxzzlNFSJeWppBgDc3AAA (org.apache.kafka.clients.Metadata:402)
+[2022-11-07 03:00:46,345] INFO [CMS-connecto5|task-0] [Producer clientId=connector-producer-CMS-connecto5-0] Resetting the last seen epoch of partition testdb.testdb.hibernate_sequence-0 to 0 since the associated topicId changed from null to kG1tKZyCQAuAANysIraJIQ (org.apache.kafka.clients.Metadata:402)
+[2022-11-07 03:00:46,347] INFO [CMS-connecto5|task-0] [Producer clientId=connector-producer-CMS-connecto5-0] Resetting the last seen epoch of partition testdb.testdb.lines_p-0 to 0 since the associated topicId changed from null to lUgq9WsaTbSrNAUKEOf47g (org.apache.kafka.clients.Metadata:402)
+[2022-11-07 03:00:46,349] INFO [CMS-connecto5|task-0] [Producer clientId=connector-producer-CMS-connecto5-0] Resetting the last seen epoch of partition testdb.testdb.user_roles-0 to 0 since the associated topicId changed from null to BtydszBNQwuhmN1B2Lp8kg (org.apache.kafka.clients.Metadata:402)
+[2022-11-07 03:00:46,351] INFO [CMS-connecto5|task-0] [Producer clientId=connector-producer-CMS-connecto5-0] Resetting the last seen epoch of partition testdb-0 to 0 since the associated topicId changed from null to xZQbHWNLSru2Tz-YNy45bw (org.apache.kafka.clients.Metadata:402)
+[2022-11-07 03:00:46,353] INFO [CMS-connecto5|task-0] [Producer clientId=connector-producer-CMS-connecto5-0] Resetting the last seen epoch of partition testdb.testdb.my_revision-0 to 0 since the associated topicId changed from null to J4x6diXTSSOIo_C90KYGlA (org.apache.kafka.clients.Metadata:402)
+[2022-11-07 03:00:46,442] WARN [CMS-connecto5|task-0] [Producer clientId=connector-producer-CMS-connecto5-0] Error while fetching metadata with correlation id 67 : {testdb.testdb.user_roles_aud=LEADER_NOT_AVAILABLE} (org.apache.kafka.clients.NetworkClient:1103)
+[2022-11-07 03:00:46,556] WARN [CMS-connecto5|task-0] [Producer clientId=connector-producer-CMS-connecto5-0] Error while fetching metadata with correlation id 68 : {testdb.testdb.user_roles_aud=LEADER_NOT_AVAILABLE} (org.apache.kafka.clients.NetworkClient:1103)
+[2022-11-07 03:00:46,680] WARN [CMS-connecto5|task-0] [Producer clientId=connector-producer-CMS-connecto5-0] Error while fetching metadata with correlation id 69 : {testdb.testdb.user_roles_aud=LEADER_NOT_AVAILABLE} (org.apache.kafka.clients.NetworkClient:1103)
+[2022-11-07 03:00:46,799] INFO [CMS-connecto5|task-0] [Producer clientId=connector-producer-CMS-connecto5-0] Resetting the last seen epoch of partition testdb.testdb.user_roles_aud-0 to 0 since the associated topicId changed from null to gra4skyvTXiKxhOGirI8JA (org.apache.kafka.clients.Metadata:402)
+[2022-11-07 03:00:47,149] WARN [CMS-connecto5|task-0] [Producer clientId=connector-producer-CMS-connecto5-0] Error while fetching metadata with correlation id 76 : {testdb.testdb.users=LEADER_NOT_AVAILABLE} (org.apache.kafka.clients.NetworkClient:1103)
+[2022-11-07 03:00:47,334] WARN [CMS-connecto5|task-0] [Producer clientId=connector-producer-CMS-connecto5-0] Error while fetching metadata with correlation id 77 : {testdb.testdb.users=LEADER_NOT_AVAILABLE} (org.apache.kafka.clients.NetworkClient:1103)
+[2022-11-07 03:00:47,335] INFO [CMS-connecto5|task-0] [Producer clientId=connector-producer-CMS-connecto5-0] Resetting the last seen epoch of partition testdb.testdb.line_alloc_aud-0 to 0 since the associated topicId changed from null to a3J4O4uPTKihTyMdDttEnQ (org.apache.kafka.clients.Metadata:402)
+[2022-11-07 03:00:47,337] INFO [CMS-connecto5|task-0] [Producer clientId=connector-producer-CMS-connecto5-0] Resetting the last seen epoch of partition testdb.testdb.roles-0 to 0 since the associated topicId changed from null to 2pAVNQRbTKed3TRzEk9LPw (org.apache.kafka.clients.Metadata:402)
+[2022-11-07 03:00:47,338] INFO [CMS-connecto5|task-0] [Producer clientId=connector-producer-CMS-connecto5-0] Resetting the last seen epoch of partition testdb.testdb.machines-0 to 0 since the associated topicId changed from null to aYOC1X94SpCiWf-vIXePCw (org.apache.kafka.clients.Metadata:402)
+[2022-11-07 03:00:47,340] INFO [CMS-connecto5|task-0] [Producer clientId=connector-producer-CMS-connecto5-0] Resetting the last seen epoch of partition testdb.testdb.lines_p_aud-0 to 0 since the associated topicId changed from null to 1MeZ31n5QC6SD23Y0mM0yA (org.apache.kafka.clients.Metadata:402)
+[2022-11-07 03:00:47,341] INFO [CMS-connecto5|task-0] [Producer clientId=connector-producer-CMS-connecto5-0] Resetting the last seen epoch of partition testdb.testdb.machines_aud-0 to 0 since the associated topicId changed from null to UjxzzlNFSJeWppBgDc3AAA (org.apache.kafka.clients.Metadata:402)
+[2022-11-07 03:00:47,342] INFO [CMS-connecto5|task-0] [Producer clientId=connector-producer-CMS-connecto5-0] Resetting the last seen epoch of partition testdb.testdb.hibernate_sequence-0 to 0 since the associated topicId changed from null to kG1tKZyCQAuAANysIraJIQ (org.apache.kafka.clients.Metadata:402)
+[2022-11-07 03:00:47,343] INFO [CMS-connecto5|task-0] [Producer clientId=connector-producer-CMS-connecto5-0] Resetting the last seen epoch of partition testdb.testdb.lines_p-0 to 0 since the associated topicId changed from null to lUgq9WsaTbSrNAUKEOf47g (org.apache.kafka.clients.Metadata:402)
+[2022-11-07 03:00:47,344] INFO [CMS-connecto5|task-0] [Producer clientId=connector-producer-CMS-connecto5-0] Resetting the last seen epoch of partition testdb.testdb.user_roles_aud-0 to 0 since the associated topicId changed from null to gra4skyvTXiKxhOGirI8JA (org.apache.kafka.clients.Metadata:402)
+[2022-11-07 03:00:47,345] INFO [CMS-connecto5|task-0] [Producer clientId=connector-producer-CMS-connecto5-0] Resetting the last seen epoch of partition testdb.testdb.user_roles-0 to 0 since the associated topicId changed from null to BtydszBNQwuhmN1B2Lp8kg (org.apache.kafka.clients.Metadata:402)
+[2022-11-07 03:00:47,346] INFO [CMS-connecto5|task-0] [Producer clientId=connector-producer-CMS-connecto5-0] Resetting the last seen epoch of partition testdb-0 to 0 since the associated topicId changed from null to xZQbHWNLSru2Tz-YNy45bw (org.apache.kafka.clients.Metadata:402)
+[2022-11-07 03:00:47,347] INFO [CMS-connecto5|task-0] [Producer clientId=connector-producer-CMS-connecto5-0] Resetting the last seen epoch of partition testdb.testdb.my_revision-0 to 0 since the associated topicId changed from null to J4x6diXTSSOIo_C90KYGlA (org.apache.kafka.clients.Metadata:402)
+[2022-11-07 03:00:47,463] WARN [CMS-connecto5|task-0] [Producer clientId=connector-producer-CMS-connecto5-0] Error while fetching metadata with correlation id 78 : {testdb.testdb.users=LEADER_NOT_AVAILABLE} (org.apache.kafka.clients.NetworkClient:1103)
+[2022-11-07 03:00:47,587] WARN [CMS-connecto5|task-0] [Producer clientId=connector-producer-CMS-connecto5-0] Error while fetching metadata with correlation id 79 : {testdb.testdb.users=LEADER_NOT_AVAILABLE} (org.apache.kafka.clients.NetworkClient:1103)
+[2022-11-07 03:00:47,709] WARN [CMS-connecto5|task-0] [Producer clientId=connector-producer-CMS-connecto5-0] Error while fetching metadata with correlation id 80 : {testdb.testdb.users=LEADER_NOT_AVAILABLE} (org.apache.kafka.clients.NetworkClient:1103)
+[2022-11-07 03:00:47,826] INFO [CMS-connecto5|task-0] [Producer clientId=connector-producer-CMS-connecto5-0] Resetting the last seen epoch of partition testdb.testdb.users-0 to 0 since the associated topicId changed from null to pTBrjtFuQ3-iGk5eK49p0Q (org.apache.kafka.clients.Metadata:402)
+[2022-11-07 03:00:48,098] WARN [CMS-connecto5|task-0] [Producer clientId=connector-producer-CMS-connecto5-0] Error while fetching metadata with correlation id 84 : {testdb.testdb.users_aud=LEADER_NOT_AVAILABLE} (org.apache.kafka.clients.NetworkClient:1103)
+[2022-11-07 03:00:48,305] WARN [CMS-connecto5|task-0] [Producer clientId=connector-producer-CMS-connecto5-0] Error while fetching metadata with correlation id 85 : {testdb.testdb.users_aud=LEADER_NOT_AVAILABLE} (org.apache.kafka.clients.NetworkClient:1103)
+[2022-11-07 03:00:48,305] INFO [CMS-connecto5|task-0] [Producer clientId=connector-producer-CMS-connecto5-0] Resetting the last seen epoch of partition testdb.testdb.line_alloc_aud-0 to 0 since the associated topicId changed from null to a3J4O4uPTKihTyMdDttEnQ (org.apache.kafka.clients.Metadata:402)
+[2022-11-07 03:00:48,307] INFO [CMS-connecto5|task-0] [Producer clientId=connector-producer-CMS-connecto5-0] Resetting the last seen epoch of partition testdb.testdb.users-0 to 0 since the associated topicId changed from null to pTBrjtFuQ3-iGk5eK49p0Q (org.apache.kafka.clients.Metadata:402)
+[2022-11-07 03:00:48,309] INFO [CMS-connecto5|task-0] [Producer clientId=connector-producer-CMS-connecto5-0] Resetting the last seen epoch of partition testdb.testdb.roles-0 to 0 since the associated topicId changed from null to 2pAVNQRbTKed3TRzEk9LPw (org.apache.kafka.clients.Metadata:402)
+[2022-11-07 03:00:48,309] INFO [CMS-connecto5|task-0] [Producer clientId=connector-producer-CMS-connecto5-0] Resetting the last seen epoch of partition testdb.testdb.machines-0 to 0 since the associated topicId changed from null to aYOC1X94SpCiWf-vIXePCw (org.apache.kafka.clients.Metadata:402)
+[2022-11-07 03:00:48,310] INFO [CMS-connecto5|task-0] [Producer clientId=connector-producer-CMS-connecto5-0] Resetting the last seen epoch of partition testdb.testdb.lines_p_aud-0 to 0 since the associated topicId changed from null to 1MeZ31n5QC6SD23Y0mM0yA (org.apache.kafka.clients.Metadata:402)
+[2022-11-07 03:00:48,310] INFO [CMS-connecto5|task-0] [Producer clientId=connector-producer-CMS-connecto5-0] Resetting the last seen epoch of partition testdb.testdb.machines_aud-0 to 0 since the associated topicId changed from null to UjxzzlNFSJeWppBgDc3AAA (org.apache.kafka.clients.Metadata:402)
+[2022-11-07 03:00:48,311] INFO [CMS-connecto5|task-0] [Producer clientId=connector-producer-CMS-connecto5-0] Resetting the last seen epoch of partition testdb.testdb.hibernate_sequence-0 to 0 since the associated topicId changed from null to kG1tKZyCQAuAANysIraJIQ (org.apache.kafka.clients.Metadata:402)
+[2022-11-07 03:00:48,311] INFO [CMS-connecto5|task-0] [Producer clientId=connector-producer-CMS-connecto5-0] Resetting the last seen epoch of partition testdb.testdb.lines_p-0 to 0 since the associated topicId changed from null to lUgq9WsaTbSrNAUKEOf47g (org.apache.kafka.clients.Metadata:402)
+[2022-11-07 03:00:48,311] INFO [CMS-connecto5|task-0] [Producer clientId=connector-producer-CMS-connecto5-0] Resetting the last seen epoch of partition testdb.testdb.user_roles_aud-0 to 0 since the associated topicId changed from null to gra4skyvTXiKxhOGirI8JA (org.apache.kafka.clients.Metadata:402)
+[2022-11-07 03:00:48,312] INFO [CMS-connecto5|task-0] [Producer clientId=connector-producer-CMS-connecto5-0] Resetting the last seen epoch of partition testdb.testdb.user_roles-0 to 0 since the associated topicId changed from null to BtydszBNQwuhmN1B2Lp8kg (org.apache.kafka.clients.Metadata:402)
+[2022-11-07 03:00:48,312] INFO [CMS-connecto5|task-0] [Producer clientId=connector-producer-CMS-connecto5-0] Resetting the last seen epoch of partition testdb-0 to 0 since the associated topicId changed from null to xZQbHWNLSru2Tz-YNy45bw (org.apache.kafka.clients.Metadata:402)
+[2022-11-07 03:00:48,313] INFO [CMS-connecto5|task-0] [Producer clientId=connector-producer-CMS-connecto5-0] Resetting the last seen epoch of partition testdb.testdb.my_revision-0 to 0 since the associated topicId changed from null to J4x6diXTSSOIo_C90KYGlA (org.apache.kafka.clients.Metadata:402)
+[2022-11-07 03:00:48,425] WARN [CMS-connecto5|task-0] [Producer clientId=connector-producer-CMS-connecto5-0] Error while fetching metadata with correlation id 86 : {testdb.testdb.users_aud=LEADER_NOT_AVAILABLE} (org.apache.kafka.clients.NetworkClient:1103)
+[2022-11-07 03:00:48,533] INFO [CMS-connecto5|task-0] [Producer clientId=connector-producer-CMS-connecto5-0] Resetting the last seen epoch of partition testdb.testdb.users_aud-0 to 0 since the associated topicId changed from null to FhFczub4QTypNnSsBO-V7w (org.apache.kafka.clients.Metadata:402)
+[2022-11-07 03:09:37,284] INFO [CMS-connecto5|task-0] [Producer clientId=testdb-dbhistory] Node -1 disconnected. (org.apache.kafka.clients.NetworkClient:935)
+[2022-11-07 03:09:48,625] INFO [CMS-connecto5|task-0] [Producer clientId=connector-producer-CMS-connecto5-0] Node -1 disconnected. (org.apache.kafka.clients.NetworkClient:935)

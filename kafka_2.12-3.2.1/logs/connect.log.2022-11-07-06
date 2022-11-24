@@ -1,0 +1,1 @@
+[2022-11-07 06:13:43,920] INFO [CMS-connecto5|task-0] [Producer clientId=connector-producer-CMS-connecto5-0] Resetting the last seen epoch of partition testdb.testdb.lines_p-0 to 0 since the associated topicId changed from null to lUgq9WsaTbSrNAUKEOf47g (org.apache.kafka.clients.Metadata:402)

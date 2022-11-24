@@ -16,6 +16,8 @@ import org.springframework.security.authentication.AuthenticationProvider;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.AuthenticationException;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Component;
@@ -74,13 +76,21 @@ public class LdapAuthenticationProvider implements AuthenticationProvider
         Boolean authenticate = ldapTemplate.authenticate(LdapUtils.emptyLdapName(), filter.encode(), authentication.getCredentials().toString());
         if (authenticate)
         {
+
+            List<GrantedAuthority> list = new ArrayList<GrantedAuthority>();
+
+            list.add(new SimpleGrantedAuthority("ROLE_ADMIN"));
+
         	
             UserDetails userDetails = new User(authentication.getName(), authentication.getCredentials().toString()
-                    , new ArrayList<>());
+                    , list);
+            
+         
+                
             
             
             Authentication auth = new UsernamePasswordAuthenticationToken(userDetails,
-                    authentication.getCredentials().toString(), new ArrayList<>());
+                    authentication.getCredentials().toString(),list);
             return auth;
         }
         else

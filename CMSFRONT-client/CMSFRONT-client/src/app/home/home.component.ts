@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { MessageService } from '../message.service';
+declare var SockJS: new (arg0: string) => any;
+declare var Stomp: { over: (arg0: any) => any; };
 import { UserService } from '../_services/user.service';
 
 @Component({
@@ -7,11 +10,48 @@ import { UserService } from '../_services/user.service';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+  title = 'WebSocketChatRoom';
+  greetings: string[] = [];
+  disabled = true;
+  newmessage: string;
+  private stompClient = null;
+ 
+ 
+  setConnected(connected: boolean) {
+    this.disabled = !connected;
+    if (connected) {
+      this.greetings = [];
+    }
+  }
+  connect() {
+    const socket = new SockJS('http://localhost:8080/testchat');
+    this.stompClient = Stomp.over(socket);
+    const _this = this;
+    this.stompClient.connect({}, function (frame:any) {
+      console.log('Connected: ' + frame);
+      _this.stompClient.subscribe('/start/initial', function(hello:any){
+        console.log(JSON.parse(hello.body));
+        _this.showMessage(JSON.parse(hello.body));
+      });
+   });
+  }
+  sendMessage() {
+    this.stompClient.send(
+      '/current/resume',
+      {},
+      JSON.stringify(this.newmessage)
+    );
+    this.newmessage = "";
+  }
+  showMessage(message:any) {
+    this.greetings.push(message);
+  }
   content?: string;
 
-  constructor(private userService: UserService) { }
+  constructor(private userService: UserService,public msserv: MessageService) { }
 
   ngOnInit(): void {
+    this.connect();
     this.userService.getPublicContent().subscribe(
       data => {
         this.content = data;
