@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MessageService } from '../message.service';
+import { TokenStorageService } from '../_services/token-storage.service';
 declare var SockJS: new (arg0: string) => any;
 declare var Stomp: { over: (arg0: any) => any; };
 import { UserService } from '../_services/user.service';
@@ -15,7 +16,7 @@ export class HomeComponent implements OnInit {
   disabled = true;
   newmessage: string;
   private stompClient = null;
- 
+   username=this.tserv.getUser().username;
  
   setConnected(connected: boolean) {
     this.disabled = !connected;
@@ -30,28 +31,34 @@ export class HomeComponent implements OnInit {
     this.stompClient.connect({}, function (frame:any) {
       console.log('Connected: ' + frame);
       _this.stompClient.subscribe('/start/initial', function(hello:any){
-        console.log(JSON.parse(hello.body));
+        console.log("after send\n"+JSON.parse(hello.body));
         _this.showMessage(JSON.parse(hello.body));
       });
    });
   }
   sendMessage() {
+    console.log("before send\n"+this.newmessage)
+
     this.stompClient.send(
-      '/current/resume',
+      '/app/resume',
       {},
-      JSON.stringify(this.newmessage)
+      JSON.stringify(`${this.username} : ${this.newmessage}`)
     );
     this.newmessage = "";
+    console.log(this.greetings);
   }
   showMessage(message:any) {
+    
     this.greetings.push(message);
+    
   }
+  
   content?: string;
-
-  constructor(private userService: UserService,public msserv: MessageService) { }
+  constructor(private userService: UserService,public msserv: MessageService,public tserv:TokenStorageService) { }
 
   ngOnInit(): void {
     this.connect();
+    const username=this.tserv.getUser().username;
     this.userService.getPublicContent().subscribe(
       data => {
         this.content = data;

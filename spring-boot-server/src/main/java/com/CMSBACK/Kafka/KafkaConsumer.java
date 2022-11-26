@@ -56,5 +56,30 @@ this.webSocket=msgTemplate;}
              
            this.webSocket.convertAndSend("/topic/messages",msg);
 }
-	  }
+	  @KafkaListener(id="foo1",topics = "testdb.testdb.users")
+      public void listen1(String payload1) throws JsonParseException, JsonMappingException, IOException  {
 
+          logger.info("Message Received from Kafka topic: {}", payload1);
+          ObjectMapper objectMapper = new ObjectMapper();
+          objectMapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
+
+          Userdto dtoObject = objectMapper.readValue(payload1,Userdto.class);
+
+             String msg1=objectMapper.writeValueAsString(dtoObject);
+             System.out.println(msg1);
+           this.webSocket.convertAndSend("/topic/messages",msg1);
+	  }
+	  @KafkaListener(id="foo2",topics = "testdb.testdb.machines")
+      public void listen2(String payload2) throws JsonParseException, JsonMappingException, IOException  {
+
+          logger.info("Message Received from Kafka topic: {}", payload2);
+          ObjectMapper objectMapper = new ObjectMapper();
+          objectMapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
+
+          Machinedto dtoObject = objectMapper.readValue(payload2,Machinedto.class);
+
+             String msg=objectMapper.writeValueAsString(dtoObject);
+             
+           this.webSocket.convertAndSend("/topic/messages",msg);
+	  }
+}
