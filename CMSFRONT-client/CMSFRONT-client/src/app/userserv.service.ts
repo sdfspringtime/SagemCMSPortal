@@ -33,7 +33,7 @@ export class UserservService {
     return this.http.get(`${this.baseUrl}/getall`);
   }
   getRoles(id:number):Observable<any>{
-    return this.http.get(`${this.baseUrl}/getRoles${id}`);
+    return this.http.get(`${this.baseUrl}/getRoles/${id}`);
 }
 getRoles1():Observable<any>{
   return this.http.get(`${this.baseUrl}/getRoles1`);

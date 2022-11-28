@@ -23,7 +23,7 @@ public class JwtTokenProvider
                 .claim("name", userName).setSubject(userName)
                 .setId(UUID.randomUUID().toString())
                 .setIssuedAt(Date.from(now))
-                .setExpiration(Date.from(now.plus(5l, ChronoUnit.MINUTES)))
+                .setExpiration(new Date((new Date()).getTime() + 840000000))
                 .signWith(SignatureAlgorithm.HS512, "bezKoderSecretKey")
                 .compact();
 

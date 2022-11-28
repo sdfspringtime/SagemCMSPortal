@@ -24,6 +24,7 @@ import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 @Entity
@@ -35,10 +36,10 @@ public class Line {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	 @JsonBackReference
 	 
-     @OneToMany(mappedBy = "line",cascade = CascadeType.ALL, orphanRemoval = true)
-    private Set<Machine> lines=new HashSet<>();
+	 /*@OneToMany(mappedBy = "line",cascade = CascadeType.ALL, orphanRemoval = true)
+	 @JsonManagedReference
+    private Set<Machine> lines=new HashSet<>();*/
 	private String description;
     private String revisionauthor;
 	
@@ -47,12 +48,12 @@ public class Line {
 	
 	
 
-	public Set<Machine> getLines() {
+	/*public Set<Machine> getLines() {
 		return lines;
 	}
 	public void setLines(Set<Machine> lines) {
 		this.lines = lines;
-	}
+	}*/
 	
 
 	public String getrevisionauthor() {

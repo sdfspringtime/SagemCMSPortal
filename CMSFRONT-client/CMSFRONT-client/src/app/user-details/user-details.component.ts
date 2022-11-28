@@ -34,7 +34,7 @@ export class UserDetailsComponent implements OnInit {
      this.lpserv.getRoles(this.id).subscribe({
         next: (data: any) => {
           this.Roles=data
-          console.log(data)  }})
+          console.log(this.Roles)  }})
           this.lprod.roles=this.Roles;}
  
           

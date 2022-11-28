@@ -65,7 +65,7 @@ public class MachineController {
 	@GetMapping("/getById/{id}")
 
 	public Machine getmachineById(@PathVariable(value = "id") Long id) {
-
+System.out.println(SecurityContextHolder.getContext().getAuthentication().getName());
 
 	return	machrep.findById(id).get();
 	
@@ -84,7 +84,7 @@ public class MachineController {
 	        mach.setRevisionauthor(SecurityContextHolder.getContext().getAuthentication().getName());
 			Date date = new Date(); 
 			mach.setRevisiondate(date);
-	        machrep.save(machinedetails);
+	        machrep.save(mach);
 
 		
 	}

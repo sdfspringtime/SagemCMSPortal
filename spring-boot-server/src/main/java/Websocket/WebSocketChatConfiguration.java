@@ -1,4 +1,4 @@
-package Websocket;
+/*package Websocket;
 
 import org.springframework.context.annotation.Configuration;
 
@@ -29,3 +29,4 @@ public class WebSocketChatConfiguration implements WebSocketMessageBrokerConfigu
 	                .withSockJS();
 	    }
 }
+*/

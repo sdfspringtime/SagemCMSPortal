@@ -38,18 +38,19 @@ public class User {
 	@NotBlank
 	@Size(max = 120)
 	private String password;
-	@JsonBackReference
+	
 	@ManyToMany(fetch = FetchType.LAZY)
 	@JoinTable(	name = "user_roles", 
 				joinColumns = @JoinColumn(name = "user_id"), 
 				inverseJoinColumns = @JoinColumn(name = "role_id"))
 	private Set<Role> roles = new HashSet<>();
-	@JsonBackReference
+	
 	@OneToMany(mappedBy = "user")
-    private Set<LineAlloc> lineallocs;
-	@JsonBackReference
+	private Set<LineAlloc> lineallocs;
+	
 	@OneToMany(mappedBy = "user")
-    private Set<MachineAlloc> machineallocs;
+	private Set<MachineAlloc> machineallocs;
+	
     private String revisionauthor;
 	
 	private Date revisiondate;

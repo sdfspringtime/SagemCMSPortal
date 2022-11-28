@@ -6,10 +6,12 @@
       {{msg}}
     </div>
   </div>
-  <div *ngFor="let string of greetings">
-    <div class="container">
+  <div class="messages" >
+    
+    <div *ngFor="let string of greetings" class="container">
      <p>{{string}}</p>
     </div>
+    
    </div>
    <form #loginForm=ngForm>
     <div>

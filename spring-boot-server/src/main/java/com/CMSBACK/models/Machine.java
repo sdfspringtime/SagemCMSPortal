@@ -46,13 +46,12 @@ public class Machine {
 	private boolean allocated=false;
 	private boolean status=false;
 	private boolean FESE;
-	@JsonBackReference
+	
 	@ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name="line_id")
-    private Line line;
+	private Line line;
 	
-	@JsonBackReference
-	@JsonIgnore
+	
 	@OneToMany(mappedBy = "machine")
     Set<MachineAlloc> machineallocs;
 	

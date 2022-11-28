@@ -57,6 +57,7 @@ import { UserDetailsComponent } from './user-details/user-details.component';
     UserListComponent,
     UserAuditComponent,
     UserDetailsComponent,
+
     
   ],
   imports: [

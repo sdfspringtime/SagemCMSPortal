@@ -17,7 +17,8 @@ import { TokenStorageService } from '../_services/token-storage.service';
 })
 export class UserListComponent implements OnInit {
 Role!:roles;
-  linep!: Observable<User1[]>;
+  linep!: User1[];
+  user=new User1();
    roles!: roles[];
   isLoggedIn = false;
   showAdminBoard = false;
@@ -28,7 +29,7 @@ Role!:roles;
     
   
 
-  constructor(private machserv: UserservService,private tokenStorageService: TokenStorageService,
+  constructor(public machserv: UserservService,private tokenStorageService: TokenStorageService,
     private router: Router) {
 
       
@@ -56,7 +57,26 @@ Role!:roles;
   }
 
     reloadData() {
-      this.linep = this.machserv.getlprodList();
+      this.machserv.getlprodList().subscribe(data=>{
+        this.linep = data;
+        this.linep.map(async user => { 
+          let userTemp = user;
+          this.machserv.getRoles(userTemp.id).subscribe({
+            next : (res) => {
+              console.log(res);
+              userTemp.roles = res
+              return userTemp;
+            },
+            error : (error) => {
+              console.log("error")
+              console.log(error)
+            }
+          })
+          return userTemp;
+        })
+      });
+      
+        
       
     
     }
