@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -41,7 +42,8 @@ public class UserController {
 	
 	
 	 private String username;
-
+        @Autowired
+        PasswordEncoder encoder;
 	    @Autowired
 	    private UserRepository linerep;
 	    @Autowired
@@ -66,7 +68,8 @@ public class UserController {
 				roles.add(Rrep.findById(role.getId()).get());
 				
 			*/
-	         
+	         lignep.setPassword(encoder.encode(lignep.getPassword()));
+
 			lignep.setRevisiondate(date);
             
             
@@ -139,7 +142,7 @@ public class UserController {
 		          @RequestBody User userdetails) {
 	        User user = linerep.findById(id).get();
 	        user.setEmail(userdetails.getEmail());
-	        user.setPassword(userdetails.getPassword());
+	        user.setPassword(encoder.encode(user.getPassword()));
 	        user.setRoles(userdetails.getRoles());
 	        user.setUsername(userdetails.getUsername());
 	    	Optional<User> aaa=linerep.findById(id);

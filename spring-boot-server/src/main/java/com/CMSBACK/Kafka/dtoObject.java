@@ -5,15 +5,9 @@ import org.springframework.stereotype.Component;
 @Component
 public class dtoObject {
 	  private Before before;
-private long id;
 
-	    public long getId() {
-	return id;
-}
 
-public void setId(long id) {
-	this.id = id;
-}
+	
 
 		private After after;
 
@@ -37,9 +31,10 @@ public void setId(long id) {
 	        this.after = after;
 	    }
 
-	    @Override
-	    public String toString()
-	    {
-	        return "ClassPojo [before = "+before+", after = "+after+"]";
-	    }
+		@Override
+		public String toString() {
+			return "dtoObject [before=" + before + ", after=" + after + "]";
+		}
+
+	  
 }

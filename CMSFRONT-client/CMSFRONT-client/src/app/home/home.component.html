@@ -1,10 +1,16 @@
 <div class="container">
-    <header class="jumbotron">
+    <header class="messages">
+      <script src="https://cdn.rawgit.com/caldwell/renderjson/master/renderjson.js"></script>
+
       <p>{{ content }}</p>
     </header>
-    <div *ngFor="let msg of msserv.msg">
-      {{msg}}
+    
+    <div *ngFor="let msgs of msg " id="bruh" class="messages">
+     <pre>{{msgs}}</pre>
+      
+    
     </div>
+  
   </div>
   <div class="messages" >
     

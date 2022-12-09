@@ -2,15 +2,17 @@ package com.CMSBACK.Kafka;
 
 public class After {
 
-	    private String revisiondate;
+	private String id;
+	private String name;
+	private String revisiondate;
+	private String description;
+    private String revisionauthor;
 
-	    private String revisionauthor;
+	    
 
-	    private String name;
+	    
 
-	    private String description;
-
-	    private String id;
+	    
 
 	 
 
@@ -64,9 +66,13 @@ public class After {
 	        this.id = id;
 	    }
 
-	    @Override
-	    public String toString()
-	    {
-	        return "ClassPojo [revisionauthor_id = "+", revisiondate = "+revisiondate+", revisionauthor = "+revisionauthor+", name = "+name+", description = "+description+", id = "+id+"]";
-	    }
+		@Override
+		public String toString() {
+			return "After [id=" + id + ", name=" + name + ", revisiondate=" + revisiondate + ", description="
+					+ description + ", revisionauthor=" + revisionauthor + "]";
+		}
+
+		
+
+	 
 }

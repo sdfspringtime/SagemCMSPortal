@@ -17,7 +17,7 @@ export class HomeComponent implements OnInit {
   newmessage: string;
   private stompClient = null;
    username=this.tserv.getUser().username;
- 
+ msg:any[]=[];
   setConnected(connected: boolean) {
     this.disabled = !connected;
     if (connected) {
@@ -57,7 +57,18 @@ export class HomeComponent implements OnInit {
   constructor(private userService: UserService,public msserv: MessageService,public tserv:TokenStorageService) { }
 
   ngOnInit(): void {
+    
+    this.msg=this.msserv.msg;
+    console.log(this.msg);
     this.connect();
+    
+    this.msg.map((msgs => {
+     
+      return JSON.stringify(msgs,null,2);  
+      
+  }))
+  
+  
     const username=this.tserv.getUser().username;
     this.userService.getPublicContent().subscribe(
       data => {
@@ -68,4 +79,5 @@ export class HomeComponent implements OnInit {
       }
     );
   }
+  
 }

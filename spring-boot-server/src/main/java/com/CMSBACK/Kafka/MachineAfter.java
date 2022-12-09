@@ -3,17 +3,20 @@ package com.CMSBACK.Kafka;
 import com.CMSBACK.models.EMType;
 
 public class MachineAfter {
+	private String id;
+	 private String name;
+	 private String description;
     private String revisiondate;
 
     private String revisionauthor;
 
     private EMType typemach;
 
-    private String name;
+   
 
-    private String description;
+   
 
-    private String id;
+    
 
     private String line_id;
 
@@ -125,9 +128,7 @@ public class MachineAfter {
         this.status = status;
     }
 
-    @Override
-    public String toString()
-    {
-        return "ClassPojo [revisiondate = "+revisiondate+", revisionauthor = "+revisionauthor+", typemach = "+typemach+", name = "+name+", description = "+description+", id = "+id+", line_id = "+line_id+", fese = "+fese+", allocated = "+allocated+", status = "+status+"]";
-    }
+	
+
+  
 }

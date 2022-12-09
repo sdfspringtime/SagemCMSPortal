@@ -127,8 +127,9 @@ public class MachineBefore {
 	    }
 
 	    @Override
-	    public String toString()
-	    {
-	        return "ClassPojo [revisiondate = "+revisiondate+", revisionauthor = "+revisionauthor+", typemach = "+typemach+", name = "+name+", description = "+description+", id = "+id+", line_id = "+line_id+", fese = "+fese+", allocated = "+allocated+", status = "+status+"]";
-	    }
+		public String toString() {
+			return "MachineAfter [id=" + id + ", name=" + name + ", description=" + description + ", revisiondate="
+					+ revisiondate + ", revisionauthor=" + revisionauthor + ", typemach=" + typemach + ", line_id="
+					+ line_id + ", fese=" + fese + ", allocated=" + allocated + ", status=" + status + "]";
+		}
 }

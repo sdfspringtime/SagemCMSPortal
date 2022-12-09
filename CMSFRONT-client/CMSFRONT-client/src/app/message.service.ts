@@ -23,7 +23,7 @@ export class MessageService {
     this.stompClient.connect({}, function(frame:any) {
       that.stompClient.subscribe('/topic/messages', (message:any) => {
         if (message.body) {
-          that.msg.push(message.body);
+          that.msg.push(JSON.stringify(JSON.parse(message.body),null,2));
         }
       });
     });
