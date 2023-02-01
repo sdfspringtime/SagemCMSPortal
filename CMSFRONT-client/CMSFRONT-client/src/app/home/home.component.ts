@@ -14,6 +14,7 @@ export class HomeComponent implements OnInit {
   title = 'WebSocketChatRoom';
   greetings: string[] = [];
   disabled = true;
+isLoggedIn = false;
   newmessage: string;
   private stompClient = null;
    username=this.tserv.getUser().username;
@@ -54,10 +55,10 @@ export class HomeComponent implements OnInit {
   }
   
   content?: string;
-  constructor(private userService: UserService,public msserv: MessageService,public tserv:TokenStorageService) { }
+  constructor(private userService: UserService,private tokenStorageService: TokenStorageService,public msserv: MessageService,public tserv:TokenStorageService) { }
 
   ngOnInit(): void {
-    
+        this.isLoggedIn = !!this.tserv.getToken();
     this.msg=this.msserv.msg;
     console.log(this.msg);
     this.connect();

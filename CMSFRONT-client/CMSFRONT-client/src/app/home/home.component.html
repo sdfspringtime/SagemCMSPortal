@@ -1,26 +1,30 @@
 <div class="container">
-    <header class="messages">
+    <header>
       <script src="https://cdn.rawgit.com/caldwell/renderjson/master/renderjson.js"></script>
 
-      <p>{{ content }}</p>
     </header>
-    
-    <div *ngFor="let msgs of msg " id="bruh" class="messages">
+    <div *ngIf="isLoggedIn"
+>    <iframe title="Jmou3lBI" width="1140" height="541.25" src="https://app.powerbi.com/reportEmbed?reportId=fc70bcd8-a40e-4f3f-be07-64a8d65a7a34&autoAuth=true&ctid=604f1a96-cbe8-43f8-abbf-f8eaf5d85730" frameborder="0" allowFullScreen="true"></iframe>
+    </div>
+    <p *ngIf="isLoggedIn" >Live Database Event Feed</p>
+    <div  *ngFor="let msgs of msg " id="bruh" class="messages" >
+     <div style="border:1px groove">
      <pre>{{msgs}}</pre>
-      
+    </div> 
     
     </div>
   
   </div>
-  <div class="messages" >
-    
-    <div *ngFor="let string of greetings" class="container">
+  
+  <div *ngIf="isLoggedIn" class="messages"  style= "margin-bottom:50px; border:1px groove;">
+    <p >Live Chat Room</p>
+    <div *ngFor="let string of greetings" class="container" >
      <p>{{string}}</p>
     </div>
     
    </div>
    <form #loginForm=ngForm>
-    <div>
+    <div *ngIf="isLoggedIn" >
      <br>
      <textarea autocomplete="off" placeholder="Type Your Message..." name="newmessage" [(ngModel)]="newmessage" required></textarea>
      <button class="btn btn-primary" (click)="sendMessage()" [disabled]="!loginForm.valid">Send</button>

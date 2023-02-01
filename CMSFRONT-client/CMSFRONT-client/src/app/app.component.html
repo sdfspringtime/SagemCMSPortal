@@ -7,7 +7,16 @@
         <li class="nav-item" *ngIf="showAdminBoard">
         <a href="/users" class="nav-link" routerLink="users">Manage Users</a>
       
+      <li class="nav-item" *ngIf="showModeratorBoard">
+        <a href="/machines" class="nav-link" routerLink="machines">Manage Machines</a>
+      </li>
+      <li class="nav-item" *ngIf="showModeratorBoard">
+        <a href="/lineps" class="nav-link" routerLink="lineps">Manage Lines </a>
+     
       <li class="nav-item" *ngIf="showAdminBoard">
+        <a href="/machines" class="nav-link" routerLink="machines">Manage Machines</a>
+      </li>
+      <li class="nav-item" *ngIf="showUserBoard">
         <a href="/machines" class="nav-link" routerLink="machines">Manage Machines</a>
       </li>
 
